@@ -10,81 +10,71 @@ package team_spitfire.lab_tom_hannes;
  * @author hanne
  */
 public class FieldModel {
-    private boolean oben;
-    private boolean rechts;
-    private boolean unten;
-    private boolean links;
+    private boolean up;
+    private boolean right;
+    private boolean down;
+    private boolean left;
 
-    public FieldModel(boolean oben, boolean rechts, boolean unten, boolean links) {
-        this.oben = oben;
-        this.rechts = rechts;
-        this.unten = unten;
-        this.links = links;
+    public FieldModel(boolean up, boolean right, boolean down, boolean left) {
+        this.up = up;
+        this.right = right;
+        this.down = down;
+        this.left = left;
     }
 
     
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft(){
-        boolean O = isOben();
-        boolean R = isRechts();
-        boolean U = isUnten();
-        boolean L = isLinks();
-        
-        setOben(R);
-        setRechts(U);
-        setUnten(L);
-        setLinks(O);
+        setUp(isLeft());
+        setRight(isUp());
+        setDown(isRight());
+        setLeft(isDown());
     }
     
     //Karte wird nach rechts gedreht (booleabs für Öffnungen werden geändert)
     public void turnRight(){
-        boolean O = isOben();
-        boolean R = isRechts();
-        boolean U = isUnten();
-        boolean L = isLinks();
-        
-        setOben(L);
-        setLinks(U);
-        setUnten(R);
-        setRechts(O);
+        setUp(isRight());
+        setRight(isDown());
+        setDown(isLeft());
+        setLeft(isUp());
+    }
+
+    public boolean isUp() {
+        return up;
+    }
+
+    public void setUp(boolean Up) {
+        this.up = up;
+    }
+
+    public boolean isRight() {
+        return right;
+    }
+
+    public void setRight(boolean right) {
+        this.right = right;
+    }
+
+    public boolean isDown() {
+        return down;
+    }
+
+    public void setDown(boolean down) {
+        this.down = down;
+    }
+
+    public boolean isLeft() {
+        return left;
+    }
+
+    public void setLeft(boolean left) {
+        this.left = left;
     }
     
     
     
     
     
-    
-    public boolean isOben() {
-        return oben;
-    }
-
-    public void setOben(boolean oben) {
-        this.oben = oben;
-    }
-
-    public boolean isRechts() {
-        return rechts;
-    }
-
-    public void setRechts(boolean rechts) {
-        this.rechts = rechts;
-    }
-
-    public boolean isUnten() {
-        return unten;
-    }
-
-    public void setUnten(boolean unten) {
-        this.unten = unten;
-    }
-
-    public boolean isLinks() {
-        return links;
-    }
-
-    public void setLinks(boolean links) {
-        this.links = links;
-    }
     
     
 }
