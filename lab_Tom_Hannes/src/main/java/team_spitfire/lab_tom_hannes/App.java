@@ -14,10 +14,12 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static FieldModel[][] field;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
+        field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
     }
