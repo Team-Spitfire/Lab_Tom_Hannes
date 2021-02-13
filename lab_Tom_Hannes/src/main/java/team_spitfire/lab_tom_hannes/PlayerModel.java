@@ -14,11 +14,15 @@ import java.util.ArrayList;
 public class PlayerModel {
     private String name;
     private int punkte;
+    private int posX;
+    private int posY;
     ArrayList<CardModel> hand = new ArrayList<CardModel> ();
 
-    public PlayerModel(String name, int punkte) {
+    public PlayerModel(String name, int punkte, int posX, int posY) {
         this.name = name;
         this.punkte = punkte;
+        this.posX = posX;
+        this.posY = posY;
     }
 
     public String getName() {
@@ -35,6 +39,30 @@ public class PlayerModel {
 
     public void setPunkte(int punkte) {
         this.punkte = punkte;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public ArrayList<CardModel> getHand() {
+        return hand;
+    }
+
+    public void setHand(ArrayList<CardModel> hand) {
+        this.hand = hand;
     }
     
     
