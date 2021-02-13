@@ -10,5 +10,8 @@ package team_spitfire.lab_tom_hannes;
  * @author hanne
  */
 public class CardModel {
-    
+    private boolean oben;
+    private boolean rechts;
+    private boolean unten;
+    private boolean links;
 }
