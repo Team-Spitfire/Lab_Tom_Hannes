@@ -5,6 +5,7 @@
  */
 package team_spitfire.lab_tom_hannes;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -27,8 +28,8 @@ public class HomeScreenViewController implements Initializable {
     }    
 
     @FXML
-    private void btnStart(ActionEvent event) {
-        App.setRoot("gameView")
+    private void btnStart(ActionEvent event) throws IOException {
+        App.setRoot("gameView");
     }
     
 }
