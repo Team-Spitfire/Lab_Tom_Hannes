@@ -10,8 +10,18 @@ package team_spitfire.lab_tom_hannes;
  * @author hanne
  */
 public class CardModel {
-    private boolean oben;
-    private boolean rechts;
-    private boolean unten;
-    private boolean links;
+    public int itemCardInt;
+
+    public CardModel(int itemCardInt) {
+        this.itemCardInt = itemCardInt;
+    }
+
+    public int getItemCardInt() {
+        return itemCardInt;
+    }
+
+    public void setItemCardInt(int itemCardInt) {
+        this.itemCardInt = itemCardInt;
+    }
+    
 }
