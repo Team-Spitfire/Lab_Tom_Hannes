@@ -25,18 +25,32 @@ public class FieldModel {
     
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft(){
-        setUp(isLeft());
-        setRight(isUp());
-        setDown(isRight());
-        setLeft(isDown());
+        boolean U = isUp();
+        boolean R = isRight();
+        boolean D = isDown();
+        boolean L = isLeft();
+        
+        
+        setUp(R);
+        setRight(D);
+        setDown(L);
+        setLeft(U);
     }
     
     //Karte wird nach rechts gedreht (booleabs für Öffnungen werden geändert)
     public void turnRight(){
-        setUp(isRight());
-        setRight(isDown());
-        setDown(isLeft());
-        setLeft(isUp());
+        boolean U = isUp();
+        boolean R = isRight();
+        boolean D = isDown();
+        boolean L = isLeft();
+        
+        
+        setUp(L);
+        setLeft(D);
+        setDown(R);
+        setRight(U);
+        
+        
     }
 
     public boolean isUp() {
