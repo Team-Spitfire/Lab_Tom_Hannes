@@ -23,6 +23,37 @@ public class FieldModel {
     }
 
     
+    //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
+    public void turnLeft(){
+        boolean O = isOben();
+        boolean R = isRechts();
+        boolean U = isUnten();
+        boolean L = isLinks();
+        
+        setOben(R);
+        setRechts(U);
+        setUnten(L);
+        setLinks(O);
+    }
+    
+    //Karte wird nach rechts gedreht (booleabs für Öffnungen werden geändert)
+    public void turnRight(){
+        boolean O = isOben();
+        boolean R = isRechts();
+        boolean U = isUnten();
+        boolean L = isLinks();
+        
+        setOben(L);
+        setLinks(U);
+        setUnten(R);
+        setRechts(O);
+    }
+    
+    
+    
+    
+    
+    
     public boolean isOben() {
         return oben;
     }
