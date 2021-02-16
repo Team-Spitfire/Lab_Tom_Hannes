@@ -5,7 +5,7 @@
  */
 package team_spitfire.lab_tom_hannes;
 
-import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -16,17 +16,22 @@ public class FieldModel {
     private boolean right;
     private boolean down;
     private boolean left;
-    private ImageView pic;
+    private String path;
+    private Image image1;
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left, ImageView pic) {
+    public FieldModel(boolean up, boolean right, boolean down, boolean left, String path) {
         this.up = up;
         this.right = right;
         this.down = down;
         this.left = left;
-        this.pic = pic;
+        this.path = path;
+        createImage();
     }
 
-    
+     private void createImage() {
+        Image image1 = new Image(path);
+    }
+     
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft(){
         boolean U = isUp();
@@ -89,13 +94,23 @@ public class FieldModel {
         this.left = left;
     }
 
-    public ImageView getPic() {
-        return pic;
+    public String getPath() {
+        return path;
     }
 
-    public void setPic(ImageView pic) {
-        this.pic = pic;
+    public void setPath(String path) {
+        this.path = path;
     }
+
+    public Image getImage1() {
+        return image1;
+    }
+
+    public void setImage1(Image image1) {
+        this.image1 = image1;
+    }
+
+   
     
     
     

@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 /**
  * JavaFX App
  */
@@ -49,18 +50,18 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        sk1 = new FieldModel(true,true,false,true, bat.png);         kk1 = new FieldModel(false,true,true,false, turn.png);  gk1 = new FieldModel(false,true,false,true, straight.png); 
-        sk2 = new FieldModel(true,true,false,true, dragon.png);      kk2 = new FieldModel(false,true,true,false, turn.png);  gk2 = new FieldModel(false,true,false,true, straight.png);
-        sk3 = new FieldModel(true,true,false,true, ghost.png);       kk3 = new FieldModel(false,true,true,false, turn.png);  gk3 = new FieldModel(false,true,false,true, straight.png);
-        sk4 = new FieldModel(true,true,false,true, gnome.png);       kk4 = new FieldModel(false,true,true,false, turn.png);  gk4 = new FieldModel(false,true,false,true, straight.png);
-        sk5 = new FieldModel(true,true,false,true, moth.png);        kk5 = new FieldModel(false,true,true,false, turn.png);  gk5 = new FieldModel(false,true,false,true, straight.png);
-        sk6 = new FieldModel(true,true,false,true, mouse.png);       kk6 = new FieldModel(false,true,true,false, turn.png);  gk6 = new FieldModel(false,true,false,true, straight.png);
-        sk7 = new FieldModel(true,true,false,true, owl.png);         kk7 = new FieldModel(false,true,true,false, turn.png);  gk7 = new FieldModel(false,true,false,true, straight.png);
-        sk8 = new FieldModel(true,true,false,true, poltergeist.png); kk8 = new FieldModel(false,true,true,false, turn.png);  gk8 = new FieldModel(false,true,false,true, straight.png);
-        sk9 = new FieldModel(true,true,false,true, salamander.png);  kk1 = new FieldModel(false,true,true,false, turn.png);  gk9 = new FieldModel(false,true,false,true, straight.png);
-        sk10 = new FieldModel(true,true,false,true, scarab.png);     kk10 = new FieldModel(false,true,true,false, turn.png); gk10 = new FieldModel(false,true,false,true, straight.png);
-        sk11 = new FieldModel(true,true,false,true, spider.png);     kk11 = new FieldModel(false,true,true,false, turn.png); gk11 = new FieldModel(false,true,false,true, straight.png);
-        sk12 = new FieldModel(true,true,false,true, witch.png);      kk12 = new FieldModel(false,true,true,false, turn.png); gk12 = new FieldModel(false,true,false,true, straight.png);
+        sk1 = new FieldModel(true,true,false,true, "bat.png");         kk1 = new FieldModel(false,true,true,false, "turn.png");  gk1 = new FieldModel(false,true,false,true, "straight.png"); 
+        sk2 = new FieldModel(true,true,false,true, "dragon.png");      kk2 = new FieldModel(false,true,true,false, "turn.png");  gk2 = new FieldModel(false,true,false,true, "straight.png");
+        sk3 = new FieldModel(true,true,false,true, "ghost.png");       kk3 = new FieldModel(false,true,true,false, "turn.png");  gk3 = new FieldModel(false,true,false,true, "straight.png");
+        sk4 = new FieldModel(true,true,false,true, "gnome.png");       kk4 = new FieldModel(false,true,true,false, "turn.png");  gk4 = new FieldModel(false,true,false,true, "straight.png");
+        sk5 = new FieldModel(true,true,false,true, "moth.png");        kk5 = new FieldModel(false,true,true,false, "turn.png");  gk5 = new FieldModel(false,true,false,true, "straight.png");
+        sk6 = new FieldModel(true,true,false,true, "mouse.png");       kk6 = new FieldModel(false,true,true,false, "turn.png");  gk6 = new FieldModel(false,true,false,true, "straight.png");
+        sk7 = new FieldModel(true,true,false,true, "owl.png");         kk7 = new FieldModel(false,true,true,false, "turn.png");  gk7 = new FieldModel(false,true,false,true, "straight.png");
+        sk8 = new FieldModel(true,true,false,true, "poltergeist.png"); kk8 = new FieldModel(false,true,true,false, "turn.png");  gk8 = new FieldModel(false,true,false,true, "straight.png");
+        sk9 = new FieldModel(true,true,false,true, "salamander.png");  kk1 = new FieldModel(false,true,true,false, "turn.png");  gk9 = new FieldModel(false,true,false,true, "straight.png");
+        sk10 = new FieldModel(true,true,false,true, "scarab.png");     kk10 = new FieldModel(false,true,true,false, "turn.png"); gk10 = new FieldModel(false,true,false,true, "straight.png");
+        sk11 = new FieldModel(true,true,false,true, "spider.png");     kk11 = new FieldModel(false,true,true,false, "turn.png"); gk11 = new FieldModel(false,true,false,true, "straight.png");
+        sk12 = new FieldModel(true,true,false,true, "witch.png");      kk12 = new FieldModel(false,true,true,false, "turn.png"); gk12 = new FieldModel(false,true,false,true, "straight.png");
         launch();
     }
     
