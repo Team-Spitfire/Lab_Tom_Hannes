@@ -137,4 +137,66 @@ public class App extends Application {
     }
     
     
+    //-------------Pfeile Start-------------
+    
+    //InsertX/Y wurden oben deklariert, aber es gibt nur ein paar Stellen, an den man etwas einschieben kann.
+    //Die folgenden Methoten sind für diese Stellen zuständing
+    //(in der View gibt es Pfeile zum einschieben, welche hierdurch funktional gemacht werden)
+    //Bei der Zählung von X und Y wurde bedacht, dass es bei 0 anfängt.
+    
+    //Links nach Rechts
+    public static void PfeilX1Links(FieldModel F){
+        InsertX(1,true,F);
+    }
+    
+    public static void PfeilX3Links(FieldModel F){
+        InsertX(3,true,F);
+    }
+    
+    public static void PfeilX5Links(FieldModel F){
+        InsertX(5,true,F);
+    }
+    
+    //Rechts nach Links
+    public static void PfeilX1Rechts(FieldModel F){
+        InsertX(1,false,F);
+    }
+    
+    public static void PfeilX3Rechts(FieldModel F){
+        InsertX(3,false,F);
+    }
+    
+    public static void PfeilX5Rechts(FieldModel F){
+        InsertX(5,false,F);
+    }
+    
+    //Oben nach Unten
+    public static void PfeilY1Oben(FieldModel F){
+        InsertY(1,true,F);
+    }
+    
+    public static void PfeilY3Oben(FieldModel F){
+        InsertY(3,true,F);
+    }
+    
+    public static void PfeilY5Oben(FieldModel F){
+        InsertY(5,true,F);
+    }
+    
+    //Unten nach Oben
+    public static void PfeilY1Unten(FieldModel F){
+        InsertY(1,false,F);
+    }
+    
+    public static void PfeilY3Unten(FieldModel F){
+        InsertY(3,false,F);
+    }
+    
+    public static void PfeilY5Unten(FieldModel F){
+        InsertY(5,false,F);
+    }
+    
+    //-------------Pfeile Ende-------------
+    
+    
 }
