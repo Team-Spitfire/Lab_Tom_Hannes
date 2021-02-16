@@ -17,6 +17,7 @@ public class App extends Application {
     private static Scene scene;
     private static FieldModel[][] field;
     
+//  --------------------------------------- DEKLARIERUNG ----------------------------------------
     private static FieldModel sk1;  private static FieldModel kk1;  private static FieldModel gk1;
     private static FieldModel sk2;  private static FieldModel kk2;  private static FieldModel gk2;
     private static FieldModel sk3;  private static FieldModel kk3;  private static FieldModel gk3;
@@ -50,6 +51,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+    //  name  _init_          up  right down left     path        -->   ------------------------------------------------------------ SAME -----------------------------------------------------                                  
         sk1 = new FieldModel(true,true,false,true, "bat.png");         kk1 = new FieldModel(false,true,true,false, "turn.png");  gk1 = new FieldModel(false,true,false,true, "straight.png"); 
         sk2 = new FieldModel(true,true,false,true, "dragon.png");      kk2 = new FieldModel(false,true,true,false, "turn.png");  gk2 = new FieldModel(false,true,false,true, "straight.png");
         sk3 = new FieldModel(true,true,false,true, "ghost.png");       kk3 = new FieldModel(false,true,true,false, "turn.png");  gk3 = new FieldModel(false,true,false,true, "straight.png");
@@ -76,7 +78,6 @@ public class App extends Application {
         FieldModel A5 = field[5][Zeile];
         FieldModel A6 = field[6][Zeile];
         
-        
         //if abfrage wird für die Richtung des einschiebens benötigt.
         if(LinksNachRechts == true){
             field[0][Zeile] = NeuesFeld;
@@ -97,8 +98,6 @@ public class App extends Application {
             field[1][Zeile] = A2;
             field[0][Zeile] = A1;
         }
-        
-        
     }
     
     //Schiebt ein neues Feld in eine Spalte ein.
@@ -132,9 +131,8 @@ public class App extends Application {
             field[Spalte][1] = A2;
             field[Spalte][0] = A1;
         }
-        
-        
     }
+
     
     
     //-------------Pfeile Start-------------
@@ -197,6 +195,5 @@ public class App extends Application {
     }
     
     //-------------Pfeile Ende-------------
+} 
     
-    
-}
