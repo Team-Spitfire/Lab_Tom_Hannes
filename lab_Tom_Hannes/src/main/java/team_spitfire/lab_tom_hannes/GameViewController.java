@@ -8,6 +8,7 @@ package team_spitfire.lab_tom_hannes;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -29,17 +30,9 @@ public class GameViewController implements Initializable {
     @FXML
     private ImageView iv2_1;
     @FXML
-    private ImageView iv2_2;
-    @FXML
     private ImageView iv2_3;
     @FXML
-    private ImageView iv2_4;
-    @FXML
     private ImageView iv2_5;
-    @FXML
-    private ImageView iv2_6;
-    @FXML
-    private ImageView iv2_7;
     @FXML
     private ImageView iv3_2;
     @FXML
@@ -49,17 +42,9 @@ public class GameViewController implements Initializable {
     @FXML
     private ImageView iv4_1;
     @FXML
-    private ImageView iv4_2;
-    @FXML
     private ImageView iv4_3;
     @FXML
-    private ImageView iv4_4;
-    @FXML
     private ImageView iv4_5;
-    @FXML
-    private ImageView iv4_6;
-    @FXML
-    private ImageView iv4_7;
     @FXML
     private ImageView iv5_2;
     @FXML
@@ -69,25 +54,41 @@ public class GameViewController implements Initializable {
     @FXML
     private ImageView iv6_1;
     @FXML
-    private ImageView iv6_2;
-    @FXML
     private ImageView iv6_3;
-    @FXML
-    private ImageView iv6_4;
     @FXML
     private ImageView iv6_5;
     @FXML
-    private ImageView iv6_6;
+    private ImageView iv0_1;
     @FXML
-    private ImageView iv6_7;
+    private ImageView iv0_3;
     @FXML
-    private ImageView iv7_2;
+    private ImageView iv0_5;
     @FXML
-    private ImageView iv7_4;
+    private ImageView iv1_0;
     @FXML
-    private ImageView iv7_6;
+    private ImageView iv1_1;
     @FXML
-    private ImageView ivNewCard;
+    private ImageView iv1_3;
+    @FXML
+    private ImageView iv1_6;
+    @FXML
+    private ImageView iv3_0;
+    @FXML
+    private ImageView iv3_1;
+    @FXML
+    private ImageView iv3_3;
+    @FXML
+    private ImageView iv3_5;
+    @FXML
+    private ImageView iv5_0;
+    @FXML
+    private ImageView iv5_1;
+    @FXML
+    private ImageView iv5_3;
+    @FXML
+    private ImageView iv5_5;
+    @FXML
+    private ImageView ivNewField;
 
     /**
      * Initializes the controller class.
@@ -96,6 +97,62 @@ public class GameViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void btnTurnRight(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnTurnLeft(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn10insU(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn30insU(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn50insU(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn61insR(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn63insR(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn65insR(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn56insD(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn36insD(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn16insD(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn01insL(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn03insL(ActionEvent event) {
+    }
+
+    @FXML
+    private void btn05insL(ActionEvent event) {
+    }
     
     /**
     @FXML
