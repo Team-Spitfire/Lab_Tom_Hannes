@@ -38,5 +38,9 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
+    
+    public static void InsertX(int Zeile){
+        FieldModel A1 = field[0][Zeile];
+    }
+    
 }
