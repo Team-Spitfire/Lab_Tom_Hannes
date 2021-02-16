@@ -64,8 +64,9 @@ public class App extends Application {
         launch();
     }
     
-    //
+    //Schiebt ein neues Feld in eine Zeile ein.
     public static void InsertX(int Zeile, boolean LinksNachRechts,FieldModel NeuesFeld){
+        //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
         FieldModel A0 = field[0][Zeile];
         FieldModel A1 = field[1][Zeile];
         FieldModel A2 = field[2][Zeile];
@@ -74,6 +75,8 @@ public class App extends Application {
         FieldModel A5 = field[5][Zeile];
         FieldModel A6 = field[6][Zeile];
         
+        
+        //if abfrage wird für die Richtung des einschiebens benötigt.
         if(LinksNachRechts == true){
             field[0][Zeile] = NeuesFeld;
             field[1][Zeile] = A0;
@@ -97,7 +100,9 @@ public class App extends Application {
         
     }
     
+    //Schiebt ein neues Feld in eine Spalte ein.
     public static void InsertY(int Spalte, boolean ObenNachUnten,FieldModel NeuesFeld){
+        //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
         FieldModel A0 = field[Spalte][0];
         FieldModel A1 = field[Spalte][1];
         FieldModel A2 = field[Spalte][2];
@@ -106,6 +111,7 @@ public class App extends Application {
         FieldModel A5 = field[Spalte][5];
         FieldModel A6 = field[Spalte][6];
         
+        //if abfrage wird für die Richtung des einschiebens benötigt.
         if(ObenNachUnten == true){
             field[Spalte][0] = NeuesFeld;
             field[Spalte][1] = A0;
