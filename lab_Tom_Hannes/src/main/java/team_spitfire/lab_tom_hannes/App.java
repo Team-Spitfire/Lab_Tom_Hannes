@@ -22,8 +22,10 @@ public class App extends Application {
         field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
+        
     }
-
+   
+    
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
