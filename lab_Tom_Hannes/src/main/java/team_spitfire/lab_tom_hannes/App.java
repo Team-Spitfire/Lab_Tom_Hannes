@@ -39,8 +39,36 @@ public class App extends Application {
         launch();
     }
     
-    public static void InsertX(int Zeile){
-        FieldModel A1 = field[0][Zeile];
+    public static void InsertX(int Zeile, boolean LinksNachRechts,FieldModel NeuesFeld){
+        FieldModel A0 = field[0][Zeile];
+        FieldModel A1 = field[1][Zeile];
+        FieldModel A2 = field[2][Zeile];
+        FieldModel A3 = field[3][Zeile];
+        FieldModel A4 = field[4][Zeile];
+        FieldModel A5 = field[5][Zeile];
+        FieldModel A6 = field[6][Zeile];
+        
+        if(LinksNachRechts == true){
+            field[0][Zeile] = NeuesFeld;
+            field[1][Zeile] = A0;
+            field[2][Zeile] = A1;
+            field[3][Zeile] = A2;
+            field[4][Zeile] = A3;
+            field[5][Zeile] = A4;
+            field[6][Zeile] = A5;
+        }
+        
+        if(LinksNachRechts == false){
+            field[6][Zeile] = NeuesFeld;
+            field[5][Zeile] = A6;
+            field[4][Zeile] = A5;
+            field[3][Zeile] = A4;
+            field[2][Zeile] = A3;
+            field[1][Zeile] = A2;
+            field[0][Zeile] = A1;
+        }
+        
+        
     }
     
 }
