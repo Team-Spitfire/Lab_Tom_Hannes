@@ -5,6 +5,8 @@
  */
 package team_spitfire.lab_tom_hannes;
 
+import javafx.scene.image.ImageView;
+
 /**
  *
  * @author hanne
@@ -14,6 +16,7 @@ public class FieldModel {
     private boolean right;
     private boolean down;
     private boolean left;
+    private ImageView pic;
 
     public FieldModel(boolean up, boolean right, boolean down, boolean left) {
         this.up = up;
