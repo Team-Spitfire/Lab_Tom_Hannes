@@ -16,6 +16,7 @@ public class App extends Application {
 
     private static Scene scene;
     private static FieldModel[][] field;
+    private static FieldModel NewField;
     
 //  --------------------------------------- DEKLARIERUNG ----------------------------------------
     private static FieldModel sk1;  private static FieldModel kk1;  private static FieldModel gk1;
@@ -67,6 +68,15 @@ public class App extends Application {
         launch();
     }
     
+    //NewField ist die FeldKarte, die immer übrig bleibt.
+    public static FieldModel getNewField(){
+        return App.NewField;
+    }
+    
+    public static void setNewField(FieldModel NF){
+        App.NewField = NF;
+    }
+    
     //Schiebt ein neues Feld in eine Zeile ein.
     public static void InsertX(int Zeile, boolean LinksNachRechts,FieldModel NeuesFeld){
         //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
@@ -87,6 +97,8 @@ public class App extends Application {
             field[4][Zeile] = A3;
             field[5][Zeile] = A4;
             field[6][Zeile] = A5;
+            
+            App.setNewField(A6);
         }
         
         if(LinksNachRechts == false){
@@ -97,6 +109,8 @@ public class App extends Application {
             field[2][Zeile] = A3;
             field[1][Zeile] = A2;
             field[0][Zeile] = A1;
+            
+            App.setNewField(A0);
         }
     }
     
@@ -120,6 +134,8 @@ public class App extends Application {
             field[Spalte][4] = A3;
             field[Spalte][5] = A4;
             field[Spalte][6] = A5;
+            
+            App.setNewField(A6);
         }
         
         if(ObenNachUnten == false){
@@ -130,6 +146,8 @@ public class App extends Application {
             field[Spalte][2] = A3;
             field[Spalte][1] = A2;
             field[Spalte][0] = A1;
+            
+            App.setNewField(A0);
         }
     }
 
