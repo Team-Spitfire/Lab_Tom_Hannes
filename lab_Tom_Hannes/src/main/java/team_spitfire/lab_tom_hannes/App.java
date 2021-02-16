@@ -39,6 +39,7 @@ public class App extends Application {
         launch();
     }
     
+    //
     public static void InsertX(int Zeile, boolean LinksNachRechts,FieldModel NeuesFeld){
         FieldModel A0 = field[0][Zeile];
         FieldModel A1 = field[1][Zeile];
@@ -70,5 +71,38 @@ public class App extends Application {
         
         
     }
+    
+    public static void InsertY(int Spalte, boolean ObenNachUnten,FieldModel NeuesFeld){
+        FieldModel A0 = field[Spalte][0];
+        FieldModel A1 = field[Spalte][1];
+        FieldModel A2 = field[Spalte][2];
+        FieldModel A3 = field[Spalte][3];
+        FieldModel A4 = field[Spalte][4];
+        FieldModel A5 = field[Spalte][5];
+        FieldModel A6 = field[Spalte][6];
+        
+        if(ObenNachUnten == true){
+            field[Spalte][0] = NeuesFeld;
+            field[Spalte][1] = A0;
+            field[Spalte][2] = A1;
+            field[Spalte][3] = A2;
+            field[Spalte][4] = A3;
+            field[Spalte][5] = A4;
+            field[Spalte][6] = A5;
+        }
+        
+        if(ObenNachUnten == false){
+            field[Spalte][6] = NeuesFeld;
+            field[Spalte][5] = A6;
+            field[Spalte][4] = A5;
+            field[Spalte][3] = A4;
+            field[Spalte][2] = A3;
+            field[Spalte][1] = A2;
+            field[Spalte][0] = A1;
+        }
+        
+        
+    }
+    
     
 }
