@@ -15,6 +15,20 @@ public class App extends Application {
 
     private static Scene scene;
     private static FieldModel[][] field;
+    
+    private static FieldModel sk1;  private static FieldModel kk1;  private static FieldModel gk1;
+    private static FieldModel sk2;  private static FieldModel kk2;  private static FieldModel gk2;
+    private static FieldModel sk3;  private static FieldModel kk3;  private static FieldModel gk3;
+    private static FieldModel sk4;  private static FieldModel kk4;  private static FieldModel gk4;
+    private static FieldModel sk5;  private static FieldModel kk5;  private static FieldModel gk5;
+    private static FieldModel sk6;  private static FieldModel kk6;  private static FieldModel gk6;
+    private static FieldModel sk7;  private static FieldModel kk7;  private static FieldModel gk7;
+    private static FieldModel sk8;  private static FieldModel kk8;  private static FieldModel gk8;
+    private static FieldModel sk9;  private static FieldModel kk9;  private static FieldModel gk9;
+    private static FieldModel sk10; private static FieldModel kk10; private static FieldModel gk10;
+    private static FieldModel sk11; private static FieldModel kk11; private static FieldModel gk11;
+    private static FieldModel sk12; private static FieldModel kk12; private static FieldModel gk12;
+    
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -22,7 +36,6 @@ public class App extends Application {
         field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
-        
     }
    
     
@@ -36,6 +49,18 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        sk1 = new FieldModel(true,true,false,true, bat.png);         kk1 = new FieldModel(false,true,true,false, turn.png);  gk1 = new FieldModel(false,true,false,true, straight.png); 
+        sk2 = new FieldModel(true,true,false,true, dragon.png);      kk2 = new FieldModel(false,true,true,false, turn.png);  gk2 = new FieldModel(false,true,false,true, straight.png);
+        sk3 = new FieldModel(true,true,false,true, ghost.png);       kk3 = new FieldModel(false,true,true,false, turn.png);  gk3 = new FieldModel(false,true,false,true, straight.png);
+        sk4 = new FieldModel(true,true,false,true, gnome.png);       kk4 = new FieldModel(false,true,true,false, turn.png);  gk4 = new FieldModel(false,true,false,true, straight.png);
+        sk5 = new FieldModel(true,true,false,true, moth.png);        kk5 = new FieldModel(false,true,true,false, turn.png);  gk5 = new FieldModel(false,true,false,true, straight.png);
+        sk6 = new FieldModel(true,true,false,true, mouse.png);       kk6 = new FieldModel(false,true,true,false, turn.png);  gk6 = new FieldModel(false,true,false,true, straight.png);
+        sk7 = new FieldModel(true,true,false,true, owl.png);         kk7 = new FieldModel(false,true,true,false, turn.png);  gk7 = new FieldModel(false,true,false,true, straight.png);
+        sk8 = new FieldModel(true,true,false,true, poltergeist.png); kk8 = new FieldModel(false,true,true,false, turn.png);  gk8 = new FieldModel(false,true,false,true, straight.png);
+        sk9 = new FieldModel(true,true,false,true, salamander.png);  kk1 = new FieldModel(false,true,true,false, turn.png);  gk9 = new FieldModel(false,true,false,true, straight.png);
+        sk10 = new FieldModel(true,true,false,true, scarab.png);     kk10 = new FieldModel(false,true,true,false, turn.png); gk10 = new FieldModel(false,true,false,true, straight.png);
+        sk11 = new FieldModel(true,true,false,true, spider.png);     kk11 = new FieldModel(false,true,true,false, turn.png); gk11 = new FieldModel(false,true,false,true, straight.png);
+        sk12 = new FieldModel(true,true,false,true, witch.png);      kk12 = new FieldModel(false,true,true,false, turn.png); gk12 = new FieldModel(false,true,false,true, straight.png);
         launch();
     }
     

@@ -18,11 +18,12 @@ public class FieldModel {
     private boolean left;
     private ImageView pic;
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left) {
+    public FieldModel(boolean up, boolean right, boolean down, boolean left, ImageView pic) {
         this.up = up;
         this.right = right;
         this.down = down;
         this.left = left;
+        this.pic = pic;
     }
 
     
@@ -86,6 +87,14 @@ public class FieldModel {
 
     public void setLeft(boolean left) {
         this.left = left;
+    }
+
+    public ImageView getPic() {
+        return pic;
+    }
+
+    public void setPic(ImageView pic) {
+        this.pic = pic;
     }
     
     
