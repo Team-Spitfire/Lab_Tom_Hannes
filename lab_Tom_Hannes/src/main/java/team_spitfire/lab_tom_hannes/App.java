@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 /**
@@ -15,6 +16,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static ArrayList<FieldModel> list;
     private static FieldModel[][] field;
     private static FieldModel NewField;
     
@@ -36,6 +38,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
+        list = new ArrayList<FieldModel> ();
         field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
@@ -52,8 +55,8 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-    //  name  _init_          up  right down left     path        -->   ------------------------------------------------------------ SAME -----------------------------------------------------                                  
-      sk1 = new FieldModel(true,true,false,true);    kk1 = new FieldModel(false,true,true,false);  gk1 = new FieldModel(false,true,false,true); 
+    //  name  _init_          up  right down left -->   -------------------------------------- SAME -----------------------------------------                                  
+        sk1 = new FieldModel(true,true,false,true);  kk1 = new FieldModel(false,true,true,false);  gk1 = new FieldModel(false,true,false,true); 
         sk2 = new FieldModel(true,true,false,true);  kk2 = new FieldModel(false,true,true,false);  gk2 = new FieldModel(false,true,false,true);
         sk3 = new FieldModel(true,true,false,true);  kk3 = new FieldModel(false,true,true,false);  gk3 = new FieldModel(false,true,false,true);
         sk4 = new FieldModel(true,true,false,true);  kk4 = new FieldModel(false,true,true,false);  gk4 = new FieldModel(false,true,false,true);
@@ -65,6 +68,20 @@ public class App extends Application {
         sk10 = new FieldModel(true,true,false,true); kk10 = new FieldModel(false,true,true,false); gk10 = new FieldModel(false,true,false,true);
         sk11 = new FieldModel(true,true,false,true); kk11 = new FieldModel(false,true,true,false); gk11 = new FieldModel(false,true,false,true);
         sk12 = new FieldModel(true,true,false,true); kk12 = new FieldModel(false,true,true,false); gk12 = new FieldModel(false,true,false,true); 
+        list.add(sk1);  list.add(kk1);  list.add(gk1);
+        list.add(sk2);  list.add(kk2);  list.add(gk2);
+        list.add(sk3);  list.add(kk3);  list.add(gk3);
+        list.add(sk4);  list.add(kk4);  list.add(gk4);
+        list.add(sk5);  list.add(kk5);  list.add(gk5);
+        list.add(sk6);  list.add(kk6);  list.add(gk6);
+        list.add(sk7);  list.add(kk7);  list.add(gk7);
+        list.add(sk8);  list.add(kk8);  list.add(gk8);
+        list.add(sk9);  list.add(kk9);  list.add(gk9);
+        list.add(sk10); list.add(kk10); list.add(gk10);
+        list.add(sk11); list.add(kk11); list.add(gk11);
+        list.add(sk12); list.add(kk12); list.add(gk12);
+                
+        
         launch();
     }
     
