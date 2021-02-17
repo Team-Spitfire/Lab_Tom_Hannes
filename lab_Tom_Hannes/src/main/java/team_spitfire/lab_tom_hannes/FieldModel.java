@@ -64,7 +64,7 @@ public class FieldModel {
         return up;
     }
 
-    public void setUp(boolean Up) {
+    public void setUp(boolean up) {
         this.up = up;
     }
 
