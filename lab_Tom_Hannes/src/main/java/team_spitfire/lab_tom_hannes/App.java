@@ -21,7 +21,7 @@ public class App extends Application {
     private static FieldModel[][] field;
     private static FieldModel NewField;
     
-  //--------------------------------------- DEKLARIERUNG ----------------------------------------
+    //----------------------------------- DEKLARIERUNG FieldModel----------------------------------------
     private static FieldModel sk1;  private static FieldModel kk1;  private static FieldModel gk1;
     private static FieldModel sk2;  private static FieldModel kk2;  private static FieldModel gk2;
     private static FieldModel sk3;  private static FieldModel kk3;  private static FieldModel gk3;
@@ -35,7 +35,18 @@ public class App extends Application {
     private static FieldModel sk11; private static FieldModel kk11; private static FieldModel gk11;
     private static FieldModel sk12; private static FieldModel kk12; private static FieldModel gk12;
     
-
+    
+    //----------------------------------- DEKLARIERUNG CardModel----------------------------------------
+    private static CardModel c1;    private static CardModel c2;    private static CardModel c3;
+    private static CardModel c4;    private static CardModel c5;    private static CardModel c6;
+    private static CardModel c7;    private static CardModel c8;    private static CardModel c9;
+    private static CardModel c10;    private static CardModel c11;    private static CardModel c12;
+    private static CardModel c13;    private static CardModel c14;    private static CardModel c15;
+    private static CardModel c16;    private static CardModel c17;    private static CardModel c18;
+    private static CardModel c19;    private static CardModel c20;    private static CardModel c21;
+    private static CardModel c22;    private static CardModel c23;    private static CardModel c24;
+    
+    
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
@@ -85,6 +96,27 @@ public class App extends Application {
         list.add(sk11); list.add(kk11); list.add(gk11);
         list.add(sk12); list.add(kk12); list.add(gk12);
     
+      //name              ID
+        c1 = new CardModel(1);      c2 = new CardModel(2);      c3 = new CardModel(3);
+        c4 = new CardModel(4);      c5 = new CardModel(5);      c6 = new CardModel(6);
+        c7 = new CardModel(7);      c8 = new CardModel(8);      c9 = new CardModel(9);
+        c10= new CardModel(10);     c11 = new CardModel(11);    c12 = new CardModel(12);
+        c13 = new CardModel(13);    c14 = new CardModel(14);    c15 = new CardModel(15);
+        c16 = new CardModel(16);    c17 = new CardModel(17);    c18 = new CardModel(18);
+        c19 = new CardModel(19);    c20 = new CardModel(20);    c21 = new CardModel(21);
+        c22 = new CardModel(22);    c23 = new CardModel(23);    c24 = new CardModel(24);
+        
+        //fügt zu liste hinzu
+        cardList.add(c1);       cardList.add(c2);       cardList.add(c3);
+        cardList.add(c4);       cardList.add(c5);       cardList.add(c6);
+        cardList.add(c7);       cardList.add(c8);       cardList.add(c9);
+        cardList.add(c10);      cardList.add(c11);      cardList.add(c12);
+        cardList.add(c13);      cardList.add(c14);      cardList.add(c15);
+        cardList.add(c16);      cardList.add(c17);      cardList.add(c18);
+        cardList.add(c19);      cardList.add(c20);      cardList.add(c21);
+        cardList.add(c22);      cardList.add(c23);      cardList.add(c24);
+        
+        
         launch();
     }
     
