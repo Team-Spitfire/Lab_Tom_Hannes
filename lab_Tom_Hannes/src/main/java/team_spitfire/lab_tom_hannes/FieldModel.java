@@ -16,22 +16,16 @@ public class FieldModel {
     private boolean right;
     private boolean down;
     private boolean left;
-    private String path;
-    private Image image;
+    
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left, String path) {
+    public FieldModel(boolean up, boolean right, boolean down, boolean left) {
         this.up = up;
         this.right = right;
         this.down = down;
-        this.left = left;
-        this.path = path;
-        createImage();  
+        this.left = left; 
     }
     
-    private void createImage() {
-        Image image1 = new Image(path);
-        setImage(image1);
-    }
+   
      
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft(){
@@ -91,29 +85,4 @@ public class FieldModel {
     public void setLeft(boolean left) {
         this.left = left;
     }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
-    }
-
-   
-    
-    
-    
-    
-    
-    
-    
 }

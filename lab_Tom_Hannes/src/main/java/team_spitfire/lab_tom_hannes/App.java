@@ -53,20 +53,21 @@ public class App extends Application {
 
     public static void main(String[] args) {
     //  name  _init_          up  right down left     path        -->   ------------------------------------------------------------ SAME -----------------------------------------------------                                  
-        sk1 = new FieldModel(true,true,false,true, "bat.png");         kk1 = new FieldModel(false,true,true,false, "turn.png");  gk1 = new FieldModel(false,true,false,true, "straight.png"); 
-        sk2 = new FieldModel(true,true,false,true, "dragon.png");      kk2 = new FieldModel(false,true,true,false, "turn.png");  gk2 = new FieldModel(false,true,false,true, "straight.png");
-        sk3 = new FieldModel(true,true,false,true, "ghost.png");       kk3 = new FieldModel(false,true,true,false, "turn.png");  gk3 = new FieldModel(false,true,false,true, "straight.png");
-        sk4 = new FieldModel(true,true,false,true, "gnome.png");       kk4 = new FieldModel(false,true,true,false, "turn.png");  gk4 = new FieldModel(false,true,false,true, "straight.png");
-        sk5 = new FieldModel(true,true,false,true, "moth.png");        kk5 = new FieldModel(false,true,true,false, "turn.png");  gk5 = new FieldModel(false,true,false,true, "straight.png");
-        sk6 = new FieldModel(true,true,false,true, "mouse.png");       kk6 = new FieldModel(false,true,true,false, "turn.png");  gk6 = new FieldModel(false,true,false,true, "straight.png");
-        sk7 = new FieldModel(true,true,false,true, "owl.png");         kk7 = new FieldModel(false,true,true,false, "turn.png");  gk7 = new FieldModel(false,true,false,true, "straight.png");
-        sk8 = new FieldModel(true,true,false,true, "poltergeist.png"); kk8 = new FieldModel(false,true,true,false, "turn.png");  gk8 = new FieldModel(false,true,false,true, "straight.png");
-        sk9 = new FieldModel(true,true,false,true, "salamander.png");  kk1 = new FieldModel(false,true,true,false, "turn.png");  gk9 = new FieldModel(false,true,false,true, "straight.png");
-        sk10 = new FieldModel(true,true,false,true, "scarab.png");     kk10 = new FieldModel(false,true,true,false, "turn.png"); gk10 = new FieldModel(false,true,false,true, "straight.png");
-        sk11 = new FieldModel(true,true,false,true, "spider.png");     kk11 = new FieldModel(false,true,true,false, "turn.png"); gk11 = new FieldModel(false,true,false,true, "straight.png");
-        sk12 = new FieldModel(true,true,false,true, "witch.png");      kk12 = new FieldModel(false,true,true,false, "turn.png"); gk12 = new FieldModel(false,true,false,true, "straight.png");
+      sk1 = new FieldModel(true,true,false,true);    kk1 = new FieldModel(false,true,true,false);  gk1 = new FieldModel(false,true,false,true); 
+        sk2 = new FieldModel(true,true,false,true);  kk2 = new FieldModel(false,true,true,false);  gk2 = new FieldModel(false,true,false,true);
+        sk3 = new FieldModel(true,true,false,true);  kk3 = new FieldModel(false,true,true,false);  gk3 = new FieldModel(false,true,false,true);
+        sk4 = new FieldModel(true,true,false,true);  kk4 = new FieldModel(false,true,true,false);  gk4 = new FieldModel(false,true,false,true);
+        sk5 = new FieldModel(true,true,false,true);  kk5 = new FieldModel(false,true,true,false);  gk5 = new FieldModel(false,true,false,true);
+        sk6 = new FieldModel(true,true,false,true);  kk6 = new FieldModel(false,true,true,false);  gk6 = new FieldModel(false,true,false,true);
+        sk7 = new FieldModel(true,true,false,true);  kk7 = new FieldModel(false,true,true,false);  gk7 = new FieldModel(false,true,false,true);
+        sk8 = new FieldModel(true,true,false,true);  kk8 = new FieldModel(false,true,true,false);  gk8 = new FieldModel(false,true,false,true);
+        sk9 = new FieldModel(true,true,false,true);  kk1 = new FieldModel(false,true,true,false);  gk9 = new FieldModel(false,true,false,true);
+        sk10 = new FieldModel(true,true,false,true); kk10 = new FieldModel(false,true,true,false); gk10 = new FieldModel(false,true,false,true);
+        sk11 = new FieldModel(true,true,false,true); kk11 = new FieldModel(false,true,true,false); gk11 = new FieldModel(false,true,false,true);
+        sk12 = new FieldModel(true,true,false,true); kk12 = new FieldModel(false,true,true,false); gk12 = new FieldModel(false,true,false,true); 
         launch();
     }
+    
     
     //NewField ist die FeldKarte, die immer übrig bleibt.
     public static FieldModel getNewField(){
