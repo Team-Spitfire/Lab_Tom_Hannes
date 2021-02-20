@@ -35,7 +35,6 @@ public class App extends Application {
     private static FieldModel sk11; private static FieldModel kk11; private static FieldModel gk11;
     private static FieldModel sk12; private static FieldModel kk12; private static FieldModel gk12;
     
-    
     //----------------------------------- DEKLARIERUNG CardModel----------------------------------------
     private static CardModel c1;    private static CardModel c2;    private static CardModel c3;
     private static CardModel c4;    private static CardModel c5;    private static CardModel c6;
@@ -46,7 +45,7 @@ public class App extends Application {
     private static CardModel c19;    private static CardModel c20;    private static CardModel c21;
     private static CardModel c22;    private static CardModel c23;    private static CardModel c24;
     
-    
+
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
@@ -56,8 +55,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-   
-    
+  
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
@@ -115,11 +113,9 @@ public class App extends Application {
         cardList.add(c16);      cardList.add(c17);      cardList.add(c18);
         cardList.add(c19);      cardList.add(c20);      cardList.add(c21);
         cardList.add(c22);      cardList.add(c23);      cardList.add(c24);
-        
-        
+
         launch();
     }
-    
     
     //NewField ist die FeldKarte, die immer übrig bleibt.
     public static FieldModel getNewField(){
