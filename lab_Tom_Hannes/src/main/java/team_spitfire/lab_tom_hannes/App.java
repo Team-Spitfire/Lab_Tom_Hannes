@@ -61,11 +61,11 @@ public class App extends Application {
     private static CardModel c1;    private static CardModel c2;    private static CardModel c3;
     private static CardModel c4;    private static CardModel c5;    private static CardModel c6;
     private static CardModel c7;    private static CardModel c8;    private static CardModel c9;
-    private static CardModel c10;    private static CardModel c11;    private static CardModel c12;
-    private static CardModel c13;    private static CardModel c14;    private static CardModel c15;
-    private static CardModel c16;    private static CardModel c17;    private static CardModel c18;
-    private static CardModel c19;    private static CardModel c20;    private static CardModel c21;
-    private static CardModel c22;    private static CardModel c23;    private static CardModel c24;
+    private static CardModel c10;   private static CardModel c11;   private static CardModel c12;
+    private static CardModel c13;   private static CardModel c14;   private static CardModel c15;
+    private static CardModel c16;   private static CardModel c17;   private static CardModel c18;
+    private static CardModel c19;   private static CardModel c20;   private static CardModel c21;
+    private static CardModel c22;   private static CardModel c23;   private static CardModel c24;
     
 
     @Override
@@ -90,18 +90,18 @@ public class App extends Application {
     public static void main(String[] args) {
     //feste
       //name        _init_        up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------
-        fsk_2_0 = new FieldModel(false,true,true,true, 1, "t");   fkk_0_0 = new FieldModel(false,true,true,false, 1, "k");
-        fsk_4_0 = new FieldModel(false,true,true,true, 1, "t");   fkk_6_0 = new FieldModel(false,false,true,true, 1, "k");
-        fsk_0_2 = new FieldModel(true,true,true,false, 1, "t");   fkk_0_6 = new FieldModel(true,true,false,false, 1, "k");
-        fsk_2_2 = new FieldModel(true,true,true,false, 1, "t");   fkk_6_6 = new FieldModel(true,false,false,true, 1, "k");
-        fsk_4_2 = new FieldModel(false,true,true,true, 1, "t");
-        fsk_6_2 = new FieldModel(true,false,true,true, 1, "t");
-        fsk_0_4 = new FieldModel(true,true,true,false, 1, "t");
-        fsk_2_4 = new FieldModel(true,true,false,true, 1, "t");
-        fsk_4_4 = new FieldModel(true,false,true,true, 1, "t");
-        fsk_6_4 = new FieldModel(true,false,true,true, 1, "t");
-        fsk_2_6 = new FieldModel(true,true,false,true, 1, "t");
-        fsk_4_6 = new FieldModel(true,true,false,true, 1, "t");
+        fsk_2_0 = new FieldModel(false,true,true,true, 7, "t");   fkk_0_0 = new FieldModel(false,true,true,false, 1, "k");
+        fsk_4_0 = new FieldModel(false,true,true,true, 8, "t");   fkk_6_0 = new FieldModel(false,false,true,true, 1, "k");
+        fsk_0_2 = new FieldModel(true,true,true,false, 9, "t");   fkk_0_6 = new FieldModel(true,true,false,false, 1, "k");
+        fsk_2_2 = new FieldModel(true,true,true,false, 10, "t");  fkk_6_6 = new FieldModel(true,false,false,true, 1, "k");
+        fsk_4_2 = new FieldModel(false,true,true,true, 11, "t");
+        fsk_6_2 = new FieldModel(true,false,true,true, 12, "t");
+        fsk_0_4 = new FieldModel(true,true,true,false, 13, "t");
+        fsk_2_4 = new FieldModel(true,true,false,true, 14, "t");
+        fsk_4_4 = new FieldModel(true,false,true,true, 15, "t");
+        fsk_6_4 = new FieldModel(true,false,true,true, 16, "t");
+        fsk_2_6 = new FieldModel(true,true,false,true, 17, "t");
+        fsk_4_6 = new FieldModel(true,true,false,true, 18, "t");
         
         
         
