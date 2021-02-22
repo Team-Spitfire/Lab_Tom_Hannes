@@ -132,6 +132,10 @@ public class App extends Application {
         //X2 - y0 2 4 6
         //X4 - y0 2 4 6
         //X6 - y0 2 4 6
+        
+        while(list.length() > 0){
+        
+        }
     }
     
     
