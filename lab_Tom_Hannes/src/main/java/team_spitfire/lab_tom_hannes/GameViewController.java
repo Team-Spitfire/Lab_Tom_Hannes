@@ -194,4 +194,28 @@ public class GameViewController implements Initializable {
         }
     }
     */
+    
+    for(FieldModel F : App.list){
+            if(F.getTyp() == "t"){
+                if(F.isUp() == true && F.isRight() == true && F.isDown() == true){
+                    
+                }
+                else if(F.isRight() == true && F.isDown() == true && F.isLeft() == true){
+                    
+                }
+                else if(F.isDown() == true && F.isLeft() == true && F.isUp() == true){
+                    
+                }
+                else(){
+                    
+                }
+            }
+            else if(F.getTyp() == "k"){
+                
+            }
+            else if(F.getTyp() == "g"){
+                
+            }
+            
+        }       
 }

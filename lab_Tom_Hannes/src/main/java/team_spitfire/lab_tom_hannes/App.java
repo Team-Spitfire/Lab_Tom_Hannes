@@ -203,7 +203,6 @@ public class App extends Application {
             int Max = list.size() - 1;
             int random = Min + (int)(Math.random() * ((Max - Min) + 1));
             
-            
             //Stellen für feste Karten werden reserviert
             if(X == 0 || X == 2 || X == 4 || X ==6){
                if(X == 0 || X == 2 || X == 4 || X ==6){
@@ -233,15 +232,7 @@ public class App extends Application {
                 X += 1;
                 }
             }
-            
-            
-            
-            
-            
-            
-            
-        }
-        
+        } 
     }
     
     
@@ -386,5 +377,10 @@ public class App extends Application {
     }
     
     //-------------Pfeile Ende-------------
+    
+    public static void checkTileOri(FieldModel F){
+        
+        
+    }
 } 
     
