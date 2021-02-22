@@ -126,6 +126,19 @@ public class App extends Application {
         App.NewField = NF;
     }
     
+    
+    public static void randomList(){
+        //X0 - y0 2 4 6
+        //X2 - y0 2 4 6
+        //X4 - y0 2 4 6
+        //X6 - y0 2 4 6
+    }
+    
+    
+    
+    
+    
+    
     //Schiebt ein neues Feld in eine Zeile ein.
     public static void InsertX(int Zeile, boolean LinksNachRechts,FieldModel NeuesFeld){
         //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
@@ -197,7 +210,7 @@ public class App extends Application {
             field[Spalte][0] = A1;
             
             App.setNewField(A0);
-        }
+        }  
     }
 
     
