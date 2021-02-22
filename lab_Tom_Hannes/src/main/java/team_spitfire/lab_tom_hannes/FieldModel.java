@@ -16,13 +16,17 @@ public class FieldModel {
     private boolean right;
     private boolean down;
     private boolean left;
+    private int schatz;
+    private String typ;
     
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left) {
+    public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, String typ) {
         this.up = up;
         this.right = right;
         this.down = down;
         this.left = left; 
+        this.schatz = schatz;
+        this.typ = typ;
     }
     
    
@@ -85,4 +89,21 @@ public class FieldModel {
     public void setLeft(boolean left) {
         this.left = left;
     }
+
+    public int getSchatz() {
+        return schatz;
+    }
+
+    public void setSchatz(int schatz) {
+        this.schatz = schatz;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
+    
 }
