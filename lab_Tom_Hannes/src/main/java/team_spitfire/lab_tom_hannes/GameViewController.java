@@ -110,62 +110,62 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn10insU(ActionEvent event) {
-        App.PfeilY1Oben(F);
+        App.PfeilY1Oben(App.getNewField());
     }
 
     @FXML
     private void btn30insU(ActionEvent event) {
-        App.PfeilY3Oben(F);
+        App.PfeilY3Oben(App.getNewField());
     }
 
     @FXML
     private void btn50insU(ActionEvent event) {
-        App.PfeilY5Oben(F);
+        App.PfeilY5Oben(App.getNewField());
     }
 
     @FXML
     private void btn61insR(ActionEvent event) {
-        App.PfeilX1Rechts(F);
+        App.PfeilX1Rechts(App.getNewField());
     }
 
     @FXML
     private void btn63insR(ActionEvent event) {
-     App.PfeilX3Rechts(F);
+     App.PfeilX3Rechts(App.getNewField());
     }
 
     @FXML
     private void btn65insR(ActionEvent event) {
-        App.PfeilX5Rechts(F);
+        App.PfeilX5Rechts(App.getNewField());
     }
 
     @FXML
     private void btn56insD(ActionEvent event) {
-        App.PfeilY5Unten(F);
+        App.PfeilY5Unten(App.getNewField());
     }
 
     @FXML
     private void btn36insD(ActionEvent event) {
-        App.PfeilY3Unten(F);
+        App.PfeilY3Unten(App.getNewField());
     }
 
     @FXML
     private void btn16insD(ActionEvent event) {
-        App.PfeilY1Unten(F);
+        App.PfeilY1Unten(App.getNewField());
     }
 
     @FXML
     private void btn01insL(ActionEvent event) {
-        App.PfeilX1Links(F);
+        App.PfeilX1Links(App.getNewField());
     }
 
     @FXML
     private void btn03insL(ActionEvent event) {
-        App.PfeilX3Links(F);
+        App.PfeilX3Links(App.getNewField());
     }
 
     @FXML
     private void btn05insL(ActionEvent event) {
-        App.PfeilX5Links(F);
+        App.PfeilX5Links(App.getNewField());
     }
     
     /**
