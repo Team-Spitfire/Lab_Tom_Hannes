@@ -132,11 +132,36 @@ public class App extends Application {
         //X2 - y0 2 4 6
         //X4 - y0 2 4 6
         //X6 - y0 2 4 6
+
+        int X = 0;
+        int Y = 0;
+        boolean reserved = false;
         
-        while(list.length() > 0){
         
+            
+        //for(FieldModel F : list){
+        //    if(X == 0 || X == 2 || X == 4 || X ==6){
+        //       if(X == 0 || X == 2 || X == 4 || X ==6){
+        //           reserved = true;
+        //        } 
+        //    }
+        //    
+        //    if(reserved == false){
+        //        field[X][Y] = F;
+        //        list.remove(F);
+        //    }       
+        //    
+        //    if(X == 6){
+        //        X = 0;
+        //        Y += 1;
+        //    }
+        //    else{
+        //    X += 1;
+        //    }
+            
+            
         }
-    }
+    
     
     
     
