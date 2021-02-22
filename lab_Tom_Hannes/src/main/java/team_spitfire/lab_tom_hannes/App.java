@@ -89,19 +89,7 @@ public class App extends Application {
 
     public static void main(String[] args) {
     //feste
-      //name        _init_        up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------
-        fsk_2_0 = new FieldModel(false,true,true,true, 7, "t");   fkk_0_0 = new FieldModel(false,true,true,false, 1, "k");
-        fsk_4_0 = new FieldModel(false,true,true,true, 8, "t");   fkk_6_0 = new FieldModel(false,false,true,true, 1, "k");
-        fsk_0_2 = new FieldModel(true,true,true,false, 9, "t");   fkk_0_6 = new FieldModel(true,true,false,false, 1, "k");
-        fsk_2_2 = new FieldModel(true,true,true,false, 10, "t");  fkk_6_6 = new FieldModel(true,false,false,true, 1, "k");
-        fsk_4_2 = new FieldModel(false,true,true,true, 11, "t");
-        fsk_6_2 = new FieldModel(true,false,true,true, 12, "t");
-        fsk_0_4 = new FieldModel(true,true,true,false, 13, "t");
-        fsk_2_4 = new FieldModel(true,true,false,true, 14, "t");
-        fsk_4_4 = new FieldModel(true,false,true,true, 15, "t");
-        fsk_6_4 = new FieldModel(true,false,true,true, 16, "t");
-        fsk_2_6 = new FieldModel(true,true,false,true, 17, "t");
-        fsk_4_6 = new FieldModel(true,true,false,true, 18, "t");
+      
         
         
         
@@ -160,6 +148,9 @@ public class App extends Application {
         cardList.add(c19);      cardList.add(c20);      cardList.add(c21);
         cardList.add(c22);      cardList.add(c23);      cardList.add(c24);
 
+        //Karten werden zufällig auf dem Spielbrett verteilt
+        randomList();
+        
         launch();
     }
     
@@ -174,39 +165,84 @@ public class App extends Application {
     
     
     public static void randomList(){
+        //Stellen mit festen Karten
+        
         //X0 - y0 2 4 6
         //X2 - y0 2 4 6
         //X4 - y0 2 4 6
         //X6 - y0 2 4 6
+        
+        //Feste Karten werden in die passende Stelle eingefügt
+        //            name        _init_        up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------
+        field[0][0] = fkk_0_0 = new FieldModel(false,true,true,false, 1, "k");
+        field[6][0] = fkk_6_0 = new FieldModel(false,false,true,true, 1, "k");
+        field[0][6] = fkk_0_6 = new FieldModel(true,true,false,false, 1, "k");
+        field[6][6] = fkk_6_6 = new FieldModel(true,false,false,true, 1, "k");
+        field[2][0] = fsk_2_0 = new FieldModel(false,true,true,true, 7, "t");   
+        field[4][0] = fsk_4_0 = new FieldModel(false,true,true,true, 8, "t");   
+        field[0][2] = fsk_0_2 = new FieldModel(true,true,true,false, 9, "t");   
+        field[2][2] = fsk_2_2 = new FieldModel(true,true,true,false, 10, "t");  
+        field[4][2] = fsk_4_2 = new FieldModel(false,true,true,true, 11, "t");
+        field[6][2] = fsk_6_2 = new FieldModel(true,false,true,true, 12, "t");
+        field[0][4] = fsk_0_4 = new FieldModel(true,true,true,false, 13, "t");
+        field[2][4] = fsk_2_4 = new FieldModel(true,true,false,true, 14, "t");
+        field[4][4] = fsk_4_4 = new FieldModel(true,false,true,true, 15, "t");
+        field[6][4] = fsk_6_4 = new FieldModel(true,false,true,true, 16, "t");
+        field[2][6] = fsk_2_6 = new FieldModel(true,true,false,true, 17, "t");
+        field[4][6] = fsk_4_6 = new FieldModel(true,true,false,true, 18, "t");
 
+        //Werte für die for-each Schleife
         int X = 0;
         int Y = 0;
         boolean reserved = false;
         
-        
+         
+        for(FieldModel F : list){
+            //Zahl wird zufällig generiert
+            int Min = 0;
+            int Max = list.size() - 1;
+            int random = Min + (int)(Math.random() * ((Max - Min) + 1));
             
-        //for(FieldModel F : list){
-        //    if(X == 0 || X == 2 || X == 4 || X ==6){
-        //       if(X == 0 || X == 2 || X == 4 || X ==6){
-        //           reserved = true;
-        //        } 
-        //    }
-        //    
-        //    if(reserved == false){
-        //        field[X][Y] = F;
-        //        list.remove(F);
-        //    }       
-        //    
-        //    if(X == 6){
-        //        X = 0;
-        //        Y += 1;
-        //    }
-        //    else{
-        //    X += 1;
-        //    }
+            
+            //Stellen für feste Karten werden reserviert
+            if(X == 0 || X == 2 || X == 4 || X ==6){
+               if(X == 0 || X == 2 || X == 4 || X ==6){
+                   reserved = true;
+                } 
+            }
+            
+            //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
+            if(reserved == false){
+                FieldModel R = list.get(random);
+                field[X][Y] = R;
+                list.remove(R);
+            }       
+            
+            //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
+            if(X == 6 && Y == 6){
+                NewField = F;
+            }
+            else{
+                
+                //Der nächste Wert wird ausgewählt
+                if(X == 6){
+                    X = 0;
+                    Y += 1;
+                }
+                else{
+                X += 1;
+                }
+            }
+            
+            
+            
+            
+            
             
             
         }
+        
+    }
     
     
     
