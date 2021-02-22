@@ -21,19 +21,41 @@ public class App extends Application {
     private static FieldModel[][] field;
     private static FieldModel NewField;
     
-    //----------------------------------- DEKLARIERUNG FieldModel----------------------------------------
+    //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
+    private static FieldModel fsk_2_0;  private static FieldModel fkk_0_0;
+    private static FieldModel fsk_4_0;  private static FieldModel fkk_6_0;
+    private static FieldModel fsk_0_2;  private static FieldModel fkk_0_6;
+    private static FieldModel fsk_2_2;  private static FieldModel fkk_6_6;
+    private static FieldModel fsk_4_2;
+    private static FieldModel fsk_6_2;
+    private static FieldModel fsk_0_4;
+    private static FieldModel fsk_2_4;
+    private static FieldModel fsk_4_4;
+    private static FieldModel fsk_6_4;
+    private static FieldModel fsk_2_6;
+    private static FieldModel fsk_4_6;
+    
+    
+    
+    
+    //----------------------------------- DEKLARIERUNG FieldModel (lose)--------------------------
     private static FieldModel sk1;  private static FieldModel kk1;  private static FieldModel gk1;
     private static FieldModel sk2;  private static FieldModel kk2;  private static FieldModel gk2;
     private static FieldModel sk3;  private static FieldModel kk3;  private static FieldModel gk3;
     private static FieldModel sk4;  private static FieldModel kk4;  private static FieldModel gk4;
     private static FieldModel sk5;  private static FieldModel kk5;  private static FieldModel gk5;
     private static FieldModel sk6;  private static FieldModel kk6;  private static FieldModel gk6;
-    private static FieldModel sk7;  private static FieldModel kk7;  private static FieldModel gk7;
-    private static FieldModel sk8;  private static FieldModel kk8;  private static FieldModel gk8;
-    private static FieldModel sk9;  private static FieldModel kk9;  private static FieldModel gk9;
-    private static FieldModel sk10; private static FieldModel kk10; private static FieldModel gk10;
-    private static FieldModel sk11; private static FieldModel kk11; private static FieldModel gk11;
-    private static FieldModel sk12; private static FieldModel kk12; private static FieldModel gk12;
+                                    private static FieldModel kk7;  private static FieldModel gk7;
+                                    private static FieldModel kk8;  private static FieldModel gk8;
+                                    private static FieldModel kk9;  private static FieldModel gk9;
+                                    private static FieldModel kk10; private static FieldModel gk10;
+                                    private static FieldModel kk11; private static FieldModel gk11;
+                                    private static FieldModel kk12; private static FieldModel gk12;
+                                    private static FieldModel kk13;
+                                    private static FieldModel kk14;
+                                    private static FieldModel kk15;
+                                    private static FieldModel kk16;
+                                    
     
     //----------------------------------- DEKLARIERUNG CardModel----------------------------------------
     private static CardModel c1;    private static CardModel c2;    private static CardModel c3;
@@ -66,20 +88,44 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-      //name  _init_          up  right down left -->   -------------------------------------- SAME -----------------------------------------                                  
-        sk1 = new FieldModel(true,true,false,true);  kk1 = new FieldModel(false,true,true,false);  gk1 = new FieldModel(false,true,false,true); 
-        sk2 = new FieldModel(true,true,false,true);  kk2 = new FieldModel(false,true,true,false);  gk2 = new FieldModel(false,true,false,true);
-        sk3 = new FieldModel(true,true,false,true);  kk3 = new FieldModel(false,true,true,false);  gk3 = new FieldModel(false,true,false,true);
-        sk4 = new FieldModel(true,true,false,true);  kk4 = new FieldModel(false,true,true,false);  gk4 = new FieldModel(false,true,false,true);
-        sk5 = new FieldModel(true,true,false,true);  kk5 = new FieldModel(false,true,true,false);  gk5 = new FieldModel(false,true,false,true);
-        sk6 = new FieldModel(true,true,false,true);  kk6 = new FieldModel(false,true,true,false);  gk6 = new FieldModel(false,true,false,true);
-        sk7 = new FieldModel(true,true,false,true);  kk7 = new FieldModel(false,true,true,false);  gk7 = new FieldModel(false,true,false,true);
-        sk8 = new FieldModel(true,true,false,true);  kk8 = new FieldModel(false,true,true,false);  gk8 = new FieldModel(false,true,false,true);
-        sk9 = new FieldModel(true,true,false,true);  kk1 = new FieldModel(false,true,true,false);  gk9 = new FieldModel(false,true,false,true);
-        sk10 = new FieldModel(true,true,false,true); kk10 = new FieldModel(false,true,true,false); gk10 = new FieldModel(false,true,false,true);
-        sk11 = new FieldModel(true,true,false,true); kk11 = new FieldModel(false,true,true,false); gk11 = new FieldModel(false,true,false,true);
-        sk12 = new FieldModel(true,true,false,true); kk12 = new FieldModel(false,true,true,false); gk12 = new FieldModel(false,true,false,true); 
-
+    //feste
+      //name        _init_        up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------
+        fsk_2_0 = new FieldModel(false,true,true,true, 1, "t");   fkk_0_0 = new FieldModel(false,true,true,false, 1, "k");
+        fsk_4_0 = new FieldModel(false,true,true,true, 1, "t");   fkk_6_0 = new FieldModel(false,false,true,true, 1, "k");
+        fsk_0_2 = new FieldModel(true,true,true,false, 1, "t");   fkk_0_6 = new FieldModel(true,true,false,false, 1, "k");
+        fsk_2_2 = new FieldModel(true,true,true,false, 1, "t");   fkk_6_6 = new FieldModel(true,false,false,true, 1, "k");
+        fsk_4_2 = new FieldModel(false,true,true,true, 1, "t");
+        fsk_6_2 = new FieldModel(true,false,true,true, 1, "t");
+        fsk_0_4 = new FieldModel(true,true,true,false, 1, "t");
+        fsk_2_4 = new FieldModel(true,true,false,true, 1, "t");
+        fsk_4_4 = new FieldModel(true,false,true,true, 1, "t");
+        fsk_6_4 = new FieldModel(true,false,true,true, 1, "t");
+        fsk_2_6 = new FieldModel(true,true,false,true, 1, "t");
+        fsk_4_6 = new FieldModel(true,true,false,true, 1, "t");
+        
+        
+        
+        
+    //lose
+      //name        _init_    up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------                                  
+        sk1 = new FieldModel(true,true,false,true, 1, "t");  kk1 = new FieldModel(false,true,true,false, 1, "k");     gk1 = new FieldModel(false,true,false,true, 0, "g"); 
+        sk2 = new FieldModel(true,true,false,true, 2, "t");  kk2 = new FieldModel(false,true,true,false, 2, "k");     gk2 = new FieldModel(false,true,false,true, 0, "g");
+        sk3 = new FieldModel(true,true,false,true, 3, "t");  kk3 = new FieldModel(false,true,true,false, 3, "k");     gk3 = new FieldModel(false,true,false,true, 0, "g");
+        sk4 = new FieldModel(true,true,false,true, 4, "t");  kk4 = new FieldModel(false,true,true,false, 4, "k");     gk4 = new FieldModel(false,true,false,true, 0, "g");
+        sk5 = new FieldModel(true,true,false,true, 5, "t");  kk5 = new FieldModel(false,true,true,false, 5, "k");     gk5 = new FieldModel(false,true,false,true, 0, "g");
+        sk6 = new FieldModel(true,true,false,true, 6, "t");  kk6 = new FieldModel(false,true,true,false, 6, "k");     gk6 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk7 = new FieldModel(false,true,true,false, 0, "k");     gk7 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk8 = new FieldModel(false,true,true,false, 0, "k");     gk8 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk1 = new FieldModel(false,true,true,false, 0, "k");     gk9 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk10 = new FieldModel(false,true,true,false, 0, "k");    gk10 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk11 = new FieldModel(false,true,true,false, 0, "k");    gk11 = new FieldModel(false,true,false,true, 0, "g");
+                                                             kk12 = new FieldModel(false,true,true,false, 0, "k");    gk12 = new FieldModel(false,true,false,true, 0, "g"); 
+                                                             kk13 = new FieldModel(false,true,true,false, 0, "k");
+                                                             kk14 = new FieldModel(false,true,true,false, 0, "k");
+                                                             kk15 = new FieldModel(false,true,true,false, 0, "k");
+                                                             kk16 = new FieldModel(false,true,true,false, 0, "k");
+                                                             
+                                                                
         //fügt zu list hinzu
         list.add(sk1);  list.add(kk1);  list.add(gk1);
         list.add(sk2);  list.add(kk2);  list.add(gk2);
@@ -87,12 +133,12 @@ public class App extends Application {
         list.add(sk4);  list.add(kk4);  list.add(gk4);
         list.add(sk5);  list.add(kk5);  list.add(gk5);
         list.add(sk6);  list.add(kk6);  list.add(gk6);
-        list.add(sk7);  list.add(kk7);  list.add(gk7);
-        list.add(sk8);  list.add(kk8);  list.add(gk8);
-        list.add(sk9);  list.add(kk9);  list.add(gk9);
-        list.add(sk10); list.add(kk10); list.add(gk10);
-        list.add(sk11); list.add(kk11); list.add(gk11);
-        list.add(sk12); list.add(kk12); list.add(gk12);
+                        list.add(kk7);  list.add(gk7);
+                        list.add(kk8);  list.add(gk8);
+                        list.add(kk9);  list.add(gk9);
+                        list.add(kk10); list.add(gk10);
+                        list.add(kk11); list.add(gk11);
+                        list.add(kk12); list.add(gk12);
     
       //name              ID
         c1 = new CardModel(1);      c2 = new CardModel(2);      c3 = new CardModel(3);
