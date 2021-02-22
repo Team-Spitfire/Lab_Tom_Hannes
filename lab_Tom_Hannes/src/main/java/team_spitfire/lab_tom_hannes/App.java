@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class App extends Application {
 
     private static Scene scene;
-    private static ArrayList<FieldModel> list;
-    private static ArrayList<CardModel> cardList;
-    private static FieldModel[][] field;
+    private static ArrayList<FieldModel> list = new ArrayList<FieldModel> ();
+    private static ArrayList<CardModel> cardList = new ArrayList<CardModel> ();
+    private static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
     
     //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
@@ -71,9 +71,6 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
-        list = new ArrayList<FieldModel> ();
-        cardList = new ArrayList<CardModel> ();
-        field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
     }
