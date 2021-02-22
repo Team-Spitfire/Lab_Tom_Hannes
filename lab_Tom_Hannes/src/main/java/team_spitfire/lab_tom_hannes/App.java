@@ -149,7 +149,7 @@ public class App extends Application {
         cardList.add(c22);      cardList.add(c23);      cardList.add(c24);
 
         //Karten werden zufällig auf dem Spielbrett verteilt
-        randomList();
+        randomList(list);
         
         launch();
     }
@@ -164,7 +164,7 @@ public class App extends Application {
     }
     
     
-    public static void randomList(){
+    public static void randomList(ArrayList<FieldModel> Flist){
         //Stellen mit festen Karten
         
         //X0 - y0 2 4 6
@@ -197,10 +197,10 @@ public class App extends Application {
         boolean reserved = false;
         
          
-        for(FieldModel F : list){
+        for(FieldModel F : Flist){
             //Zahl wird zufällig generiert
             int Min = 0;
-            int Max = list.size() - 1;
+            int Max = Flist.size() - 1;
             int random = Min + (int)(Math.random() * ((Max - Min) + 1));
             
             
@@ -213,9 +213,9 @@ public class App extends Application {
             
             //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
             if(reserved == false){
-                FieldModel R = list.get(random);
+                FieldModel R = Flist.get(random);
                 field[X][Y] = R;
-                list.remove(R);
+                Flist.remove(R);
             }       
             
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
