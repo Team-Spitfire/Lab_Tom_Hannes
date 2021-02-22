@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class App extends Application {
 
     private static Scene scene;
-    private static ArrayList<FieldModel> list;
-    private static ArrayList<CardModel> cardList;
-    private static FieldModel[][] field;
+    private static ArrayList<FieldModel> list = new ArrayList<FieldModel> ();
+    private static ArrayList<CardModel> cardList = new ArrayList<CardModel> ();
+    private static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
     
     //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
@@ -71,9 +71,6 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("homeScreenView"), 640, 480);
-        list = new ArrayList<FieldModel> ();
-        cardList = new ArrayList<CardModel> ();
-        field = new FieldModel[7][7];
         stage.setScene(scene);
         stage.show();
     }
@@ -149,7 +146,7 @@ public class App extends Application {
         cardList.add(c22);      cardList.add(c23);      cardList.add(c24);
 
         //Karten werden zufällig auf dem Spielbrett verteilt
-        randomList();
+        randomList(list);
         
         launch();
     }
@@ -164,7 +161,7 @@ public class App extends Application {
     }
     
     
-    public static void randomList(){
+    public static void randomList(ArrayList<FieldModel> Flist){
         //Stellen mit festen Karten
         
         //X0 - y0 2 4 6
@@ -197,10 +194,10 @@ public class App extends Application {
         boolean reserved = false;
         
          
-        for(FieldModel F : list){
+        for(FieldModel F : Flist){
             //Zahl wird zufällig generiert
             int Min = 0;
-            int Max = list.size() - 1;
+            int Max = Flist.size() - 1;
             int random = Min + (int)(Math.random() * ((Max - Min) + 1));
             
             //Stellen für feste Karten werden reserviert
@@ -212,9 +209,9 @@ public class App extends Application {
             
             //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
             if(reserved == false){
-                FieldModel R = list.get(random);
+                FieldModel R = Flist.get(random);
                 field[X][Y] = R;
-                list.remove(R);
+                Flist.remove(R);
             }       
             
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
