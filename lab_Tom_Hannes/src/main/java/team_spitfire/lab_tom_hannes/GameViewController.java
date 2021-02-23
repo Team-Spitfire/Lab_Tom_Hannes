@@ -5,12 +5,14 @@
  */
 package team_spitfire.lab_tom_hannes;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 
@@ -89,6 +91,12 @@ public class GameViewController implements Initializable {
     private ImageView iv5_5;
     @FXML
     private ImageView ivNewField;
+    
+    private static int x = 0;
+    private static int y = 0;
+    private static String X = String.valueOf(x);
+    private static String Y = String.valueOf(y);
+    private static String Z = "iv_" + X + "_" + Y; 
 
     /**
      * Initializes the controller class.
@@ -96,16 +104,18 @@ public class GameViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void btnTurnRight(ActionEvent event) {
         App.getNewField().turnRight();
+        ivNewField.setRotate(+45);
     }
 
     @FXML
     private void btnTurnLeft(ActionEvent event) {
         App.getNewField().turnRight();
+        ivNewField.setRotate(-45);
     }
 
     @FXML
@@ -130,7 +140,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn63insR(ActionEvent event) {
-     App.PfeilX3Rechts(App.getNewField());
+        App.PfeilX3Rechts(App.getNewField());
     }
 
     @FXML
@@ -167,55 +177,90 @@ public class GameViewController implements Initializable {
     private void btn05insL(ActionEvent event) {
         App.PfeilX5Links(App.getNewField());
     }
-    
-    /**
-    @FXML
-    void keyPressed(KeyEvent event) throws IOException {
-        switch (event.getCode()) {
-            case W:
-                testPerson.setY(testPerson.getY() - 16);
-                checkPersonCoord();
-                break;
-            case S:
-                testPerson.setY(testPerson.getY() + 16);
-                checkPersonCoord();
-                break;
-            case A:
-                testPerson.setX(testPerson.getX() - 16);
-                checkPersonCoord();
-                break;
-            case D:
-                testPerson.setX(testPerson.getX() + 16);
-                checkPersonCoord();
-                break;
 
-            default:
-                break;
+    /**
+    * @FXML void keyPressed(KeyEvent event) throws IOException { switch
+    * (event.getCode()) { case W: testPerson.setY(testPerson.getY() - 16);
+    * checkPersonCoord(); break; case S: testPerson.setY(testPerson.getY() +
+    * 16); checkPersonCoord(); break; case A: testPerson.setX(testPerson.getX()
+    * - 16); checkPersonCoord(); break; case D:
+    *testPerson.setX(testPerson.getX() + 16); checkPersonCoord(); break;
+    *
+    * default: break; } }
+    */
+    public void checkTileOri(FieldModel f) {
+        int x = 0;
+        int y = 0;
+        
+         for(FieldModel F : App.list) {
+                
+            for(int a = 0; a <= 6; a++){
+                y = y + 1;
+                for (int b = 0; b <= 6; b++) {
+                    x = x + 1;       
+                    
+                    
+                    
+                    
+                    if(x != 0 && y != 0 || x != 2 && y != 0 || x != 4 && y != 0 || x != 6 && y != 0 || x != 0 && y != 2 || x != 2 && y != 2 || x != 4 && y != 2 || x != 6 && y != 2 ||x != 0 && y != 4 || x != 2 && y != 4 || x != 4 && y != 4 || x != 6 && y != 4 || x != 0 && y != 6 || x != 2 && y != 6 || x != 4 && y != 6 || x != 6 && y != 6){
+                        if (F.getTyp() == "t") {
+                       
+                            if (F.isUp() == true && F.isRight() == true && F.isDown() == true) {
+                                iv1_2.setRotate(45);
+                            } 
+                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
+                                iv1_2.setRotate(90);
+                            } 
+                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
+                                iv1_2.setRotate(-45);
+                            } 
+                            else {
+                                iv1_2.setRotate(0);
+                            }
+                        }     
+                    
+                        else if (F.getTyp() == "k") {
+                            File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/turn.png");
+                            Image image = new Image(file.toURI().toString());
+                            iv1_2.setImage(image);
+
+                            if (F.isUp() ==  false && F.isRight() == true && F.isDown() == true) {
+
+                                iv1_2.setRotate(45);
+                            } 
+                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
+                                iv1_2.setRotate(90);
+                            } 
+                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
+                                iv1_2.setRotate(-45);
+                            } 
+                            else {
+                                iv1_2.setRotate(0);
+                            }
+                        } 
+                        else if (F.getTyp() == "g") {
+                            File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/straight.png");
+                            Image image = new Image(file.toURI().toString());
+                            iv1_2.setImage(image);
+
+                            if (F.isUp() == true && F.isRight() == true && F.isDown() == true) {
+                                iv1_2.setRotate(45);
+                            } 
+                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
+                                iv1_2.setRotate(90);
+                            } 
+                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
+                                iv1_2.setRotate(-45);
+                            } 
+                            else {
+                                iv1_2.setRotate(0);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-    */
-    
-    for(FieldModel F : App.list){
-            if(F.getTyp() == "t"){
-                if(F.isUp() == true && F.isRight() == true && F.isDown() == true){
-                    
-                }
-                else if(F.isRight() == true && F.isDown() == true && F.isLeft() == true){
-                    
-                }
-                else if(F.isDown() == true && F.isLeft() == true && F.isUp() == true){
-                    
-                }
-                else(){
-                    
-                }
-            }
-            else if(F.getTyp() == "k"){
-                
-            }
-            else if(F.getTyp() == "g"){
-                
-            }
-            
-        }       
+        
 }
+

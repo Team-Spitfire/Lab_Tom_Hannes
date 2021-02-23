@@ -12,50 +12,47 @@ import javafx.scene.image.Image;
  * @author hanne
  */
 public class FieldModel {
+
     private boolean up;
     private boolean right;
     private boolean down;
     private boolean left;
     private int schatz;
     private String typ;
-    
 
     public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, String typ) {
         this.up = up;
         this.right = right;
         this.down = down;
-        this.left = left; 
+        this.left = left;
         this.schatz = schatz;
         this.typ = typ;
     }
-    
-   
-     
+
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
-    public void turnLeft(){
+    public void turnLeft() {
         boolean U = isUp();
         boolean R = isRight();
         boolean D = isDown();
         boolean L = isLeft();
-        
-        
+
         setUp(R);
         setRight(D);
         setDown(L);
         setLeft(U);
     }
-    
+
     //Karte wird nach rechts gedreht (booleabs für Öffnungen werden geändert)
-    public void turnRight(){
+    public void turnRight() {
         boolean U = isUp();
         boolean R = isRight();
         boolean D = isDown();
         boolean L = isLeft();
-        
+
         setUp(L);
         setLeft(D);
         setDown(R);
-        setRight(U);  
+        setRight(U);
     }
 
     public boolean isUp() {
@@ -105,5 +102,5 @@ public class FieldModel {
     public void setTyp(String typ) {
         this.typ = typ;
     }
-    
+
 }

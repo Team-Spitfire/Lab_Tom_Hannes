@@ -184,9 +184,9 @@
       </ImageView>
       <Button layoutX="481.0" layoutY="164.0" mnemonicParsing="false" onAction="#btnTurnRight" text="right" />
       <Button layoutX="441.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnTurnLeft" text="left" />
-      <Button layoutX="76.0" layoutY="12.0" mnemonicParsing="false" onAction="#btn10insU" text="Button" />
-      <Button layoutX="165.0" layoutY="12.0" mnemonicParsing="false" onAction="#btn30insU" text="Button" />
-      <Button layoutX="252.0" layoutY="12.0" mnemonicParsing="false" onAction="#btn50insU" text="Button" />
+      <Button layoutX="91.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn10insU" text="˅" />
+      <Button layoutX="179.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn30insU" text="˅" />
+      <Button layoutX="267.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn50insU" text="˅" />
       <Button layoutX="345.0" layoutY="100.0" mnemonicParsing="false" onAction="#btn61insR" text="&lt;" />
       <Button layoutX="345.0" layoutY="186.0" mnemonicParsing="false" onAction="#btn63insR" text="&lt;" />
       <Button layoutX="345.0" layoutY="274.0" mnemonicParsing="false" onAction="#btn65insR" text="&lt;" />
