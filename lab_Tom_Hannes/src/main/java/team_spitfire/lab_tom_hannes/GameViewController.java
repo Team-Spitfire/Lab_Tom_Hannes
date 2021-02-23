@@ -107,75 +107,89 @@ public class GameViewController implements Initializable {
     }
 
     @FXML
-    private void btnTurnRight(ActionEvent event) {
+    private void btnTurnRight(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
         ivNewField.setRotate(+45);
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btnTurnLeft(ActionEvent event) {
+    private void btnTurnLeft(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
         ivNewField.setRotate(-45);
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn10insU(ActionEvent event) {
+    private void btn10insU(ActionEvent event) throws IOException {
         App.PfeilY1Oben(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn30insU(ActionEvent event) {
+    private void btn30insU(ActionEvent event) throws IOException {
         App.PfeilY3Oben(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn50insU(ActionEvent event) {
+    private void btn50insU(ActionEvent event) throws IOException {
         App.PfeilY5Oben(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn61insR(ActionEvent event) {
+    private void btn61insR(ActionEvent event) throws IOException {
         App.PfeilX1Rechts(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn63insR(ActionEvent event) {
+    private void btn63insR(ActionEvent event) throws IOException {
         App.PfeilX3Rechts(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn65insR(ActionEvent event) {
+    private void btn65insR(ActionEvent event) throws IOException {
         App.PfeilX5Rechts(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn56insD(ActionEvent event) {
+    private void btn56insD(ActionEvent event) throws IOException {
         App.PfeilY5Unten(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn36insD(ActionEvent event) {
+    private void btn36insD(ActionEvent event) throws IOException {
         App.PfeilY3Unten(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn16insD(ActionEvent event) {
+    private void btn16insD(ActionEvent event) throws IOException {
         App.PfeilY1Unten(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn01insL(ActionEvent event) {
+    private void btn01insL(ActionEvent event) throws IOException {
         App.PfeilX1Links(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn03insL(ActionEvent event) {
+    private void btn03insL(ActionEvent event) throws IOException {
         App.PfeilX3Links(App.getNewField());
+        App.setRoot("gameView");
     }
 
     @FXML
-    private void btn05insL(ActionEvent event) {
+    private void btn05insL(ActionEvent event) throws IOException {
         App.PfeilX5Links(App.getNewField());
+        App.setRoot("gameView");
     }
 
     /**
