@@ -5,6 +5,7 @@
  */
 package team_spitfire.lab_tom_hannes;
 
+import java.io.File;
 import javafx.scene.image.Image;
 
 /**
@@ -18,16 +19,14 @@ public class FieldModel {
     private boolean down;
     private boolean left;
     private int schatz;
-    private String typ;
+    private String pngName;
+    private File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/" + pngName);
+    private Image image = new Image(file.toURI().toString());
+    private int rotation;
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, String typ) {
-        this.up = up;
-        this.right = right;
-        this.down = down;
-        this.left = left;
-        this.schatz = schatz;
-        this.typ = typ;
-    }
+    
+
+    
 
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft() {
@@ -102,5 +101,30 @@ public class FieldModel {
     public void setTyp(String typ) {
         this.typ = typ;
     }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public int getRotation() {
+        return rotation;
+    }
+
+    public void setRotation(int rotation) {
+        this.rotation = rotation;
+    }
+    
 
 }

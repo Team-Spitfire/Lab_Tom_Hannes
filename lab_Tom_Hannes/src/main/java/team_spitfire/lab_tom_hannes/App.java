@@ -122,40 +122,22 @@ public class App extends Application {
 
         //lose
         //name        _init_    up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------                                  
-        sk1 = new FieldModel(true, true, false, true, 1, "t");
-        kk1 = new FieldModel(false, true, true, false, 1, "k");
-        gk1 = new FieldModel(false, true, false, true, 0, "g");
-        sk2 = new FieldModel(true, true, false, true, 2, "t");
-        kk2 = new FieldModel(false, true, true, false, 2, "k");
-        gk2 = new FieldModel(false, true, false, true, 0, "g");
-        sk3 = new FieldModel(true, true, false, true, 3, "t");
-        kk3 = new FieldModel(false, true, true, false, 3, "k");
-        gk3 = new FieldModel(false, true, false, true, 0, "g");
-        sk4 = new FieldModel(true, true, false, true, 4, "t");
-        kk4 = new FieldModel(false, true, true, false, 4, "k");
-        gk4 = new FieldModel(false, true, false, true, 0, "g");
-        sk5 = new FieldModel(true, true, false, true, 5, "t");
-        kk5 = new FieldModel(false, true, true, false, 5, "k");
-        gk5 = new FieldModel(false, true, false, true, 0, "g");
-        sk6 = new FieldModel(true, true, false, true, 6, "t");
-        kk6 = new FieldModel(false, true, true, false, 6, "k");
-        gk6 = new FieldModel(false, true, false, true, 0, "g");
-        kk7 = new FieldModel(false, true, true, false, 0, "k");
-        gk7 = new FieldModel(false, true, false, true, 0, "g");
-        kk8 = new FieldModel(false, true, true, false, 0, "k");
-        gk8 = new FieldModel(false, true, false, true, 0, "g");
-        kk1 = new FieldModel(false, true, true, false, 0, "k");
-        gk9 = new FieldModel(false, true, false, true, 0, "g");
-        kk10 = new FieldModel(false, true, true, false, 0, "k");
-        gk10 = new FieldModel(false, true, false, true, 0, "g");
-        kk11 = new FieldModel(false, true, true, false, 0, "k");
-        gk11 = new FieldModel(false, true, false, true, 0, "g");
-        kk12 = new FieldModel(false, true, true, false, 0, "k");
-        gk12 = new FieldModel(false, true, false, true, 0, "g");
-        kk13 = new FieldModel(false, true, true, false, 0, "k");
-        kk14 = new FieldModel(false, true, true, false, 0, "k");
-        kk15 = new FieldModel(false, true, true, false, 0, "k");
-        kk16 = new FieldModel(false, true, true, false, 0, "k");
+        sk1 = new FieldModel(true, true, false, true, 1, "dragon.png", 0);      kk1 = new FieldModel(false, true, true, false, 7, "moth.png", 0);       gk1 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+        sk2 = new FieldModel(true, true, false, true, 2, "ghost.png", 0);       kk2 = new FieldModel(false, true, true, false, 8, "mouse.png", 0);      gk2 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+        sk3 = new FieldModel(true, true, false, true, 3, "gnome.png", 0);       kk3 = new FieldModel(false, true, true, false, 9, "owl.png", 0);        gk3 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+        sk4 = new FieldModel(true, true, false, true, 4, "poltergeist.png", 0); kk4 = new FieldModel(false, true, true, false, 10, "salamander.png", 0); gk4 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+        sk5 = new FieldModel(true, true, false, true, 5, "witch.png", 0);       kk5 = new FieldModel(false, true, true, false, 11, "scarab.png", 0);     gk5 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+        sk6 = new FieldModel(true, true, false, true, 6, "bat.png", 0);         kk6 = new FieldModel(false, true, true, false, 12, "spider.png", 0);     gk6 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk7 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk7 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk8 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk8 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk1 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk9 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk10 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk10 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk11 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk11 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk12 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk12 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
+                                                                                kk13 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
+                                                                                kk14 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
+                                                                                kk15 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
+                                                                                kk16 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
 
         //fügt zu list hinzu
         list.add(sk1);
@@ -264,23 +246,23 @@ public class App extends Application {
         //X4 - y0 2 4 6
         //X6 - y0 2 4 6
         //Feste Karten werden in die passende Stelle eingefügt
-        //            name        _init_        up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------
-        field[0][0] = fkk_0_0 = new FieldModel(false, true, true, false, 1, "k");
-        field[6][0] = fkk_6_0 = new FieldModel(false, false, true, true, 1, "k");
-        field[0][6] = fkk_0_6 = new FieldModel(true, true, false, false, 1, "k");
-        field[6][6] = fkk_6_6 = new FieldModel(true, false, false, true, 1, "k");
-        field[2][0] = fsk_2_0 = new FieldModel(false, true, true, true, 7, "t");
-        field[4][0] = fsk_4_0 = new FieldModel(false, true, true, true, 8, "t");
-        field[0][2] = fsk_0_2 = new FieldModel(true, true, true, false, 9, "t");
-        field[2][2] = fsk_2_2 = new FieldModel(true, true, true, false, 10, "t");
-        field[4][2] = fsk_4_2 = new FieldModel(false, true, true, true, 11, "t");
-        field[6][2] = fsk_6_2 = new FieldModel(true, false, true, true, 12, "t");
-        field[0][4] = fsk_0_4 = new FieldModel(true, true, true, false, 13, "t");
-        field[2][4] = fsk_2_4 = new FieldModel(true, true, false, true, 14, "t");
-        field[4][4] = fsk_4_4 = new FieldModel(true, false, true, true, 15, "t");
-        field[6][4] = fsk_6_4 = new FieldModel(true, false, true, true, 16, "t");
-        field[2][6] = fsk_2_6 = new FieldModel(true, true, false, true, 17, "t");
-        field[4][6] = fsk_4_6 = new FieldModel(true, true, false, true, 18, "t");
+        //            name        _init_        up  right down left      sI png  -->   -------------------------------------- SAME -----------------------------------------
+        field[0][0] = fkk_0_0 = new FieldModel(false, true, true, false, 0, "black.png", 0);
+        field[6][0] = fkk_6_0 = new FieldModel(false, false, true, true, 0, "black.png", 0);
+        field[0][6] = fkk_0_6 = new FieldModel(true, true, false, false, 0, "black.png", 0);
+        field[6][6] = fkk_6_6 = new FieldModel(true, false, false, true, 0, "black.png", 0);
+        field[2][0] = fsk_2_0 = new FieldModel(false, true, true, true, 12, "black.png", 0);
+        field[4][0] = fsk_4_0 = new FieldModel(false, true, true, true, 13, "black.png", 0);
+        field[0][2] = fsk_0_2 = new FieldModel(true, true, true, false, 14, "black.png", 0);
+        field[2][2] = fsk_2_2 = new FieldModel(true, true, true, false, 16, "black.png", 0);
+        field[4][2] = fsk_4_2 = new FieldModel(false, true, true, true, 17, "black.png", 0);
+        field[6][2] = fsk_6_2 = new FieldModel(true, false, true, true, 18, "black.png", 0);
+        field[0][4] = fsk_0_4 = new FieldModel(true, true, true, false, 19, "black.png", 0);
+        field[2][4] = fsk_2_4 = new FieldModel(true, true, false, true, 20, "black.png", 0);
+        field[4][4] = fsk_4_4 = new FieldModel(true, false, true, true, 21, "black.png", 0);
+        field[6][4] = fsk_6_4 = new FieldModel(true, false, true, true, 22, "black.png", 0);
+        field[2][6] = fsk_2_6 = new FieldModel(true, true, false, true, 23, "black.png", 0);
+        field[4][6] = fsk_4_6 = new FieldModel(true, true, false, true, 24, "black.png", 0);
 
         //Werte für die for-each Schleife
         int X = 0;
