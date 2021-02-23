@@ -24,6 +24,16 @@ public class FieldModel {
     private Image image = new Image(file.toURI().toString());
     private int rotation;
 
+    public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, String pngName, int rotation) {
+        this.up = up;
+        this.right = right;
+        this.down = down;
+        this.left = left;
+        this.schatz = schatz;
+        this.pngName = pngName;
+        this.rotation = rotation;
+    }
+
     
 
     
@@ -94,13 +104,14 @@ public class FieldModel {
         this.schatz = schatz;
     }
 
-    public String getTyp() {
-        return typ;
+    public String getPngName() {
+        return pngName;
     }
 
-    public void setTyp(String typ) {
-        this.typ = typ;
+    public void setPngName(String pngName) {
+        this.pngName = pngName;
     }
+
 
     public File getFile() {
         return file;
