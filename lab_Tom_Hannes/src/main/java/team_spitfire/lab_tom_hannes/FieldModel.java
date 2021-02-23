@@ -34,10 +34,6 @@ public class FieldModel {
         this.rotation = rotation;
     }
 
-    
-
-    
-
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft() {
         boolean U = isUp();
@@ -112,7 +108,6 @@ public class FieldModel {
         this.pngName = pngName;
     }
 
-
     public File getFile() {
         return file;
     }
@@ -136,6 +131,5 @@ public class FieldModel {
     public void setRotation(int rotation) {
         this.rotation = rotation;
     }
-    
 
 }
