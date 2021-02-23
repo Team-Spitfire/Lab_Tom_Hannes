@@ -8,6 +8,7 @@ package team_spitfire.lab_tom_hannes;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -92,18 +93,24 @@ public class GameViewController implements Initializable {
     @FXML
     private ImageView ivNewField;
     
-    private static int x = 0;
-    private static int y = 0;
-    private static String X = String.valueOf(x);
-    private static String Y = String.valueOf(y);
-    private static String Z = "iv_" + X + "_" + Y; 
+   
+    ArrayList<ImageView> imageviews;
+    ArrayList<Image> images;
+    ArrayList<Integer> rotations;
+    
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        imageviews = new ArrayList<ImageView> ();
+        images = new ArrayList<Image> ();
+        rotations = new ArrayList<Integer> ();
+        addToList();
+        checkTileOri();
     }
 
     @FXML
@@ -192,89 +199,48 @@ public class GameViewController implements Initializable {
         App.setRoot("gameView");
     }
 
-    /**
-    * @FXML void keyPressed(KeyEvent event) throws IOException { switch
-    * (event.getCode()) { case W: testPerson.setY(testPerson.getY() - 16);
-    * checkPersonCoord(); break; case S: testPerson.setY(testPerson.getY() +
-    * 16); checkPersonCoord(); break; case A: testPerson.setX(testPerson.getX()
-    * - 16); checkPersonCoord(); break; case D:
-    *testPerson.setX(testPerson.getX() + 16); checkPersonCoord(); break;
-    *
-    * default: break; } }
-    */
-    public void checkTileOri(FieldModel f) {
-        int x = 0;
-        int y = 0;
-        
-         for(FieldModel F : App.list) {
-                
-            for(int a = 0; a <= 6; a++){
-                y = y + 1;
-                for (int b = 0; b <= 6; b++) {
-                    x = x + 1;       
-                    
-                    
-                    
-                    
-                    if(x != 0 && y != 0 || x != 2 && y != 0 || x != 4 && y != 0 || x != 6 && y != 0 || x != 0 && y != 2 || x != 2 && y != 2 || x != 4 && y != 2 || x != 6 && y != 2 ||x != 0 && y != 4 || x != 2 && y != 4 || x != 4 && y != 4 || x != 6 && y != 4 || x != 0 && y != 6 || x != 2 && y != 6 || x != 4 && y != 6 || x != 6 && y != 6){
-                        if (F.getTyp() == "t") {
-                       
-                            if (F.isUp() == true && F.isRight() == true && F.isDown() == true) {
-                                iv1_2.setRotate(45);
-                            } 
-                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
-                                iv1_2.setRotate(90);
-                            } 
-                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
-                                iv1_2.setRotate(-45);
-                            } 
-                            else {
-                                iv1_2.setRotate(0);
-                            }
-                        }     
-                    
-                        else if (F.getTyp() == "k") {
-                            File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/turn.png");
-                            Image image = new Image(file.toURI().toString());
-                            iv1_2.setImage(image);
-
-                            if (F.isUp() ==  false && F.isRight() == true && F.isDown() == true) {
-
-                                iv1_2.setRotate(45);
-                            } 
-                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
-                                iv1_2.setRotate(90);
-                            } 
-                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
-                                iv1_2.setRotate(-45);
-                            } 
-                            else {
-                                iv1_2.setRotate(0);
-                            }
-                        } 
-                        else if (F.getTyp() == "g") {
-                            File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/straight.png");
-                            Image image = new Image(file.toURI().toString());
-                            iv1_2.setImage(image);
-
-                            if (F.isUp() == true && F.isRight() == true && F.isDown() == true) {
-                                iv1_2.setRotate(45);
-                            } 
-                            else if (F.isRight() == true && F.isDown() == true && F.isLeft() == true) {
-                                iv1_2.setRotate(90);
-                            } 
-                            else if (F.isDown() == true && F.isLeft() == true && F.isUp() == true) {
-                                iv1_2.setRotate(-45);
-                            } 
-                            else {
-                                iv1_2.setRotate(0);
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    public void addToList(){
+        imageviews.add(iv0_1);
+        imageviews.add(iv0_3);
+        imageviews.add(iv0_5);
+        imageviews.add(iv1_1);
+        imageviews.add(iv1_2);
+        imageviews.add(iv1_3);
+        imageviews.add(iv1_4);
+        imageviews.add(iv1_5);
+        imageviews.add(iv2_1);
+        imageviews.add(iv2_3);
+        imageviews.add(iv2_5);
+        imageviews.add(iv3_1);
+        imageviews.add(iv5_2);
+        imageviews.add(iv5_3);
+        imageviews.add(iv5_4);
+        imageviews.add(iv5_5);
+        imageviews.add(iv5_6);
+        imageviews.add(iv6_1);
+        imageviews.add(iv6_3);
+        imageviews.add(iv6_5);
     }
+    
+    public void checkTileOri() {
         
+        for(FieldModel F : App.list) {
+            //Image i = F.getImage();
+            //int r = F.getRotation();
+            //if(F.getImage().getUrl() != "file:src/main/resources/team_spitfire/lab_tom_hannes/balck.png"){
+                images.add(F.getImage());
+                rotations.add(F.getRotation());     
+            //}
+            //else{
+            //}
+        }
+        
+        for(ImageView I : imageviews) {
+            I.setImage(images.get(0));
+            I.setRotate(rotations.get(0));
+            images.remove(0); 
+            rotations.remove(0);
+        }
+    }    
 }
 
