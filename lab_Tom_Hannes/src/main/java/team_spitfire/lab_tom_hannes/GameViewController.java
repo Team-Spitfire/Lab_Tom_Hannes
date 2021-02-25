@@ -253,6 +253,10 @@ public class GameViewController implements Initializable {
         
         while(exit = false){
             FieldModel F = App.field[X][Y];
+            Image i = F.getImg();
+            int r = F.getRotation();
+            images.add(i);
+            rotations.add(r);
             if(X == 6 && Y == 6){
                 exit = true;
             }
@@ -266,12 +270,6 @@ public class GameViewController implements Initializable {
                 }
             }
         }        
-                
-                
-                
-            
-        
-        
         
         for(ImageView I : imageviews) {
             System.out.println("test1");
@@ -281,6 +279,5 @@ public class GameViewController implements Initializable {
             rotations.remove(0);
         }  
     }    
-    
 }
 
