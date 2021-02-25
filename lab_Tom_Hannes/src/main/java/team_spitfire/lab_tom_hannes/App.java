@@ -339,6 +339,30 @@ public class App extends Application {
 
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
             if (X == 6 && Y == 6) {
+                //Fix start
+                boolean fixed = false;
+                int fX = 0;
+                int fY = 0;
+                
+                while(fixed == false){
+                    
+                    if(field[fX][fY] == null){
+                        field[fX][fY] = list.get(0);
+                        fixed = true;
+                    }
+                    
+                    
+                    //
+                    if (fX == 6) {
+                    fX = 0;
+                    fY += 1;
+                    } 
+                    else {
+                    fX += 1;
+                    }
+                }
+                //Fix ende
+                
                 NewField = list.get(0);
                 System.out.println(NewField);
                 done = true;
