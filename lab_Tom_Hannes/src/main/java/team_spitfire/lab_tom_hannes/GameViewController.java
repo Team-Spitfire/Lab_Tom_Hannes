@@ -127,7 +127,13 @@ public class GameViewController implements Initializable {
         images = new ArrayList<Image> ();
         rotations = new ArrayList<Integer> ();
         addToList();
-        //checkTileOri();
+        
+        
+        try {
+            checkTileOri();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     @FXML
@@ -224,6 +230,7 @@ public class GameViewController implements Initializable {
         }
     }
     
+    @FXML
     void keyPressed(KeyEvent event) throws IOException {
         switch (event.getCode()) {
             case W:
@@ -383,7 +390,7 @@ public class GameViewController implements Initializable {
     }
     
     
-    public void checkTileOri() {
+    public void checkTileOri() throws IOException {
         int X = 0;
         int Y = 0;
         boolean exit = false;
@@ -416,6 +423,7 @@ public class GameViewController implements Initializable {
             images.remove(0); 
             rotations.remove(0);
         }  
+        App.setRoot("gameView");
     }  
     
 
