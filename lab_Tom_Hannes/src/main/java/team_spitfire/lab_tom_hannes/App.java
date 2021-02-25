@@ -22,6 +22,13 @@ public class App extends Application {
     public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
     
+    //   Deklarierung der Spieler            init         P x y
+    public static PlayerModel redPlayer = new PlayerModel(0,0,0);
+    public static PlayerModel yellowPlayer = new PlayerModel(0,6,0);
+    public static PlayerModel greenPlayer = new PlayerModel(0,0,6);
+    public static PlayerModel bluePlayer = new PlayerModel(0,6,6);
+    
+    //Files für die Bilder in FieldModel          "path"
     public static File file0 = new File("src/main/resources/tiles/black.png");
     public static File file13 = new File("src/main/resources/tiles/dragon.png");
     public static File file14 = new File("src/main/resources/tiles/ghost.png");
@@ -39,9 +46,9 @@ public class App extends Application {
     public static File fileG = new File("src/main/resources/tiles/straight.png");
     
 
-    //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
+    
 
-    //----------------------------------- DEKLARIERUNG FieldModel (lose)--------------------------
+    //DEKLARIERUNG FieldModel (lose)
     private static FieldModel sk1;
     private static FieldModel kk1;
     private static FieldModel gk1;
@@ -78,7 +85,7 @@ public class App extends Application {
     private static FieldModel kk15;
     private static FieldModel kk16;
 
-    //----------------------------------- DEKLARIERUNG CardModel----------------------------------------
+    //DEKLARIERUNG CardModel
     private static CardModel c1;
     private static CardModel c2;
     private static CardModel c3;
@@ -126,10 +133,7 @@ public class App extends Application {
     
     
     public static void main(String[] args) {
-        //feste
-
-        //lose
-        //name        _init_  up  right down left  sI      Bild                 file      rotation  -->   -------------------------------------- SAME -----------------------------------------                                  
+        //name        _init_  up  right down left  sI      Bild          files siehe z. 31      rotation  -->   -------------------------------------- SAME -----------------------------------------                                  
         sk1 = new FieldModel(true, true, false, true, 13, new Image(file13.toURI().toString()), 0);         kk1 = new FieldModel(false, true, true, false, 19, new Image(file19.toURI().toString()), 0);   gk1 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
         sk2 = new FieldModel(true, true, false, true, 14, new Image(file14.toURI().toString()), 0);         kk2 = new FieldModel(false, true, true, false, 20, new Image(file20.toURI().toString()), 0);   gk2 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
         sk3 = new FieldModel(true, true, false, true, 15, new Image(file15.toURI().toString()), 0);         kk3 = new FieldModel(false, true, true, false, 21, new Image(file21.toURI().toString()), 0);   gk3 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
@@ -185,7 +189,7 @@ public class App extends Application {
         list.add(kk16);
 
 
-        //name              ID
+        //name             ID
         c1 = new CardModel(1);
         c2 = new CardModel(2);
         c3 = new CardModel(3);
