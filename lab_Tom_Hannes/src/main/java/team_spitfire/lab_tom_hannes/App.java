@@ -232,7 +232,32 @@ public class App extends Application {
 
         //Karten werden zufällig auf dem Spielbrett verteilt
         randomList();
+        
+        int X = 0;
+        int Y = 0;
+        
+        boolean done = false;
+        while(done == false) {
+            
+            System.out.println("X" + String.valueOf(X) + " " + "Y" + String.valueOf(Y));
+            System.out.println(field[X][Y]);
+            
 
+            //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
+            if (X == 6 && Y == 6) {
+                NewField = list.get(0);
+                done = true;
+            } else {
+
+                //Der nächste Wert wird ausgewählt
+                if (X == 6) {
+                    X = 0;
+                    Y += 1;
+                } else {
+                    X += 1;
+                }
+            }
+        }
 
         launch();
     }
