@@ -245,7 +245,6 @@ public class App extends Application {
 
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
             if (X == 6 && Y == 6) {
-                NewField = list.get(0);
                 done = true;
             } else {
 
@@ -313,13 +312,14 @@ public class App extends Application {
 
             //Stellen für feste Karten werden reserviert
             if (X == 0 || X == 2 || X == 4 || X == 6) {
-                if (X == 0 || X == 2 || X == 4 || X == 6) {
+                if (Y == 0 || Y == 2 || Y == 4 || Y == 6) {
                     reserved = true;
                 }
             }
 
             //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
-            if (reserved == false) {
+            if (reserved == false && list.size() > 1) {
+                System.out.println(list.size());
                 FieldModel R = list.get(random);
                 field[X][Y] = R;
                 list.remove(R);
