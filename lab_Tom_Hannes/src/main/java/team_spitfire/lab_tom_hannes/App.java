@@ -275,8 +275,9 @@ public class App extends Application {
         int X = 0;
         int Y = 0;
         boolean reserved = false;
+        boolean done = false;
 
-        for (FieldModel F : Flist) {
+        while(done == false) {
             reserved = false;
             
             //Zahl wird zufällig generiert
@@ -300,7 +301,8 @@ public class App extends Application {
 
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
             if (X == 6 && Y == 6) {
-                NewField = F;
+                NewField = Flist.get(0);
+                done = true;
             } else {
 
                 //Der nächste Wert wird ausgewählt
