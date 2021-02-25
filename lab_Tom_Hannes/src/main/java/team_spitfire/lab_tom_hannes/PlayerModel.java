@@ -12,26 +12,19 @@ import java.util.ArrayList;
  * @author hanne
  */
 public class PlayerModel {
-    private String name;
+    
     private int punkte;
     private int posX;
     private int posY;
     ArrayList<CardModel> hand = new ArrayList<CardModel> ();
 
-    public PlayerModel(String name, int punkte, int posX, int posY) {
-        this.name = name;
+    public PlayerModel(int punkte, int posX, int posY) {
         this.punkte = punkte;
         this.posX = posX;
         this.posY = posY;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    
 
     public int getPunkte() {
         return punkte;
