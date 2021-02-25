@@ -244,30 +244,30 @@ public class App extends Application {
         //Karten werden zufällig auf dem Spielbrett verteilt
         randomList();
         
-        int X = 0;
-        int Y = 0;
+        //int X = 0;
+        //int Y = 0;
         
-        boolean done = false;
-        while(done == false) {
+        //boolean done = false;
+        //while(done == false) {
             
-            System.out.println("X" + String.valueOf(X) + " " + "Y" + String.valueOf(Y));
-            System.out.println(field[X][Y]);
+            //System.out.println("X" + String.valueOf(X) + " " + "Y" + String.valueOf(Y));
+            //System.out.println(field[X][Y]);
             
 
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
-            if (X == 6 && Y == 6) {
-                done = true;
-            } else {
+            //if (X == 6 && Y == 6) {
+               // done = true;
+            //} else {
 
                 //Der nächste Wert wird ausgewählt
-                if (X == 6) {
-                    X = 0;
-                    Y += 1;
-                } else {
-                    X += 1;
-                }
-            }
-        }
+            //    if (X == 6) {
+                    //X = 0;
+                    //Y += 1;
+                //} else {
+                    //X += 1;
+                //}
+            //}
+        //}
 
         launch();
     }
@@ -331,7 +331,7 @@ public class App extends Application {
 
             //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
             if (reserved == false) {
-                System.out.println(list.size());
+                //System.out.println(list.size());
                 FieldModel R = list.get(random);
                 field[X][Y] = R;
                 list.remove(R);
@@ -364,7 +364,8 @@ public class App extends Application {
                 //Fix ende
                 
                 NewField = list.get(0);
-                System.out.println(NewField);
+                //System.out.println(NewField);
+                System.out.println(list.size());
                 done = true;
             } 
             else {
