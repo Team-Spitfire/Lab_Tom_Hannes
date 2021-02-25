@@ -23,21 +23,20 @@ public class App extends Application {
     private static FieldModel NewField;
     
     public static File file0 = new File("src/main/resources/tiles/black.png");
-    private static File file13 = new File("src/main/resources/tiles/black.png");
-    private static File file14 = new File("src/main/resources/tiles/black.png");
-    private static File file15 = new File("src/main/resources/tiles/black.png");
-    private static File file16 = new File("src/main/resources/tiles/black.png");
-    private static File file17 = new File("src/main/resources/tiles/black.png");
-    private static File file18 = new File("src/main/resources/tiles/black.png");
-    private static File file19 = new File("src/main/resources/tiles/black.png");
-    private static File file20 = new File("src/main/resources/tiles/black.png");
-    private static File file21 = new File("src/main/resources/tiles/black.png");
-    private static File file22 = new File("src/main/resources/tiles/black.png");
-    private static File file23 = new File("src/main/resources/tiles/black.png");
-    private static File file24 = new File("src/main/resources/tiles/black.png");
-    private static File fileT = new File("src/main/resources/tiles/black.png");
-    private static File fileK = new File("src/main/resources/tiles/turn.png");
-    private static File fileG = new File("src/main/resources/tiles/straight.png");
+    public static File file13 = new File("src/main/resources/tiles/dragon.png");
+    public static File file14 = new File("src/main/resources/tiles/ghost.png");
+    public static File file15 = new File("src/main/resources/tiles/gnome.png");
+    public static File file16 = new File("src/main/resources/tiles/poltergeist.png");
+    public static File file17 = new File("src/main/resources/tiles/witch.png");
+    public static File file18 = new File("src/main/resources/tiles/bat.png");
+    public static File file19 = new File("src/main/resources/tiles/moth.png");
+    public static File file20 = new File("src/main/resources/tiles/mouse.png");
+    public static File file21 = new File("src/main/resources/tiles/owl.png");
+    public static File file22 = new File("src/main/resources/tiles/salamander.png");
+    public static File file23 = new File("src/main/resources/tiles/scarab.png");
+    public static File file24 = new File("src/main/resources/tiles/spider.png");
+    public static File fileK = new File("src/main/resources/tiles/turn.png");
+    public static File fileG = new File("src/main/resources/tiles/straight.png");
     
 
     //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
