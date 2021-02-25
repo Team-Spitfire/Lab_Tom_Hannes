@@ -177,6 +177,11 @@ public class App extends Application {
         list.add(gk11);
         list.add(kk12);
         list.add(gk12);
+        list.add(kk13);
+        list.add(kk14);
+        list.add(kk15);
+        list.add(kk16);
+
 
         //name              ID
         c1 = new CardModel(1);
