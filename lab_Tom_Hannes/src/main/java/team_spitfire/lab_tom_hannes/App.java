@@ -277,6 +277,8 @@ public class App extends Application {
         boolean reserved = false;
 
         for (FieldModel F : Flist) {
+            reserved = false;
+            
             //Zahl wird zufällig generiert
             int Min = 0;
             int Max = Flist.size() - 1;
