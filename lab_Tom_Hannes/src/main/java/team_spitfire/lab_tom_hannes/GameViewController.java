@@ -106,7 +106,13 @@ public class GameViewController implements Initializable {
     private static ArrayList<Image> images;
     private static ArrayList<Integer> rotations;
 
-    private static int currPayer;
+    private static int curPlayer;
+    private static PlayerModel cPlayer;
+    
+    private static boolean boundsUp;
+    private static boolean boundsDown;
+    private static boolean boundsRight;
+    private static boolean boundsLeft;
     
     
 
@@ -209,24 +215,111 @@ public class GameViewController implements Initializable {
         App.setRoot("gameView");
     }
     
+    @FXML
+    private void btnEndTurn(ActionEvent event) {
+        curPlayer = curPlayer + 1;
+        if(curPlayer == 4){
+            curPlayer = 1;
+        }
+    }
+    
     void keyPressed(KeyEvent event) throws IOException {
         switch (event.getCode()) {
             case W:
-                if(currPayer == 1)
+                checkBounds();
+                // welcher Spieler ist dran, in alle richtugen offen ist 
+                // versetz das Bild und die position des Spieler auf dem Grid
+                if(curPlayer == 1 && boundsUp == true){
                 ivRedPlayer.setY(ivRedPlayer.getY() - 16);
-                //checkPersonCoord();
+                App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                boundsUp = false;
+                }
+                if(curPlayer == 2 && boundsUp == true){
+                ivYellowPlayer.setY(ivYellowPlayer.getY() - 16);
+                App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                boundsUp = false;
+                }
+                if(curPlayer == 3 && boundsUp == true){
+                ivGreenPlayer.setY(ivGreenPlayer.getY() - 16);
+                App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                boundsUp = false;
+                }
+                if(curPlayer == 4 && boundsUp == true){
+                ivBluePlayer.setY(ivBluePlayer.getY() - 16);
+                App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                boundsUp = false;
+                }
+
                 break;
             case S:
+                checkBounds();
+                if(curPlayer == 1 && boundsDown == true){
                 ivRedPlayer.setY(ivRedPlayer.getY() + 16);
-                //checkPersonCoord();
+                App.redPlayer.setPosY(App.redPlayer.getPosY() + 1);
+                boundsDown = false;
+                }
+                if(curPlayer == 2 && boundsDown == true){
+                ivYellowPlayer.setY(ivYellowPlayer.getY() + 16);
+                App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() + 1);
+                boundsDown = false;
+                }
+                if(curPlayer == 3 && boundsDown == true){
+                ivGreenPlayer.setY(ivGreenPlayer.getY() + 16);
+                App.greenPlayer.setPosY(App.greenPlayer.getPosY() + 1);
+                boundsDown = false;
+                }
+                if(curPlayer == 4 && boundsDown == true){
+                ivBluePlayer.setY(ivBluePlayer.getY() + 16);
+                App.bluePlayer.setPosY(App.bluePlayer.getPosY() + 1);
+                boundsDown = false;
+                }
+                
                 break;
             case A:
+                checkBounds();
+                if(curPlayer == 1 && boundsLeft == true){
                 ivRedPlayer.setX(ivRedPlayer.getX() - 16);
-                //checkPersonCoord();
+                App.redPlayer.setPosX(App.redPlayer.getPosX() - 1);
+                boundsLeft = false;
+                }
+                else if(curPlayer == 2 && boundsLeft == true){
+                ivYellowPlayer.setX(ivYellowPlayer.getY() - 16);
+                App.yellowPlayer.setPosX(App.yellowPlayer.getPosX() - 1);
+                boundsLeft = false;
+                }
+                else if(curPlayer == 3 && boundsLeft == true){
+                ivGreenPlayer.setX(ivGreenPlayer.getX() - 16);
+                App.greenPlayer.setPosX(App.greenPlayer.getPosX() - 1);
+                boundsLeft = false;
+                }
+                else if(curPlayer == 4 && boundsLeft == true){
+                ivBluePlayer.setX(ivBluePlayer.getX() - 16);
+                App.bluePlayer.setPosX(App.bluePlayer.getPosX() - 1);
+                boundsLeft = false;
+                }
                 break;
             case D:
+                checkBounds();
+                if(curPlayer == 1 && boundsRight == true){
                 ivRedPlayer.setX(ivRedPlayer.getX() + 16);
-                //checkPersonCoord();
+                App.redPlayer.setPosX(App.redPlayer.getPosX() + 1);
+                boundsRight = false;
+                }
+                else if(curPlayer == 2 && boundsRight == true){
+                ivYellowPlayer.setX(ivRedPlayer.getY() + 16);
+                App.yellowPlayer.setPosX(App.yellowPlayer.getPosX() + 1);
+                boundsRight = false;
+                }
+                else if(curPlayer == 3 && boundsRight == true){
+                ivGreenPlayer.setX(ivRedPlayer.getX() + 16);
+                App.greenPlayer.setPosX(App.greenPlayer.getPosX() + 1);
+                boundsRight = false;
+                }
+                else if(curPlayer == 4 && boundsRight == true){
+                ivBluePlayer.setX(ivRedPlayer.getX() + 16);
+                App.bluePlayer.setPosX(App.bluePlayer.getPosX() + 1);
+                boundsRight = false;
+                }
                 break;
 
             default:
@@ -234,7 +327,56 @@ public class GameViewController implements Initializable {
         }
     }
 
-    public void checkTurn(){
+    public void checkBounds(){
+        
+        if(curPlayer == 1){
+            cPlayer = App.redPlayer;
+        }
+        else if(curPlayer == 2){
+            cPlayer = App.yellowPlayer;
+        }
+        else if(curPlayer == 3){
+            cPlayer = App.greenPlayer;
+        }
+        else if(curPlayer == 4){
+            cPlayer = App.bluePlayer;
+        }
+        
+        int x = cPlayer.getPosX();
+        int y = cPlayer.getPosY();
+
+        //Alle Fieldmodels die den Spieler Umgeben
+        FieldModel c = App.field[x][y];
+        FieldModel d = App.field[x - 1][y];
+        FieldModel u = App.field[x + 1][y];
+        FieldModel l = App.field[x][y - 1];
+        FieldModel r = App.field[x][y + 1];
+
+        //Alle Booleans des Feldes wo der Spieler sich drauf befindet
+        boolean cu = c.isUp();
+        boolean cd = c.isDown();
+        boolean cl = c.isLeft();
+        boolean cr = c.isRight();
+
+        //Alle Booleans der umgebenden Felder
+        boolean ud = u.isDown();
+        boolean du = d.isUp();
+        boolean lr = l.isRight();
+        boolean rl = r.isLeft();
+
+        //guckt ob die Übergänge offen sind
+        if(cu && ud == true){
+            boundsUp = true;
+        }
+        else if(cd && du == true){
+            boundsDown = true;
+        }
+        else if(cl && lr == true){
+            boundsLeft = true;
+        }
+        else if(cr && rl == true){
+            boundsRight = true;
+        }
         
         
     }
@@ -311,8 +453,6 @@ public class GameViewController implements Initializable {
     }  
     */
 
-    @FXML
-    private void btnEndTurn(ActionEvent event) {
-    }
+    
 }
 
