@@ -40,22 +40,6 @@ public class App extends Application {
     
 
     //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
-    private static FieldModel fsk_2_0;
-    private static FieldModel fkk_0_0;
-    private static FieldModel fsk_4_0;
-    private static FieldModel fkk_6_0;
-    private static FieldModel fsk_0_2;
-    private static FieldModel fkk_0_6;
-    private static FieldModel fsk_2_2;
-    private static FieldModel fkk_6_6;
-    private static FieldModel fsk_4_2;
-    private static FieldModel fsk_6_2;
-    private static FieldModel fsk_0_4;
-    private static FieldModel fsk_2_4;
-    private static FieldModel fsk_4_4;
-    private static FieldModel fsk_6_4;
-    private static FieldModel fsk_2_6;
-    private static FieldModel fsk_4_6;
 
     //----------------------------------- DEKLARIERUNG FieldModel (lose)--------------------------
     private static FieldModel sk1;
