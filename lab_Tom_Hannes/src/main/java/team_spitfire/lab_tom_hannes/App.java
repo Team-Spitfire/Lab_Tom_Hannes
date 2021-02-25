@@ -19,7 +19,7 @@ public class App extends Application {
     private static Scene scene;
     public static ArrayList<FieldModel> list = new ArrayList<FieldModel>();
     private static ArrayList<CardModel> cardList = new ArrayList<CardModel>();
-    private static FieldModel[][] field = new FieldModel[7][7];
+    public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
     
     public static File file0 = new File("src/main/resources/tiles/black.png");

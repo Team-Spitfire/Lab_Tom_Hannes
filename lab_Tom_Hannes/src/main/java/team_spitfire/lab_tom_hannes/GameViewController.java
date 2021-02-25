@@ -239,7 +239,7 @@ public class GameViewController implements Initializable {
       
     public void checkTileOri() {
         
-        for(FieldModel F : App.list) {
+        for(FieldModel F : App.field) {
             Image i = F.getImg();
             int r = F.getRotation();
             if(F.getImg().getUrl().equals(App.file0)){
