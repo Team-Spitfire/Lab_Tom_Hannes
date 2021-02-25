@@ -251,12 +251,13 @@ public class GameViewController implements Initializable {
         int Y = 0;
         boolean exit = false;
         
-        while(exit = false){
+        while(exit == false){
             FieldModel F = App.field[X][Y];
             Image i = F.getImg();
             int r = F.getRotation();
             images.add(i);
             rotations.add(r);
+            
             if(X == 6 && Y == 6){
                 exit = true;
             }
