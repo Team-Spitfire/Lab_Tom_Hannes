@@ -92,11 +92,21 @@ public class GameViewController implements Initializable {
     private ImageView iv5_5;
     @FXML
     private ImageView ivNewField;
+    @FXML
+    private ImageView ivRedPlayer;
+    @FXML
+    private ImageView ivYellowPlayer;
+    @FXML
+    private ImageView ivBluePlayer;
+    @FXML
+    private ImageView ivGreenPlayer;
     
-   
-    ArrayList<ImageView> imageviews;
-    ArrayList<Image> images;
-    ArrayList<Integer> rotations;
+    
+    private static ArrayList<ImageView> imageviews;
+    private static ArrayList<Image> images;
+    private static ArrayList<Integer> rotations;
+
+    private static int currPayer;
     
     
 
@@ -110,7 +120,7 @@ public class GameViewController implements Initializable {
         images = new ArrayList<Image> ();
         rotations = new ArrayList<Integer> ();
         addToList();
-        checkTileOri();
+        //checkTileOri();
     }
 
     @FXML
@@ -198,7 +208,37 @@ public class GameViewController implements Initializable {
         App.PfeilX5Links(App.getNewField());
         App.setRoot("gameView");
     }
+    
+    void keyPressed(KeyEvent event) throws IOException {
+        switch (event.getCode()) {
+            case W:
+                if(currPayer == 1)
+                ivRedPlayer.setY(ivRedPlayer.getY() - 16);
+                //checkPersonCoord();
+                break;
+            case S:
+                ivRedPlayer.setY(ivRedPlayer.getY() + 16);
+                //checkPersonCoord();
+                break;
+            case A:
+                ivRedPlayer.setX(ivRedPlayer.getX() - 16);
+                //checkPersonCoord();
+                break;
+            case D:
+                ivRedPlayer.setX(ivRedPlayer.getX() + 16);
+                //checkPersonCoord();
+                break;
 
+            default:
+                break;
+        }
+    }
+
+    public void checkTurn(){
+        
+        
+    }
+    
     public void addToList(){
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
@@ -234,18 +274,7 @@ public class GameViewController implements Initializable {
         imageviews.add(iv6_5);
     }
     
-    /*
-        Image i = F.get();
-        int r = F.getRotation();
-        if(F.getImg().getUrl().equals(App.file0)){
-        }
-        else{
-            rotations.add(r);  
-            images.add(i);  
-        }
-    */
-    
-      
+    /* 
     public void checkTileOri() {
         int X = 0;
         int Y = 0;
@@ -279,6 +308,11 @@ public class GameViewController implements Initializable {
             images.remove(0); 
             rotations.remove(0);
         }  
-    }    
+    }  
+    */
+
+    @FXML
+    private void btnEndTurn(ActionEvent event) {
+    }
 }
 

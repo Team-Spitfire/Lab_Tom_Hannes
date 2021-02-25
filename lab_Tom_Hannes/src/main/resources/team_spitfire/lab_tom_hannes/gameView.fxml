@@ -177,13 +177,13 @@
             <Image url="@tiles/black.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivNewField" fitHeight="47.0" fitWidth="44.0" layoutX="458.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivNewField" fitHeight="47.0" fitWidth="44.0" layoutX="419.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@tiles/black.png" />
          </image>
       </ImageView>
-      <Button layoutX="481.0" layoutY="164.0" mnemonicParsing="false" onAction="#btnTurnRight" text="right" />
-      <Button layoutX="441.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnTurnLeft" text="left" />
+      <Button layoutX="463.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnTurnRight" text="right" />
+      <Button layoutX="463.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnTurnLeft" text="left" />
       <Button layoutX="91.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn10insU" text="˅" />
       <Button layoutX="179.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn30insU" text="˅" />
       <Button layoutX="267.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn50insU" text="˅" />
@@ -196,5 +196,26 @@
       <Button layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btn01insL" text="&gt;" />
       <Button layoutX="10.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn03insL" text="&gt;" />
       <Button layoutX="10.0" layoutY="275.0" mnemonicParsing="false" onAction="#btn05insL" text="&gt;" />
+      <ImageView fx:id="ivRedPlayer" fitHeight="44.0" fitWidth="44.0" layoutX="36.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiles/red_player.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivYellowPlayer" fitHeight="44.0" fitWidth="44.0" layoutX="300.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiles/yellow_player.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivBluePlayer" fitHeight="44.0" fitWidth="44.0" layoutX="300.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiles/blue_player.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivGreenPlayer" fitHeight="44.0" fitWidth="44.0" layoutX="36.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiles/green_player.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="415.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnEndTurn" text="end Turn" />
    </children>
 </AnchorPane>
