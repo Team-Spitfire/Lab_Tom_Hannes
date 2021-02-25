@@ -73,6 +73,7 @@ public class App extends Application {
     private static FieldModel kk12;
     private static FieldModel gk12;
     private static FieldModel kk13;
+    private static FieldModel gk13;
     private static FieldModel kk14;
     private static FieldModel kk15;
     private static FieldModel kk16;
@@ -141,7 +142,7 @@ public class App extends Application {
                                                                                                             kk10 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk10 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
                                                                                                             kk11 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk11 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
                                                                                                             kk12 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk12 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
-                                                                                                            kk13 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
+                                                                                                            kk13 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk13 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
                                                                                                             kk14 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
                                                                                                             kk15 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
                                                                                                             kk16 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
@@ -177,6 +178,7 @@ public class App extends Application {
         list.add(gk11);
         list.add(kk12);
         list.add(gk12);
+        list.add(gk13);
         list.add(kk13);
         list.add(kk14);
         list.add(kk15);
@@ -308,7 +310,7 @@ public class App extends Application {
         boolean done = false;
 
         while(done == false) {
-            reserved = true;
+            reserved = false;
             
             //Zahl wird zufällig generiert
             int Min = 0;
@@ -316,12 +318,16 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
 
             //Stellen für feste Karten werden reserviert
-            if(X != 0 && Y != 0 || X != 2 && Y != 0 || X != 4 && Y != 0 || X != 6 && Y != 0 || X != 0 && Y != 2 || X != 2 && Y != 2 || X != 4 && Y != 2 || X != 6 && Y != 2 ||X != 0 && Y != 4 || X != 2 && Y != 4 || X != 4 && Y != 4 || X != 6 && Y != 4 || X != 0 && Y != 6 || X != 2 && Y != 6 || X != 4 && Y != 6 || X != 6 && Y != 6){
-                reserved = false;
+            //if(X != 0 && Y != 0 || X != 2 && Y != 0 || X != 4 && Y != 0 || X != 6 && Y != 0 || X != 0 && Y != 2 || X != 2 && Y != 2 || X != 4 && Y != 2 || X != 6 && Y != 2 ||X != 0 && Y != 4 || X != 2 && Y != 4 || X != 4 && Y != 4 || X != 6 && Y != 4 || X != 0 && Y != 6 || X != 2 && Y != 6 || X != 4 && Y != 6 || X != 6 && Y != 6){
+            if(X == 0 ||X == 2 || X == 4 || X == 6){
+                if(Y == 0 ||Y == 2 || Y == 4 || Y == 6){
+                    System.out.println("reserved");
+                    reserved = true;
+                }
             }
 
             //nicht reserverte Stellen werden gefüllt (mit der zufälligen Karte R)
-            if (reserved == false && list.size() > 1) {
+            if (reserved == false) {
                 System.out.println(list.size());
                 FieldModel R = list.get(random);
                 field[X][Y] = R;
@@ -331,8 +337,10 @@ public class App extends Application {
             //die letzte Karte wird zur "neuen Karte", welche eingeschoben werden kann.
             if (X == 6 && Y == 6) {
                 NewField = list.get(0);
+                System.out.println(NewField);
                 done = true;
-            } else {
+            } 
+            else {
 
                 //Der nächste Wert wird ausgewählt
                 if (X == 6) {
