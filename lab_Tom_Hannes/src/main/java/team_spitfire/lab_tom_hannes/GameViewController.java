@@ -251,6 +251,8 @@ public class GameViewController implements Initializable {
         int Y = 0;
         boolean exit = false;
         
+        System.out.println(App.field[0][0]);
+        
         while(exit == false){
             FieldModel F = App.field[X][Y];
             Image i = F.getImg();
