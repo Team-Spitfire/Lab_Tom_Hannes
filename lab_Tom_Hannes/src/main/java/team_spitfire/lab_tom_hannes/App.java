@@ -318,10 +318,9 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
 
             //Stellen für feste Karten werden reserviert
-            //if(X != 0 && Y != 0 || X != 2 && Y != 0 || X != 4 && Y != 0 || X != 6 && Y != 0 || X != 0 && Y != 2 || X != 2 && Y != 2 || X != 4 && Y != 2 || X != 6 && Y != 2 ||X != 0 && Y != 4 || X != 2 && Y != 4 || X != 4 && Y != 4 || X != 6 && Y != 4 || X != 0 && Y != 6 || X != 2 && Y != 6 || X != 4 && Y != 6 || X != 6 && Y != 6){
             if(X == 0 ||X == 2 || X == 4 || X == 6){
                 if(Y == 0 ||Y == 2 || Y == 4 || Y == 6){
-                    System.out.println("reserved");
+                    //System.out.println("reserved");
                     reserved = true;
                 }
             }
