@@ -19,20 +19,24 @@ public class FieldModel {
     private boolean down;
     private boolean left;
     private int schatz;
-    private String pngName;
-    private File file = new File("src/main/resources/team_spitfire/lab_tom_hannes/" + pngName);
-    private Image image = new Image(file.toURI().toString());
+    private Image img;
     private int rotation;
 
-    public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, String pngName, int rotation) {
+    public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, Image img, int rotation) {
         this.up = up;
         this.right = right;
         this.down = down;
         this.left = left;
         this.schatz = schatz;
-        this.pngName = pngName;
+        this.img = img;
         this.rotation = rotation;
     }
+
+    
+
+    
+
+    
 
     //Karte wird nach links gedreht (booleabs für Öffnungen werden geändert)
     public void turnLeft() {
@@ -100,29 +104,14 @@ public class FieldModel {
         this.schatz = schatz;
     }
 
-    public String getPngName() {
-        return pngName;
+    public Image getImg() {
+        return img;
     }
 
-    public void setPngName(String pngName) {
-        this.pngName = pngName;
+    public void setImg(Image img) {
+        this.img = img;
     }
 
-    public File getFile() {
-        return file;
-    }
-
-    public void setFile(File file) {
-        this.file = file;
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
-    }
 
     public int getRotation() {
         return rotation;

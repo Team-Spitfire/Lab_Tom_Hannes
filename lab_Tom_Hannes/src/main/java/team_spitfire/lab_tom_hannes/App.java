@@ -1,5 +1,6 @@
 package team_spitfire.lab_tom_hannes;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import javafx.scene.image.Image;
 
 /**
  * JavaFX App
@@ -19,6 +21,23 @@ public class App extends Application {
     private static ArrayList<CardModel> cardList = new ArrayList<CardModel>();
     private static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
+    
+    public static File file0 = new File("src/main/resources/tiles/black.png");
+    private static File file13 = new File("src/main/resources/tiles/black.png");
+    private static File file14 = new File("src/main/resources/tiles/black.png");
+    private static File file15 = new File("src/main/resources/tiles/black.png");
+    private static File file16 = new File("src/main/resources/tiles/black.png");
+    private static File file17 = new File("src/main/resources/tiles/black.png");
+    private static File file18 = new File("src/main/resources/tiles/black.png");
+    private static File file19 = new File("src/main/resources/tiles/black.png");
+    private static File file20 = new File("src/main/resources/tiles/black.png");
+    private static File file21 = new File("src/main/resources/tiles/black.png");
+    private static File file22 = new File("src/main/resources/tiles/black.png");
+    private static File file23 = new File("src/main/resources/tiles/black.png");
+    private static File file24 = new File("src/main/resources/tiles/black.png");
+    private static File fileT = new File("src/main/resources/tiles/black.png");
+    private static File fileK = new File("src/main/resources/tiles/turn.png");
+    private static File fileG = new File("src/main/resources/tiles/straight.png");
     
 
     //----------------------------------- DEKLARIERUNG FieldModel (feste)-------------------------
@@ -117,28 +136,33 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    
+    
+    
+    
+    
     public static void main(String[] args) {
         //feste
 
         //lose
         //name        _init_    up  right down left  sI typ  -->   -------------------------------------- SAME -----------------------------------------                                  
-        sk1 = new FieldModel(true, true, false, true, 13, "dragon.png", 0);      kk1 = new FieldModel(false, true, true, false, 19, "moth.png", 0);       gk1 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-        sk2 = new FieldModel(true, true, false, true, 14, "ghost.png", 0);       kk2 = new FieldModel(false, true, true, false, 20, "mouse.png", 0);      gk2 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-        sk3 = new FieldModel(true, true, false, true, 15, "gnome.png", 0);       kk3 = new FieldModel(false, true, true, false, 21, "owl.png", 0);        gk3 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-        sk4 = new FieldModel(true, true, false, true, 16, "poltergeist.png", 0); kk4 = new FieldModel(false, true, true, false, 22, "salamander.png", 0); gk4 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-        sk5 = new FieldModel(true, true, false, true, 17, "witch.png", 0);       kk5 = new FieldModel(false, true, true, false, 23, "scarab.png", 0);     gk5 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-        sk6 = new FieldModel(true, true, false, true, 18, "bat.png", 0);         kk6 = new FieldModel(false, true, true, false, 24, "spider.png", 0);     gk6 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk7 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk7 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk8 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk8 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk1 = new FieldModel(false, true, true, false, 0, "turn.png", 0);       gk9 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk10 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk10 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk11 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk11 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk12 = new FieldModel(false, true, true, false, 0, "turn.png", 0);      gk12 = new FieldModel(false, true, false, true, 0, "straight.png", 0);
-                                                                                kk13 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
-                                                                                kk14 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
-                                                                                kk15 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
-                                                                                kk16 = new FieldModel(false, true, true, false, 0, "turn.png", 0);
-
+        sk1 = new FieldModel(true, true, false, true, 13, new Image(file13.toURI().toString()), 0);         kk1 = new FieldModel(false, true, true, false, 19, new Image(file19.toURI().toString()), 0);   gk1 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+        sk2 = new FieldModel(true, true, false, true, 14, new Image(file14.toURI().toString()), 0);         kk2 = new FieldModel(false, true, true, false, 20, new Image(file20.toURI().toString()), 0);   gk2 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+        sk3 = new FieldModel(true, true, false, true, 15, new Image(file15.toURI().toString()), 0);         kk3 = new FieldModel(false, true, true, false, 21, new Image(file21.toURI().toString()), 0);   gk3 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+        sk4 = new FieldModel(true, true, false, true, 16, new Image(file16.toURI().toString()), 0);         kk4 = new FieldModel(false, true, true, false, 22, new Image(file22.toURI().toString()), 0);   gk4 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+        sk5 = new FieldModel(true, true, false, true, 17, new Image(file17.toURI().toString()), 0);         kk5 = new FieldModel(false, true, true, false, 23, new Image(file23.toURI().toString()), 0);   gk5 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+        sk6 = new FieldModel(true, true, false, true, 18, new Image(file18.toURI().toString()), 0);         kk6 = new FieldModel(false, true, true, false, 24, new Image(file24.toURI().toString()), 0);   gk6 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk7 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);     gk7 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk8 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);     gk8 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk1 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);     gk9 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk10 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk10 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk11 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk11 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk12 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);    gk12 = new FieldModel(false, true, false, true, 0, new Image(fileG.toURI().toString()), 0);
+                                                                                                            kk13 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
+                                                                                                            kk14 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
+                                                                                                            kk15 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
+                                                                                                            kk16 = new FieldModel(false, true, true, false, 0, new Image(fileK.toURI().toString()), 0);
+        
         //fügt zu list hinzu
         list.add(sk1);
         list.add(kk1);
@@ -247,22 +271,22 @@ public class App extends Application {
         //X6 - y0 2 4 6
         //Feste Karten werden in die passende Stelle eingefügt
         //            name        _init_        up  right down left      sI png  -->   -------------------------------------- SAME -----------------------------------------
-        field[0][0] = fkk_0_0 = new FieldModel(false, true, true, false, 0, "black.png", 0);//red
-        field[6][0] = fkk_6_0 = new FieldModel(false, false, true, true, 0, "black.png", 0);//yellow
-        field[0][6] = fkk_0_6 = new FieldModel(true, true, false, false, 0, "black.png", 0);//green
-        field[6][6] = fkk_6_6 = new FieldModel(true, false, false, true, 0, "black.png", 0);//blue
-        field[2][0] = fsk_2_0 = new FieldModel(false, true, true, true, 1, "bible.png", 0);
-        field[4][0] = fsk_4_0 = new FieldModel(false, true, true, true, 2, "coins.png", 0);
-        field[0][2] = fsk_0_2 = new FieldModel(true, true, true, false, 3, "map.png", 0);
-        field[2][2] = fsk_2_2 = new FieldModel(true, true, true, false, 4, "crown.png", 0);
-        field[4][2] = fsk_4_2 = new FieldModel(false, true, true, true, 5, "keys.png", 0);
-        field[6][2] = fsk_6_2 = new FieldModel(true, false, true, true, 6, "skull.png", 0);
-        field[0][4] = fsk_0_4 = new FieldModel(true, true, true, false, 7, "ring.png", 0);
-        field[2][4] = fsk_2_4 = new FieldModel(true, true, false, true, 8, "chest.png", 0);
-        field[4][4] = fsk_4_4 = new FieldModel(true, false, true, true, 9, "emerald.png", 0);
-        field[6][4] = fsk_6_4 = new FieldModel(true, false, true, true, 10, "sword.png", 0);
-        field[2][6] = fsk_2_6 = new FieldModel(true, true, false, true, 11, "candleHolder.png", 0);
-        field[4][6] = fsk_4_6 = new FieldModel(true, true, false, true, 12, "helmet.png", 0);
+        field[0][0] = fkk_0_0 = new FieldModel(false, true, true, false, 0, new Image(file0.toURI().toString()), 0);//red
+        field[6][0] = fkk_6_0 = new FieldModel(false, false, true, true, 0, new Image(file0.toURI().toString()), 0);//yellow
+        field[0][6] = fkk_0_6 = new FieldModel(true, true, false, false, 0, new Image(file0.toURI().toString()), 0);//green
+        field[6][6] = fkk_6_6 = new FieldModel(true, false, false, true, 0, new Image(file0.toURI().toString()), 0);//blue
+        field[2][0] = fsk_2_0 = new FieldModel(false, true, true, true, 1, new Image(file0.toURI().toString()), 0);
+        field[4][0] = fsk_4_0 = new FieldModel(false, true, true, true, 2, new Image(file0.toURI().toString()), 0);
+        field[0][2] = fsk_0_2 = new FieldModel(true, true, true, false, 3, new Image(file0.toURI().toString()), 0);
+        field[2][2] = fsk_2_2 = new FieldModel(true, true, true, false, 4, new Image(file0.toURI().toString()), 0);
+        field[4][2] = fsk_4_2 = new FieldModel(false, true, true, true, 5, new Image(file0.toURI().toString()), 0);
+        field[6][2] = fsk_6_2 = new FieldModel(true, false, true, true, 6, new Image(file0.toURI().toString()), 0);
+        field[0][4] = fsk_0_4 = new FieldModel(true, true, true, false, 7, new Image(file0.toURI().toString()), 0);
+        field[2][4] = fsk_2_4 = new FieldModel(true, true, false, true, 8, new Image(file0.toURI().toString()), 0);
+        field[4][4] = fsk_4_4 = new FieldModel(true, false, true, true, 9, new Image(file0.toURI().toString()), 0);
+        field[6][4] = fsk_6_4 = new FieldModel(true, false, true, true, 10, new Image(file0.toURI().toString()), 0);
+        field[2][6] = fsk_2_6 = new FieldModel(true, true, false, true, 11, new Image(file0.toURI().toString()), 0);
+        field[4][6] = fsk_4_6 = new FieldModel(true, true, false, true, 12, new Image(file0.toURI().toString()), 0);
 
         //Werte für die for-each Schleife
         int X = 0;

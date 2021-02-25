@@ -203,15 +203,27 @@ public class GameViewController implements Initializable {
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
         imageviews.add(iv0_5);
+        imageviews.add(iv1_0);
         imageviews.add(iv1_1);
         imageviews.add(iv1_2);
         imageviews.add(iv1_3);
         imageviews.add(iv1_4);
         imageviews.add(iv1_5);
+        imageviews.add(iv1_6);
         imageviews.add(iv2_1);
         imageviews.add(iv2_3);
         imageviews.add(iv2_5);
+        imageviews.add(iv3_0);
         imageviews.add(iv3_1);
+        imageviews.add(iv3_2);
+        imageviews.add(iv3_3);
+        imageviews.add(iv3_4);
+        imageviews.add(iv3_5);
+        imageviews.add(iv4_1);
+        imageviews.add(iv4_3);
+        imageviews.add(iv4_5);
+        imageviews.add(iv5_0);
+        imageviews.add(iv5_1);
         imageviews.add(iv5_2);
         imageviews.add(iv5_3);
         imageviews.add(iv5_4);
@@ -225,17 +237,18 @@ public class GameViewController implements Initializable {
     public void checkTileOri() {
         
         for(FieldModel F : App.list) {
-            //Image i = F.getImage();
-            //int r = F.getRotation();
-            //if(F.getImage().getUrl() != "file:src/main/resources/team_spitfire/lab_tom_hannes/balck.png"){
-                images.add(F.getImage());
-                rotations.add(F.getRotation());     
-            //}
-            //else{
-            //}
+            Image i = F.getImg();
+            int r = F.getRotation();
+            if(F.getImg().getUrl().equals(App.file0)){
+                rotations.add(r);  
+                images.add(i);
+            }
+            else{
+            }
         }
         
         for(ImageView I : imageviews) {
+            System.out.println();
             I.setImage(images.get(0));
             I.setRotate(rotations.get(0));
             images.remove(0); 
