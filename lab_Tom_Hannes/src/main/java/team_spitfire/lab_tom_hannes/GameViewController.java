@@ -234,26 +234,47 @@ public class GameViewController implements Initializable {
         imageviews.add(iv6_5);
     }
     
-    
+    /*
+        Image i = F.get();
+        int r = F.getRotation();
+        if(F.getImg().getUrl().equals(App.file0)){
+        }
+        else{
+            rotations.add(r);  
+            images.add(i);  
+        }
+    */
     
       
     public void checkTileOri() {
+        int X = 0;
+        int Y = 0;
+        boolean exit = false;
         
-        for(FieldModel F : App.field) {
-            Image i = F.getImg();
-            int r = F.getRotation();
-            if(F.getImg().getUrl().equals(App.file0)){
-                
+        while(exit = false){
+            FieldModel F = App.field[X][Y];
+            if(X == 6 && Y == 6){
+                exit = true;
             }
             else{
-                rotations.add(r);  
-                images.add(i);  
+                if(X == 6){
+                    X = 0;
+                    Y = Y + 1;
+                }
+                else{
+                    X = X + 1;
+                }
             }
-        }
+        }        
+                
+                
+                
+            
+        
         
         
         for(ImageView I : imageviews) {
-            System.out.println("test");
+            System.out.println("test1");
             I.setImage(images.get(0));
             I.setRotate(rotations.get(0));
             images.remove(0); 
