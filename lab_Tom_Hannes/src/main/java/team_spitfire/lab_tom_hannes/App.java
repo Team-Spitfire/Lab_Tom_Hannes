@@ -9,7 +9,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 /**
  * JavaFX App
@@ -135,7 +138,26 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("homeScreenView"), 640, 480);
+        scene = new Scene(loadFXML("gameView"), 640, 480);
+        scene.setOnKeyPressed(new EventHandler<KeyEvent> (){
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode() == KeyCode.W){
+                    GameViewController.KeyEventW();
+                }   
+            
+                if(event.getCode() == KeyCode.S){
+                    GameViewController.KeyEventS();
+                }
+                if(event.getCode() == KeyCode.A){
+                    System.out.println("A");
+                }
+                if(event.getCode() == KeyCode.D){
+                    System.out.println("D");
+                }
+            }
+        });
+        
         stage.setScene(scene);
         stage.show();
     }
