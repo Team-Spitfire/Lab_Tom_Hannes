@@ -34,6 +34,11 @@ public class App extends Application {
     public static boolean btnStatus10 = true;
     public static boolean btnStatus11 = true;
     public static boolean btnStatus12 = true;
+    
+    public static boolean boundsUp;
+    public static boolean boundsDown;
+    public static boolean boundsRight;
+    public static boolean boundsLeft;
    
     
     public static int curPlayer = 1;
@@ -306,7 +311,7 @@ public class App extends Application {
         //X4 - y0 2 4 6
         //X6 - y0 2 4 6
         //Feste Karten werden in die passende Stelle eingefügt
-        //            name        _init_        up  right down left      sI png  -->   -------------------------------------- SAME -----------------------------------------
+        //  name        _init_        up  right down left      sI png  -->   -------------------------------------- SAME -----------------------------------------
         field[0][0] = new FieldModel(false, true, true, false, 0, new Image(file0.toURI().toString()), 0);//red
         field[6][0] = new FieldModel(false, false, true, true, 0, new Image(file0.toURI().toString()), 0);//yellow
         field[0][6] = new FieldModel(true, true, false, false, 0, new Image(file0.toURI().toString()), 0);//green
