@@ -465,11 +465,17 @@ public class GameViewController implements Initializable {
         //guckt ob die Übergänge offen sind
         if (cu  == true && ud == true) {
             App.boundsUp = true;
-        } else if (cd  == true && du == true) {
+        }
+        
+        if (cd  == true && du == true) {
             App.boundsDown = true;
-        } else if (cl  == true && lr == true) {
+        }
+        
+        if (cl  == true && lr == true) {
             App.boundsLeft = true;
-        } else if (cr  == true && rl == true) {
+        }
+        
+        if (cr  == true && rl == true) {
             App.boundsRight = true;
         }
         
