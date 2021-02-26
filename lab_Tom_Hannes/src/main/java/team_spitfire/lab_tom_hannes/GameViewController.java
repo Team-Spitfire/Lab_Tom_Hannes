@@ -303,8 +303,6 @@ public class GameViewController implements Initializable {
         int x = cPlayer.getPosX();
         int y = cPlayer.getPosY();
         
-<<<<<<< Updated upstream
-=======
         boolean du = false;
         boolean ud = false;
         boolean lr = false;
@@ -312,7 +310,6 @@ public class GameViewController implements Initializable {
         
         
         if(y != 6){
->>>>>>> Stashed changes
         FieldModel d = App.field[x][y + 1];
         
         du = d.isUp();
