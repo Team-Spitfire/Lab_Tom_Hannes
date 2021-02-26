@@ -25,6 +25,11 @@ public class App extends Application {
     public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
     
+    ArrayList<CardModel> handRed = new ArrayList<CardModel> ();
+    ArrayList<CardModel> handYellow = new ArrayList<CardModel> ();
+    ArrayList<CardModel> handGreen = new ArrayList<CardModel> ();
+    ArrayList<CardModel> handBlue = new ArrayList<CardModel> ();
+    
     public static boolean btnStatus1 = true;
     public static boolean btnStatus2 = true;
     public static boolean btnStatus3 = true;
@@ -359,11 +364,6 @@ public class App extends Application {
         int Y = 4;
         int G = 4;
         int B = 4;
-        
-        ArrayList<CardModel> handRed = new ArrayList<CardModel> ();
-        ArrayList<CardModel> handYellow = new ArrayList<CardModel> ();
-        ArrayList<CardModel> handGreen = new ArrayList<CardModel> ();
-        ArrayList<CardModel> handBlue = new ArrayList<CardModel> ();
         
         while(R >= 0){
             int Min = 0;
