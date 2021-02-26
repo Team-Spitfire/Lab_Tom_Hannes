@@ -196,7 +196,7 @@ public class GameViewController implements Initializable {
     private void btn10insU(ActionEvent event) throws IOException {
         App.PfeilY1Oben(App.getNewField());
         App.insertedField = true;
-        btn.setDisable(App.insertedField);
+        disableBtns();
         App.setRoot("gameView");
     }
 
