@@ -355,7 +355,6 @@ public class App extends Application {
     }
 
     public static void randomCard(){
-        boolean done = false;
         int R = 4;
         int Y = 4;
         int G = 4;
@@ -374,7 +373,7 @@ public class App extends Application {
             handRed.add(cardList.get(random));
             cardList.remove(random);
             
-            R -= 1;
+            R = R - 1;
         }
         
         while(Y >= 0){
@@ -383,8 +382,9 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
             
             handYellow.add(cardList.get(random));
+            cardList.remove(random);
             
-            Y -= 1;
+            Y = Y - 1;
         }
         
         while(G >= 0){
@@ -393,8 +393,9 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
             
             handGreen.add(cardList.get(random));
+            cardList.remove(random);
             
-            G  -= 1;
+            G  = G - 1;
         }
         
         while(B >= 0){
@@ -403,8 +404,9 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
             
             handBlue.add(cardList.get(random));
+            cardList.remove(random);
             
-            B -= 1;
+            B = B - 1;
         }
         
         redPlayer.setHand(handRed);
