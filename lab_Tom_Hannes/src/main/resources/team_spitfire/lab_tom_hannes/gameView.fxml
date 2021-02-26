@@ -238,7 +238,7 @@
             <Image url="@cards/batCard.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivYellow3" fitHeight="99.0" fitWidth="44.0" layoutX="549.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivYellow4" fitHeight="99.0" fitWidth="44.0" layoutX="549.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cards/batCard.png" />
          </image>

@@ -104,6 +104,8 @@ public class GameViewController implements Initializable {
     @FXML
     private ImageView ivRed1;
     @FXML
+    private ImageView ivYellow4;
+    @FXML
     private ImageView ivYellow3;
     @FXML
     private ImageView ivYellow2;
@@ -165,6 +167,11 @@ public class GameViewController implements Initializable {
 
     private static ArrayList<ImageView> imageviews;
     private static ArrayList<FieldModel> tempList;
+    private static ArrayList<ImageView> cardImageviewsR;
+    private static ArrayList<ImageView> cardImageviewsY;
+    private static ArrayList<ImageView> cardImageviewsG;
+    private static ArrayList<ImageView> cardImageviewsB;
+    
     
 
     /**
@@ -175,7 +182,11 @@ public class GameViewController implements Initializable {
         
         imageviews = new ArrayList<ImageView>();
         tempList = new ArrayList<FieldModel>();
-
+        cardImageviewsR = new ArrayList<ImageView>();
+        cardImageviewsY = new ArrayList<ImageView>();
+        cardImageviewsG = new ArrayList<ImageView>();
+        cardImageviewsB = new ArrayList<ImageView>();
+        
         checkBounds();
         loadImages();
         
@@ -607,7 +618,28 @@ public class GameViewController implements Initializable {
     public void loadImages() {
         tempList.clear();
         imageviews.clear();
-
+        cardImageviewsR.clear();
+        cardImageviewsY.clear();
+        cardImageviewsG.clear();
+        cardImageviewsB.clear();
+        
+        cardImageviewsR.add(ivRed1);
+        cardImageviewsR.add(ivRed2);
+        cardImageviewsR.add(ivRed3);
+        cardImageviewsR.add(ivRed4);
+        cardImageviewsY.add(ivYellow1);
+        cardImageviewsY.add(ivYellow2);
+        cardImageviewsY.add(ivYellow3);
+        cardImageviewsY.add(ivYellow4);
+        cardImageviewsG.add(ivGreen1);
+        cardImageviewsG.add(ivGreen2);
+        cardImageviewsG.add(ivGreen3);
+        cardImageviewsG.add(ivGreen4);
+        cardImageviewsB.add(ivBlue1);
+        cardImageviewsB.add(ivBlue2);
+        cardImageviewsB.add(ivBlue3);
+        cardImageviewsB.add(ivBlue4);
+        
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
         imageviews.add(iv0_5);
@@ -713,7 +745,18 @@ public class GameViewController implements Initializable {
         tempList.add(F6_5);
         tempList.add(FNewField);
 
-        
+        for(ImageView I : cardImageviewsR){
+            I.setImage(App.redPlayer.getHand().get(0).getImgC());
+        }
+        for(ImageView I : cardImageviewsY){
+            I.setImage(App.yellowPlayer.getHand().get(0).getImgC());
+        }
+        for(ImageView I : cardImageviewsG){
+            I.setImage(App.greenPlayer.getHand().get(0).getImgC());
+        }
+        for(ImageView I : cardImageviewsB){
+            I.setImage(App.bluePlayer.getHand().get(0).getImgC());
+        }
 
         for (ImageView I : imageviews) {
             I.setImage(tempList.get(0).getImg());
