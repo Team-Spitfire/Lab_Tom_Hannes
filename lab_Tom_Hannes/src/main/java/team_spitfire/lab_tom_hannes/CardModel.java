@@ -5,15 +5,19 @@
  */
 package team_spitfire.lab_tom_hannes;
 
+import javafx.scene.image.Image;
+
 /**
  *
  * @author hanne
  */
 public class CardModel {
-    public int itemCardInt;
+    private int itemCardInt;
+    private Image imgC;
 
     public CardModel(int itemCardInt) {
         this.itemCardInt = itemCardInt;
+        this.imgC = imgC;
     }
 
     public int getItemCardInt() {
@@ -23,5 +27,14 @@ public class CardModel {
     public void setItemCardInt(int itemCardInt) {
         this.itemCardInt = itemCardInt;
     }
+
+    public Image getImgC() {
+        return imgC;
+    }
+
+    public void setImgC(Image imgC) {
+        this.imgC = imgC;
+    }
+    
     
 }

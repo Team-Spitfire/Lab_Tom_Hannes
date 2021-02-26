@@ -70,6 +70,33 @@ public class App extends Application {
     public static File fileK = new File("src/main/resources/tiles/turn.png");
     public static File fileG = new File("src/main/resources/tiles/straight.png");
     
+    //Files für die Bilder in CardModel          "path"
+    public static File Cfile1 = new File("src/main/resources/cards/black.png");
+    public static File Cfile2 = new File("src/main/resources/cards/dragon.png");
+    public static File Cfile3 = new File("src/main/resources/cards/dragon.png");
+    public static File Cfile4 = new File("src/main/resources/cards/ghost.png");
+    public static File Cfile5 = new File("src/main/resources/cards/gnome.png");
+    public static File Cfile6 = new File("src/main/resources/cards/poltergeist.png");
+    public static File Cfile7 = new File("src/main/resources/cards/witch.png");
+    public static File Cfile8 = new File("src/main/resources/cards/bat.png");
+    public static File Cfile9 = new File("src/main/resources/cards/moth.png");
+    public static File Cfile10 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile11 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile12 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile13 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile14 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile15 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile16 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile17 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile18 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile19 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile20 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile21 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile22 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile23 = new File("src/main/resources/cards/mouse.png");
+    public static File Cfile24 = new File("src/main/resources/cards/mouse.png");
+    
+    
 
     
 
