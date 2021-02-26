@@ -101,8 +101,8 @@ public class GameViewController implements Initializable {
     private ImageView ivBluePlayer;
     @FXML
     private ImageView ivGreenPlayer;
-    @FXML
-    private Button btn8;
+    
+    
     @FXML
     private Button btn1;
     @FXML
@@ -118,13 +118,15 @@ public class GameViewController implements Initializable {
     @FXML
     private Button btn7;
     @FXML
+    private Button btn8;
+    @FXML
     private Button btn9;
     @FXML
-    private Button btn12;
+    private Button btn10;
     @FXML
     private Button btn11;
     @FXML
-    private Button btn10;
+    private Button btn12;
 
     private static ArrayList<ImageView> imageviews;
     private static ArrayList<FieldModel> tempList;
@@ -156,6 +158,24 @@ public class GameViewController implements Initializable {
         checkBounds();
     }
 
+    private void disableBtns(){
+        btn1.setDisable(App.insertedField);
+        btn2.setDisable(App.insertedField);
+        btn3.setDisable(App.insertedField);
+        btn4.setDisable(App.insertedField);
+        btn5.setDisable(App.insertedField);
+        btn6.setDisable(App.insertedField);
+        btn7.setDisable(App.insertedField);
+        btn8.setDisable(App.insertedField);
+        btn9.setDisable(App.insertedField);
+        btn10.setDisable(App.insertedField);
+        btn11.setDisable(App.insertedField);
+        btn12.setDisable(App.insertedField);
+    }
+    
+    
+    
+    
     @FXML
     private void btnTurnRight(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
@@ -171,12 +191,6 @@ public class GameViewController implements Initializable {
         ivNewField.setRotate(-45);
         App.setRoot("gameView");
     }
-
-    
-    
-    
-    
-    
     
     @FXML
     private void btn10insU(ActionEvent event) throws IOException {
@@ -190,6 +204,7 @@ public class GameViewController implements Initializable {
     private void btn30insU(ActionEvent event) throws IOException {
         App.PfeilY3Oben(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -197,6 +212,7 @@ public class GameViewController implements Initializable {
     private void btn50insU(ActionEvent event) throws IOException {
         App.PfeilY5Oben(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -204,6 +220,7 @@ public class GameViewController implements Initializable {
     private void btn61insR(ActionEvent event) throws IOException {
         App.PfeilX1Rechts(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -211,6 +228,7 @@ public class GameViewController implements Initializable {
     private void btn63insR(ActionEvent event) throws IOException {
         App.PfeilX3Rechts(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -218,6 +236,7 @@ public class GameViewController implements Initializable {
     private void btn65insR(ActionEvent event) throws IOException {
         App.PfeilX5Rechts(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -225,6 +244,7 @@ public class GameViewController implements Initializable {
     private void btn56insD(ActionEvent event) throws IOException {
         App.PfeilY5Unten(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -232,6 +252,7 @@ public class GameViewController implements Initializable {
     private void btn36insD(ActionEvent event) throws IOException {
         App.PfeilY3Unten(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -239,6 +260,7 @@ public class GameViewController implements Initializable {
     private void btn16insD(ActionEvent event) throws IOException {
         App.PfeilY1Unten(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -246,6 +268,7 @@ public class GameViewController implements Initializable {
     private void btn01insL(ActionEvent event) throws IOException {
         App.PfeilX1Links(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -253,6 +276,7 @@ public class GameViewController implements Initializable {
     private void btn03insL(ActionEvent event) throws IOException {
         App.PfeilX3Links(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
@@ -260,12 +284,14 @@ public class GameViewController implements Initializable {
     private void btn05insL(ActionEvent event) throws IOException {
         App.PfeilX5Links(App.getNewField());
         App.insertedField = true;
+        disableBtns();
         App.setRoot("gameView");
     }
 
     @FXML
     private void btnEndTurn(ActionEvent event) {
         App.curPlayer = App.curPlayer + 1;
+        App.insertedField = false;
         if (App.curPlayer == 4) {
             App.curPlayer = 1;
         }
