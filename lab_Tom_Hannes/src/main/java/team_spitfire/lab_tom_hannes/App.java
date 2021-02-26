@@ -385,35 +385,35 @@ public class App extends Application {
     //Schiebt ein neues Feld in eine Zeile ein.
     public static void InsertX(int Zeile, boolean LinksNachRechts, FieldModel NeuesFeld) {
         //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
-        FieldModel A0 = field[0][Zeile];
-        FieldModel A1 = field[1][Zeile];
-        FieldModel A2 = field[2][Zeile];
-        FieldModel A3 = field[3][Zeile];
-        FieldModel A4 = field[4][Zeile];
-        FieldModel A5 = field[5][Zeile];
-        FieldModel A6 = field[6][Zeile];
+        FieldModel A0 = field[Zeile][0];
+        FieldModel A1 = field[Zeile][1];
+        FieldModel A2 = field[Zeile][2];
+        FieldModel A3 = field[Zeile][3];
+        FieldModel A4 = field[Zeile][4];
+        FieldModel A5 = field[Zeile][5];
+        FieldModel A6 = field[Zeile][6];
 
         //if abfrage wird für die Richtung des einschiebens benötigt.
         if (LinksNachRechts == true) {
-            field[0][Zeile] = NeuesFeld;
-            field[1][Zeile] = A0;
-            field[2][Zeile] = A1;
-            field[3][Zeile] = A2;
-            field[4][Zeile] = A3;
-            field[5][Zeile] = A4;
-            field[6][Zeile] = A5;
+            field[Zeile][0] = NeuesFeld;
+            field[Zeile][1] = A0;
+            field[Zeile][2] = A1;
+            field[Zeile][3] = A2;
+            field[Zeile][4] = A3;
+            field[Zeile][5] = A4;
+            field[Zeile][6] = A5;
 
             App.setNewField(A6);
         }
 
         if (LinksNachRechts == false) {
-            field[6][Zeile] = NeuesFeld;
-            field[5][Zeile] = A6;
-            field[4][Zeile] = A5;
-            field[3][Zeile] = A4;
-            field[2][Zeile] = A3;
-            field[1][Zeile] = A2;
-            field[0][Zeile] = A1;
+            field[Zeile][6] = NeuesFeld;
+            field[Zeile][5] = A6;
+            field[Zeile][4] = A5;
+            field[Zeile][3] = A4;
+            field[Zeile][2] = A3;
+            field[Zeile][1] = A2;
+            field[Zeile][0] = A1;
 
             App.setNewField(A0);
         }
@@ -422,35 +422,35 @@ public class App extends Application {
     //Schiebt ein neues Feld in eine Spalte ein.
     public static void InsertY(int Spalte, boolean ObenNachUnten, FieldModel NeuesFeld) {
         //Alte Werte werden gespeichert, damit sie nicht ungewollt übetschrieben werden.
-        FieldModel A0 = field[Spalte][0];
-        FieldModel A1 = field[Spalte][1];
-        FieldModel A2 = field[Spalte][2];
-        FieldModel A3 = field[Spalte][3];
-        FieldModel A4 = field[Spalte][4];
-        FieldModel A5 = field[Spalte][5];
-        FieldModel A6 = field[Spalte][6];
+        FieldModel A0 = field[0][Spalte];
+        FieldModel A1 = field[1][Spalte];
+        FieldModel A2 = field[2][Spalte];
+        FieldModel A3 = field[3][Spalte];
+        FieldModel A4 = field[4][Spalte];
+        FieldModel A5 = field[5][Spalte];
+        FieldModel A6 = field[6][Spalte];
 
         //if abfrage wird für die Richtung des einschiebens benötigt.
         if (ObenNachUnten == true) {
-            field[Spalte][0] = NeuesFeld;
-            field[Spalte][1] = A0;
-            field[Spalte][2] = A1;
-            field[Spalte][3] = A2;
-            field[Spalte][4] = A3;
-            field[Spalte][5] = A4;
-            field[Spalte][6] = A5;
+            field[0][Spalte] = NeuesFeld;
+            field[1][Spalte] = A0;
+            field[2][Spalte] = A1;
+            field[3][Spalte] = A2;
+            field[4][Spalte] = A3;
+            field[5][Spalte] = A4;
+            field[6][Spalte] = A5;
 
             App.setNewField(A6);
         }
 
         if (ObenNachUnten == false) {
-            field[Spalte][6] = NeuesFeld;
-            field[Spalte][5] = A6;
-            field[Spalte][4] = A5;
-            field[Spalte][3] = A4;
-            field[Spalte][2] = A3;
-            field[Spalte][1] = A2;
-            field[Spalte][0] = A1;
+            field[6][Spalte] = NeuesFeld;
+            field[5][Spalte] = A6;
+            field[4][Spalte] = A5;
+            field[3][Spalte] = A4;
+            field[2][Spalte] = A3;
+            field[1][Spalte] = A2;
+            field[0][Spalte] = A1;
 
             App.setNewField(A0);
         }
