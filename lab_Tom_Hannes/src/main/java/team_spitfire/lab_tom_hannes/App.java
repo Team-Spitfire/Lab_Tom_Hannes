@@ -26,10 +26,10 @@ public class App extends Application {
     private static FieldModel NewField;
     public static int i = 0;
     
-    ArrayList<CardModel> handRed = new ArrayList<CardModel> ();
-    ArrayList<CardModel> handYellow = new ArrayList<CardModel> ();
-    ArrayList<CardModel> handGreen = new ArrayList<CardModel> ();
-    ArrayList<CardModel> handBlue = new ArrayList<CardModel> ();
+    public static ArrayList<CardModel> handRed = new ArrayList<CardModel> ();
+    public static ArrayList<CardModel> handYellow = new ArrayList<CardModel> ();
+    public static ArrayList<CardModel> handGreen = new ArrayList<CardModel> ();
+    public static ArrayList<CardModel> handBlue = new ArrayList<CardModel> ();
     
     public static boolean btnStatus1 = true;
     public static boolean btnStatus2 = true;
