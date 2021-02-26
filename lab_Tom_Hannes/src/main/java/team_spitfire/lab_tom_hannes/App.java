@@ -372,6 +372,7 @@ public class App extends Application {
             int random = Min + (int) (Math.random() * ((Max - Min) + 1));
             
             handRed.add(cardList.get(random));
+            cardList.remove(random);
             
             R -= 1;
         }
