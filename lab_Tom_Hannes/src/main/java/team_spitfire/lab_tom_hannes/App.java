@@ -352,6 +352,7 @@ public class App extends Application {
                     
                     if(field[fX][fY] == null){
                         field[fX][fY] = list.get(0);
+                        list.remove(0);
                         fixed = true;
                     }
                     
@@ -368,8 +369,9 @@ public class App extends Application {
                 //Fix ende
                 
                 NewField = list.get(0);
+                list.remove(0);
                 //System.out.println(NewField);
-                System.out.println(list.size());
+                //System.out.println(list.size());
                 done = true;
             } 
             else {
