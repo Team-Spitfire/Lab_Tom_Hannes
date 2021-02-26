@@ -302,20 +302,24 @@ public class GameViewController implements Initializable {
 
         int x = cPlayer.getPosX();
         int y = cPlayer.getPosY();
+        FieldModel d = null;
+        FieldModel u = null;
+        FieldModel l = null;
+        FieldModel r = null;
 
         //Alle Fieldmodels die den Spieler Umgeben
         FieldModel c = App.field[x][y];
         if(x != 0 ){
-            FieldModel d = App.field[x - 1][y];
+            d = App.field[x - 1][y];
         }
         else if(x != 6){
-            FieldModel u = App.field[x + 1][y];
+            u = App.field[x + 1][y];
         }
         else if(y != 0){
-            FieldModel l = App.field[x][y - 1];
+            l = App.field[x][y - 1];
         }
         else if(y != 6){
-            FieldModel r = App.field[x][y + 1];
+            r = App.field[x][y + 1];
         }
 
         //Alle Booleans des Feldes wo der Spieler sich drauf befindet
