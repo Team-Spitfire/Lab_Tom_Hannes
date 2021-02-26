@@ -203,6 +203,18 @@ public class GameViewController implements Initializable {
         App.btnStatus10 = false;
         App.btnStatus11 = false;
         App.btnStatus12 = false;
+        btn1.setOpacity(0);
+        btn2.setOpacity(0);
+        btn3.setOpacity(0);
+        btn4.setOpacity(0);
+        btn5.setOpacity(0);
+        btn6.setOpacity(0);
+        btn7.setOpacity(0);
+        btn8.setOpacity(0);
+        btn9.setOpacity(0);
+        btn10.setOpacity(0);
+        btn11.setOpacity(0);
+        btn12.setOpacity(0);
         System.out.println("END DISABLEBUTTONS");
     }
 
@@ -219,6 +231,18 @@ public class GameViewController implements Initializable {
         App.btnStatus10 = true;
         App.btnStatus11 = true;
         App.btnStatus12 = true;
+        btn1.setOpacity(1);
+        btn2.setOpacity(1);
+        btn3.setOpacity(1);
+        btn4.setOpacity(1);
+        btn5.setOpacity(1);
+        btn6.setOpacity(1);
+        btn7.setOpacity(1);
+        btn8.setOpacity(1);
+        btn9.setOpacity(1);
+        btn10.setOpacity(1);
+        btn11.setOpacity(1);
+        btn12.setOpacity(1);
         System.out.println("END ENABLEBUTTONS");
     }
 
