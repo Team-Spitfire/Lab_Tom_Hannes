@@ -21,6 +21,7 @@ public class App extends Application {
     private static ArrayList<CardModel> cardList = new ArrayList<CardModel>();
     public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
+    public static int curPlayer = 1;
     
     //   Deklarierung der Spieler            init         P x y
     public static PlayerModel redPlayer = new PlayerModel(0,0,0);

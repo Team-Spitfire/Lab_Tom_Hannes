@@ -104,7 +104,7 @@ public class GameViewController implements Initializable {
     private static ArrayList<ImageView> imageviews;
     private static ArrayList<FieldModel> tempList;
 
-    private static int curPlayer;
+   
     private static PlayerModel cPlayer;
     private static ImageView cPlayerView;
 
@@ -216,9 +216,9 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btnEndTurn(ActionEvent event) {
-        curPlayer = curPlayer + 1;
-        if (curPlayer == 4) {
-            curPlayer = 1;
+        App.curPlayer = App.curPlayer + 1;
+        if (App.curPlayer == 4) {
+            App.curPlayer = 1;
         }
     }
 
@@ -273,7 +273,7 @@ public class GameViewController implements Initializable {
 
     public void checkCPlayer() {
 
-        switch (curPlayer) {
+        switch (App.curPlayer) {
             case 1:
                 cPlayer = App.redPlayer;
                 cPlayerView = ivRedPlayer;
@@ -305,10 +305,18 @@ public class GameViewController implements Initializable {
 
         //Alle Fieldmodels die den Spieler Umgeben
         FieldModel c = App.field[x][y];
-        FieldModel d = App.field[x - 1][y];
-        FieldModel u = App.field[x + 1][y];
-        FieldModel l = App.field[x][y - 1];
-        FieldModel r = App.field[x][y + 1];
+        if(x != 0 ){
+            FieldModel d = App.field[x - 1][y];
+        }
+        else if(x != 6){
+            FieldModel u = App.field[x + 1][y];
+        }
+        else if(y != 0){
+            FieldModel l = App.field[x][y - 1];
+        }
+        else if(y != 6){
+            FieldModel r = App.field[x][y + 1];
+        }
 
         //Alle Booleans des Feldes wo der Spieler sich drauf befindet
         boolean cu = c.isUp();
