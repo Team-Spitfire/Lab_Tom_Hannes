@@ -21,6 +21,7 @@ public class FieldModel {
     private int schatz;
     private Image img;
     private int rotation;
+    private int i = 0;
 
     public FieldModel(boolean up, boolean right, boolean down, boolean left, int schatz, Image img, int rotation) {
         this.up = up;

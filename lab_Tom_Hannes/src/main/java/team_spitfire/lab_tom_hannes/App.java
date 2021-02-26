@@ -24,6 +24,7 @@ public class App extends Application {
     private static ArrayList<CardModel> cardList = new ArrayList<CardModel>();
     public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
+    public static int i = 0;
     
     public static boolean btnStatus1 = true;
     public static boolean btnStatus2 = true;
@@ -170,17 +171,17 @@ public class App extends Application {
             @Override
             public void handle(KeyEvent event) {
                 if(event.getCode() == KeyCode.W){
-                    GameViewController.KeyEventW();
+                    //GameViewController.KeyEventW();
                 }   
             
                 if(event.getCode() == KeyCode.S){
-                    GameViewController.KeyEventS();
+                    //GameViewController.KeyEventS();
                 }
                 if(event.getCode() == KeyCode.A){
-                    System.out.println("A");
+                    //GameViewController.KeyEventA();
                 }
                 if(event.getCode() == KeyCode.D){
-                    System.out.println("D");
+                    //GameViewController.KeyEventD();
                 }
             }
         });

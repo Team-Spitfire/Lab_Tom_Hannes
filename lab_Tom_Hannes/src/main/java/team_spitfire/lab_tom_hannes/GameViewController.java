@@ -5,7 +5,6 @@
  */
 package team_spitfire.lab_tom_hannes;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,7 +19,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-
 
 /**
  * FXML Controller class
@@ -172,24 +170,23 @@ public class GameViewController implements Initializable {
     private static ArrayList<ImageView> cardImageviewsG;
     private static ArrayList<ImageView> cardImageviewsB;
     
-    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         imageviews = new ArrayList<ImageView>();
         tempList = new ArrayList<FieldModel>();
         cardImageviewsR = new ArrayList<ImageView>();
         cardImageviewsY = new ArrayList<ImageView>();
         cardImageviewsG = new ArrayList<ImageView>();
         cardImageviewsB = new ArrayList<ImageView>();
-        
+
         checkBounds();
         loadImages();
-        
+
         System.out.println("END INITIALIZE");
     }
 
@@ -227,17 +224,20 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btnTurnRight(ActionEvent event) throws IOException {
+        
         App.getNewField().turnRight();
-        System.out.println(App.getNewField());
-        System.out.println(App.getNewField().getRotation());
-        ivNewField.setRotate(+45);
+        App.getNewField().setRotation(App.i + 90);
+        App.i = App.i + 90;
+        ivNewField.setRotate(App.i);
         App.setRoot("gameView");
     }
 
     @FXML
     private void btnTurnLeft(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
-        ivNewField.setRotate(-45);
+        App.getNewField().setRotation(App.i - 90);
+        App.i = App.i - 90;
+        ivNewField.setRotate(App.i);
         App.setRoot("gameView");
     }
 
@@ -362,11 +362,18 @@ public class GameViewController implements Initializable {
         if (App.curPlayer == 5) {
             App.curPlayer = 1;
         }
-        System.out.println("END CHECKCURPLAYER");
+        if (App.curPlayer == 1) {
+            txtZugIndicator.setText("Rot ist am Zug");
+        } else if (App.curPlayer == 2) {
+            txtZugIndicator.setText("Gelb ist am Zug");
+        } else if (App.curPlayer == 3) {
+            txtZugIndicator.setText("Grün ist am Zug");
+        } else if (App.curPlayer == 4) {
+            txtZugIndicator.setText("Blau ist am Zug");
+        }
     }
 
-    
-    public static void KeyEventW(){
+    public static void KeyEventW() {
         switch (App.curPlayer) {
             case 1:
                 ivRedPlayer.setY(ivRedPlayer.getY() - 16);
@@ -388,9 +395,8 @@ public class GameViewController implements Initializable {
                 break;
         }
     }
-    
-    
-    public static void KeyEventS(){
+
+    public static void KeyEventS() {
         switch (App.curPlayer) {
             case 1:
                 ivRedPlayer.setY(ivRedPlayer.getY() + 16);
@@ -412,17 +418,60 @@ public class GameViewController implements Initializable {
                 break;
         }
     }
-    
-    /*
-    
-    
+
+    public static void KeyEventD() {
+        switch (App.curPlayer) {
+            case 1:
+                ivRedPlayer.setX(ivRedPlayer.getX() - 16);
+                App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                break;
+            case 2:
+                ivYellowPlayer.setX(ivYellowPlayer.getX() - 16);
+                App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                break;
+            case 3:
+                ivGreenPlayer.setX(ivGreenPlayer.getX() - 16);
+                App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                break;
+            case 4:
+                ivBluePlayer.setX(ivBluePlayer.getX() - 16);
+                App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void KeyEventA() {
+        switch (App.curPlayer) {
+            case 1:
+                ivRedPlayer.setX(ivRedPlayer.getX() - 16);
+                App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                break;
+            case 2:
+                ivYellowPlayer.setX(ivYellowPlayer.getX() - 16);
+                App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                break;
+            case 3:
+                ivGreenPlayer.setX(ivGreenPlayer.getX() - 16);
+                App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                break;
+            case 4:
+                ivBluePlayer.setX(ivBluePlayer.getX() - 16);
+                App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                break;
+            default:
+                break;
+        }
+    }
+
     @FXML
     void keyPressed(KeyEvent event) {
-        
+
         //switch (event.getCode()) {
         if (event.getCode() == KeyCode.W) {
             //case W:
-            System.out.println("----------------------------------------------------------------");
+
             switch (App.curPlayer) {
                 case 1:
                     ivRedPlayer.setY(ivRedPlayer.getY() - 16);
@@ -446,8 +495,7 @@ public class GameViewController implements Initializable {
             //break;
             //case S:
             if (event.getCode() == KeyCode.S) {
-                
-                System.out.println("----------------------------------------------------------------");
+
                 switch (App.curPlayer) {
                     case 1:
                         ivRedPlayer.setY(ivRedPlayer.getY() + 16);
@@ -472,7 +520,6 @@ public class GameViewController implements Initializable {
             //break;
             //case A:
             if (event.getCode() == KeyCode.A) {
-                System.out.println("----------------------------------------------------------------");
                 switch (App.curPlayer) {
                     case 1:
                         ivRedPlayer.setX(ivRedPlayer.getX() - 16);
@@ -494,12 +541,10 @@ public class GameViewController implements Initializable {
                         break;
                 }
             }
-                
+
             //break;
-           //case D:
-                
+            //case D:
             if (event.getCode() == KeyCode.D) {
-                System.out.println("----------------------------------------------------------------");
                 switch (App.curPlayer) {
                     case 1:
                         ivRedPlayer.setX(ivRedPlayer.getX() - 16);
@@ -522,12 +567,8 @@ public class GameViewController implements Initializable {
                 }
                 //break;
             }
+        }
     }
-    */
-    
-
-
-    
 
     public void checkBounds() {
         int x = 0;
@@ -552,7 +593,6 @@ public class GameViewController implements Initializable {
             default:
                 break;
         }
-
 
         System.out.println(x);
         System.out.println(y);
@@ -594,8 +634,6 @@ public class GameViewController implements Initializable {
         boolean cr = c.isRight();
 
         //Alle Booleans der umgebenden Felder
-       
-
         //guckt ob die Übergänge offen sind
         if (cu == true && ud == true) {
             App.boundsUp = true;
@@ -622,7 +660,7 @@ public class GameViewController implements Initializable {
         cardImageviewsY.clear();
         cardImageviewsG.clear();
         cardImageviewsB.clear();
-        
+
         cardImageviewsR.add(ivRed1);
         cardImageviewsR.add(ivRed2);
         cardImageviewsR.add(ivRed3);
@@ -639,7 +677,7 @@ public class GameViewController implements Initializable {
         cardImageviewsB.add(ivBlue2);
         cardImageviewsB.add(ivBlue3);
         cardImageviewsB.add(ivBlue4);
-        
+
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
         imageviews.add(iv0_5);
@@ -745,21 +783,25 @@ public class GameViewController implements Initializable {
         tempList.add(F6_5);
         tempList.add(FNewField);
 
-        for(ImageView I : cardImageviewsR){
-            I.setImage(App.redPlayer.getHand().get(0).getImgC());
-            App.redPlayer.getHand().remove(0);
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        for (ImageView I : cardImageviewsR) {
+            a = a + 1;
+            I.setImage(App.redPlayer.getHand().get(a).getImgC());
         }
-        for(ImageView I : cardImageviewsY){
-            I.setImage(App.yellowPlayer.getHand().get(0).getImgC());
-            App.yellowPlayer.getHand().remove(0);
+        for (ImageView I : cardImageviewsY) {
+            b = b + 1;
+            I.setImage(App.yellowPlayer.getHand().get(b).getImgC());
         }
-        for(ImageView I : cardImageviewsG){
-            I.setImage(App.greenPlayer.getHand().get(0).getImgC());
-            App.yellowPlayer.getHand().remove(0);
+        for (ImageView I : cardImageviewsG) {
+            c = c + 1;
+            I.setImage(App.greenPlayer.getHand().get(c).getImgC());
         }
-        for(ImageView I : cardImageviewsB){
-            I.setImage(App.bluePlayer.getHand().get(0).getImgC());
-            App.bluePlayer.getHand().remove(0);
+        for (ImageView I : cardImageviewsB) {
+            d = d + 1;
+            I.setImage(App.bluePlayer.getHand().get(d).getImgC());
         }
         for (ImageView I : imageviews) {
             I.setImage(tempList.get(0).getImg());
@@ -767,6 +809,6 @@ public class GameViewController implements Initializable {
 
             tempList.remove(0);
         }
-    System.out.println("END LOADIMAGES");
+        System.out.println("END LOADIMAGES");
     }
 }
