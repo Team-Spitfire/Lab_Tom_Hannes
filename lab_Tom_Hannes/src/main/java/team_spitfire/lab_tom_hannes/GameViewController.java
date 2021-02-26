@@ -310,24 +310,20 @@ public class GameViewController implements Initializable {
         
         
         if(y != 6){
-        FieldModel d = App.field[x][y + 1];
-        
-        du = d.isUp();
+            FieldModel d = App.field[x][y + 1];
+            du = d.isUp();
         }
         if(y != 0){
-        FieldModel u = App.field[x][y - 1];
-        
-        ud = u.isDown();
+            FieldModel u = App.field[x][y - 1];
+            ud = u.isDown();
         }
         if(x != 0){
-        FieldModel l = App.field[x - 1][y];
-        
-        lr = l.isRight();
+            FieldModel l = App.field[x - 1][y];
+            lr = l.isRight();
         }
         if(x != 6){
-        FieldModel r = App.field[x + 1][y];
-        
-        rl = r.isLeft();
+            FieldModel r = App.field[x + 1][y];
+            rl = r.isLeft();
         }
         
         
