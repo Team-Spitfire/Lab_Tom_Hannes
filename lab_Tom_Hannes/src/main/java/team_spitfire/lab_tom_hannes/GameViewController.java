@@ -303,7 +303,6 @@ public class GameViewController implements Initializable {
         int x = cPlayer.getPosX();
         int y = cPlayer.getPosY();
         
-        
         FieldModel d = App.field[x][y + 1];
         FieldModel u = App.field[x][y - 1];
         FieldModel l = App.field[x - 1][y];
