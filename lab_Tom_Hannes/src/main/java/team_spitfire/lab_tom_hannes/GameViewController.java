@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -100,6 +101,30 @@ public class GameViewController implements Initializable {
     private ImageView ivBluePlayer;
     @FXML
     private ImageView ivGreenPlayer;
+    @FXML
+    private Button btn8;
+    @FXML
+    private Button btn1;
+    @FXML
+    private Button btn2;
+    @FXML
+    private Button btn3;
+    @FXML
+    private Button btn4;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Button btn6;
+    @FXML
+    private Button btn7;
+    @FXML
+    private Button btn9;
+    @FXML
+    private Button btn12;
+    @FXML
+    private Button btn11;
+    @FXML
+    private Button btn10;
 
     private static ArrayList<ImageView> imageviews;
     private static ArrayList<FieldModel> tempList;
@@ -113,7 +138,10 @@ public class GameViewController implements Initializable {
     private static boolean boundsRight;
     private static boolean boundsLeft;
     
+    
     private static Image black;
+    private Button btn;
+    
     /**
      * Initializes the controller class.
      */
@@ -131,6 +159,8 @@ public class GameViewController implements Initializable {
     @FXML
     private void btnTurnRight(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
+        System.out.println(App.getNewField());
+        System.out.println(App.getNewField().getRotation());
         ivNewField.setRotate(+45);
         App.setRoot("gameView");
     }
@@ -142,75 +172,94 @@ public class GameViewController implements Initializable {
         App.setRoot("gameView");
     }
 
+    
+    
+    
+    
+    
+    
     @FXML
     private void btn10insU(ActionEvent event) throws IOException {
         App.PfeilY1Oben(App.getNewField());
+        App.insertedField = true;
+        btn.setDisable(App.insertedField);
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn30insU(ActionEvent event) throws IOException {
         App.PfeilY3Oben(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn50insU(ActionEvent event) throws IOException {
         App.PfeilY5Oben(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn61insR(ActionEvent event) throws IOException {
         App.PfeilX1Rechts(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn63insR(ActionEvent event) throws IOException {
         App.PfeilX3Rechts(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn65insR(ActionEvent event) throws IOException {
         App.PfeilX5Rechts(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn56insD(ActionEvent event) throws IOException {
         App.PfeilY5Unten(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn36insD(ActionEvent event) throws IOException {
         App.PfeilY3Unten(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn16insD(ActionEvent event) throws IOException {
         App.PfeilY1Unten(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn01insL(ActionEvent event) throws IOException {
         App.PfeilX1Links(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn03insL(ActionEvent event) throws IOException {
         App.PfeilX3Links(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
     @FXML
     private void btn05insL(ActionEvent event) throws IOException {
         App.PfeilX5Links(App.getNewField());
+        App.insertedField = true;
         App.setRoot("gameView");
     }
 
@@ -222,7 +271,6 @@ public class GameViewController implements Initializable {
         }
     }
 
-    @FXML
     void keyPressed(KeyEvent event) throws IOException {
         switch (event.getCode()) {
             case W:

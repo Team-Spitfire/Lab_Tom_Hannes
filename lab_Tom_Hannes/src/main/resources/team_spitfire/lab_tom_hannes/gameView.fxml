@@ -184,18 +184,18 @@
       </ImageView>
       <Button layoutX="463.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnTurnRight" text="right" />
       <Button layoutX="463.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnTurnLeft" text="left" />
-      <Button layoutX="91.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn10insU" text="˅" />
-      <Button layoutX="179.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn30insU" text="˅" />
-      <Button layoutX="267.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn50insU" text="˅" />
-      <Button layoutX="345.0" layoutY="100.0" mnemonicParsing="false" onAction="#btn61insR" text="&lt;" />
-      <Button layoutX="345.0" layoutY="186.0" mnemonicParsing="false" onAction="#btn63insR" text="&lt;" />
-      <Button layoutX="345.0" layoutY="274.0" mnemonicParsing="false" onAction="#btn65insR" text="&lt;" />
-      <Button layoutX="266.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn56insD" text="^" />
-      <Button layoutX="178.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn36insD" text="^" />
-      <Button layoutX="90.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn16insD" text="^" />
-      <Button layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btn01insL" text="&gt;" />
-      <Button layoutX="10.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn03insL" text="&gt;" />
-      <Button layoutX="10.0" layoutY="275.0" mnemonicParsing="false" onAction="#btn05insL" text="&gt;" />
+      <Button fx:id="btn1" layoutX="91.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn10insU" text="˅" />
+      <Button fx:id="btn2" layoutX="179.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn30insU" text="˅" />
+      <Button fx:id="btn3" layoutX="267.0" layoutY="15.0" mnemonicParsing="false" onAction="#btn50insU" text="˅" />
+      <Button fx:id="btn4" layoutX="345.0" layoutY="100.0" mnemonicParsing="false" onAction="#btn61insR" text="&lt;" />
+      <Button fx:id="btn5" layoutX="345.0" layoutY="186.0" mnemonicParsing="false" onAction="#btn63insR" text="&lt;" />
+      <Button fx:id="btn6" layoutX="345.0" layoutY="274.0" mnemonicParsing="false" onAction="#btn65insR" text="&lt;" />
+      <Button fx:id="btn7" layoutX="266.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn56insD" text="^" />
+      <Button fx:id="btn8" layoutX="178.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn36insD" text="^" />
+      <Button fx:id="btn9" layoutX="90.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn16insD" text="^" />
+      <Button fx:id="btn12" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btn01insL" text="&gt;" />
+      <Button fx:id="btn11" layoutX="10.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn03insL" text="&gt;" />
+      <Button fx:id="btn10" layoutX="10.0" layoutY="275.0" mnemonicParsing="false" onAction="#btn05insL" text="&gt;" />
       <ImageView fx:id="ivRedPlayer" fitHeight="44.0" fitWidth="44.0" layoutX="36.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@tiles/red_player.png" />
