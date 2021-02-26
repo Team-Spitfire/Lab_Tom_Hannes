@@ -158,19 +158,49 @@ public class GameViewController implements Initializable {
         checkBounds();
     }
 
-    private void disableBtns(){
-        btn1.setDisable(true);
-        btn2.setDisable(true);
-        btn3.setDisable(true);
-        btn4.setDisable(true);
-        btn5.setDisable(true);
-        btn6.setDisable(true);
-        btn7.setDisable(true);
-        btn8.setDisable(true);
-        btn9.setDisable(true);
-        btn10.setDisable(true);
-        btn11.setDisable(true);
-        btn12.setDisable(true);
+    
+    public void disableBtns(){
+        App.btnStatus1 = false;
+        App.btnStatus2 = false;
+        App.btnStatus3 = false;
+        App.btnStatus4 = false;
+        App.btnStatus5 = false;
+        App.btnStatus6 = false;
+        App.btnStatus7 = false;
+        App.btnStatus8 = false;
+        App.btnStatus9 = false;
+        App.btnStatus10 = false;
+        App.btnStatus11 = false;
+        App.btnStatus12 = false;
+        
+        
+        //btn1.setDisable(true);
+        //btn2.setDisable(true);
+        //btn3.setDisable(true);
+        //btn4.setDisable(true);
+        //btn5.setDisable(true);
+        //btn6.setDisable(true);
+        //btn7.setDisable(true);
+        //btn8.setDisable(true);
+        //btn9.setDisable(true);
+        //btn10.setDisable(true);
+        //btn11.setDisable(true);
+        //btn12.setDisable(true);
+    }
+    
+    public void enableBtns(){
+        App.btnStatus1 = true;
+        App.btnStatus2 = true;
+        App.btnStatus3 = true;
+        App.btnStatus4 = true;
+        App.btnStatus5 = true;
+        App.btnStatus6 = true;
+        App.btnStatus7 = true;
+        App.btnStatus8 = true;
+        App.btnStatus9 = true;
+        App.btnStatus10 = true;
+        App.btnStatus11 = true;
+        App.btnStatus12 = true;
     }
     
     
@@ -194,101 +224,123 @@ public class GameViewController implements Initializable {
     
     @FXML
     private void btn10insU(ActionEvent event) throws IOException {
-        App.PfeilY1Oben(App.getNewField());
-
-        System.out.println(App.insertedField);
-        App.setRoot("gameView");
-        
-        disableBtns();
+        if(App.btnStatus1 == true){
+            App.PfeilY1Oben(App.getNewField());
+            System.out.println(App.insertedField);
+            disableBtns();
+            App.setRoot("gameView");
+        }
         
     }
 
     @FXML
     private void btn30insU(ActionEvent event) throws IOException {
-        App.PfeilY3Oben(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus2 == true){
+            App.PfeilY3Oben(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn50insU(ActionEvent event) throws IOException {
-        App.PfeilY5Oben(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus3 == true){
+            App.PfeilY5Oben(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn61insR(ActionEvent event) throws IOException {
-        App.PfeilX1Rechts(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus4 == true){
+            App.PfeilX1Rechts(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn63insR(ActionEvent event) throws IOException {
-        App.PfeilX3Rechts(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus5 == true){
+            App.PfeilX3Rechts(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn65insR(ActionEvent event) throws IOException {
-        App.PfeilX5Rechts(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus6 == true){
+            App.PfeilX5Rechts(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn56insD(ActionEvent event) throws IOException {
-        App.PfeilY5Unten(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus7 == true){
+            App.PfeilY5Unten(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn36insD(ActionEvent event) throws IOException {
-        App.PfeilY3Unten(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus8 == true){
+            App.PfeilY3Unten(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn16insD(ActionEvent event) throws IOException {
-        App.PfeilY1Unten(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus9 == true){
+            App.PfeilY1Unten(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn01insL(ActionEvent event) throws IOException {
-        App.PfeilX1Links(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus12 == true){
+            App.PfeilX1Links(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn03insL(ActionEvent event) throws IOException {
-        App.PfeilX3Links(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus11 == true){
+            App.PfeilX3Links(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML
     private void btn05insL(ActionEvent event) throws IOException {
-        App.PfeilX5Links(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
-        App.setRoot("gameView");
+        if(App.btnStatus10 == true){
+            App.PfeilX5Links(App.getNewField());
+            App.insertedField = true;
+            disableBtns();
+            App.setRoot("gameView");
+        }
     }
 
     @FXML

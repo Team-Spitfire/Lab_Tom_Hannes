@@ -21,6 +21,19 @@ public class App extends Application {
     private static ArrayList<CardModel> cardList = new ArrayList<CardModel>();
     public static FieldModel[][] field = new FieldModel[7][7];
     private static FieldModel NewField;
+    
+    public static boolean btnStatus1 = true;
+    public static boolean btnStatus2 = true;
+    public static boolean btnStatus3 = true;
+    public static boolean btnStatus4 = true;
+    public static boolean btnStatus5 = true;
+    public static boolean btnStatus6 = true;
+    public static boolean btnStatus7 = true;
+    public static boolean btnStatus8 = true;
+    public static boolean btnStatus9 = true;
+    public static boolean btnStatus10 = true;
+    public static boolean btnStatus11 = true;
+    public static boolean btnStatus12 = true;
    
     
     public static int curPlayer = 1;
