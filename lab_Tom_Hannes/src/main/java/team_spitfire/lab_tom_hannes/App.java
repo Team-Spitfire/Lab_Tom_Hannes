@@ -288,6 +288,8 @@ public class App extends Application {
         //Karten werden zufällig auf dem Spielbrett verteilt
         randomList();
         
+        randomCard();
+        
         //int X = 0;
         //int Y = 0;
         
@@ -325,6 +327,66 @@ public class App extends Application {
         App.NewField = NF;
     }
 
+    public static void randomCard(){
+        boolean done = false;
+        int R = 4;
+        int Y = 4;
+        int G = 4;
+        int B = 4;
+        
+        ArrayList<CardModel> handRed = new ArrayList<CardModel> ();
+        ArrayList<CardModel> handYellow = new ArrayList<CardModel> ();
+        ArrayList<CardModel> handGreen = new ArrayList<CardModel> ();
+        ArrayList<CardModel> handBlue = new ArrayList<CardModel> ();
+        
+        while(R >= 0){
+            int Min = 0;
+            int Max = cardList.size() - 1;
+            int random = Min + (int) (Math.random() * ((Max - Min) + 1));
+            
+            handRed.add(cardList.get(random));
+            
+            R -= 1;
+        }
+        
+        while(Y >= 0){
+            int Min = 0;
+            int Max = cardList.size() - 1;
+            int random = Min + (int) (Math.random() * ((Max - Min) + 1));
+            
+            handYellow.add(cardList.get(random));
+            
+            Y -= 1;
+        }
+        
+        while(G >= 0){
+            int Min = 0;
+            int Max = cardList.size() - 1;
+            int random = Min + (int) (Math.random() * ((Max - Min) + 1));
+            
+            handGreen.add(cardList.get(random));
+            
+            G  -= 1;
+        }
+        
+        while(B >= 0){
+            int Min = 0;
+            int Max = cardList.size() - 1;
+            int random = Min + (int) (Math.random() * ((Max - Min) + 1));
+            
+            handBlue.add(cardList.get(random));
+            
+            B -= 1;
+        }
+        
+        redPlayer.setHand(handRed);
+        yellowPlayer.setHand(handYellow);
+        greenPlayer.setHand(handGreen);
+        bluePlayer.setHand(handBlue);
+
+    }
+    
+    
     public static void randomList() {
         //Stellen mit festen Karten
 
