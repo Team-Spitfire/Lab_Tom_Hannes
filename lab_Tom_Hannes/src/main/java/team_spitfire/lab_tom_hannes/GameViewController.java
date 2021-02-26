@@ -303,10 +303,35 @@ public class GameViewController implements Initializable {
         int x = cPlayer.getPosX();
         int y = cPlayer.getPosY();
         
+<<<<<<< Updated upstream
+=======
+        boolean du = false;
+        boolean ud = false;
+        boolean lr = false;
+        boolean rl = false;
+        
+        
+        if(y != 6){
+>>>>>>> Stashed changes
         FieldModel d = App.field[x][y + 1];
+        
+        du = d.isUp();
+        }
+        if(y != 0){
         FieldModel u = App.field[x][y - 1];
+        
+        ud = u.isDown();
+        }
+        if(x != 0){
         FieldModel l = App.field[x - 1][y];
+        
+        lr = l.isRight();
+        }
+        if(x != 6){
         FieldModel r = App.field[x + 1][y];
+        
+        rl = r.isLeft();
+        }
         
         
         
@@ -322,10 +347,10 @@ public class GameViewController implements Initializable {
         boolean cr = c.isRight();
 
         //Alle Booleans der umgebenden Felder
-        boolean ud = u.isDown();
-        boolean du = d.isUp();
-        boolean lr = l.isRight();
-        boolean rl = r.isLeft();
+        
+        
+        
+        
 
         //guckt ob die Übergänge offen sind
         if (cu && ud == true) {
