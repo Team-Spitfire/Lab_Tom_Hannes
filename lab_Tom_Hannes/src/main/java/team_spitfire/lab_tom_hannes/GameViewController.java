@@ -183,10 +183,11 @@ public class GameViewController implements Initializable {
         cardImageviewsY = new ArrayList<ImageView>();
         cardImageviewsG = new ArrayList<ImageView>();
         cardImageviewsB = new ArrayList<ImageView>();
-
+        
+        checkCurPlayer();
         checkBounds();
         loadImages();
-
+        
         System.out.println("END INITIALIZE");
     }
 
