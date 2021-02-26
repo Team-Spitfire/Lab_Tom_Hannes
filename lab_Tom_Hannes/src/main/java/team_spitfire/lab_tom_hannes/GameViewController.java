@@ -102,8 +102,7 @@ public class GameViewController implements Initializable {
     private ImageView ivGreenPlayer;
 
     private static ArrayList<ImageView> imageviews;
-    private static ArrayList<Image> images;
-    private static ArrayList<Integer> rotations;
+    private static ArrayList<FieldModel> tempList;
 
     private static int curPlayer;
     private static PlayerModel cPlayer;
@@ -113,7 +112,8 @@ public class GameViewController implements Initializable {
     private static boolean boundsDown;
     private static boolean boundsRight;
     private static boolean boundsLeft;
-
+    
+    private static Image black;
     /**
      * Initializes the controller class.
      */
@@ -121,11 +121,11 @@ public class GameViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         imageviews = new ArrayList<ImageView>();
-        images = new ArrayList<Image>();
-        rotations = new ArrayList<Integer>();
-        addToList();
-        checkTileOri();
+        tempList = new ArrayList<FieldModel> ();
+
         loadImages();
+        checkCPlayer();
+        checkBounds();
     }
 
     @FXML
@@ -226,9 +226,7 @@ public class GameViewController implements Initializable {
     void keyPressed(KeyEvent event) throws IOException {
         switch (event.getCode()) {
             case W:
-                checkCPlayer();
-                checkCPlayerView();
-                checkBounds();
+                
 
                 // welcher Spieler ist dran, in alle richtugen offen ist 
                 // versetz das Bild und die position des Spieler auf dem Grid
@@ -240,9 +238,7 @@ public class GameViewController implements Initializable {
                 
                 break;
             case S:
-                checkCPlayer();
-                checkCPlayerView();
-                checkBounds();
+                
 
                 cPlayerView.setY(cPlayerView.getY() + 16);
                 cPlayer.setPosY(cPlayer.getPosY() + 1);
@@ -252,10 +248,7 @@ public class GameViewController implements Initializable {
 
                 break;
             case A:
-                checkCPlayer();
-                checkCPlayerView();
-                checkBounds();
-
+                
                 cPlayerView.setX(cPlayerView.getX() - 16);
                 cPlayer.setPosX(cPlayer.getPosX() - 1);
                 boundsUp = false;
@@ -264,9 +257,7 @@ public class GameViewController implements Initializable {
                 
                 break;
             case D:
-                checkCPlayer();
-                checkCPlayerView();
-                checkBounds();
+                
 
                 cPlayerView.setX(cPlayerView.getX() + 16);
                 cPlayer.setPosX(cPlayer.getPosX() + 1);
@@ -285,40 +276,27 @@ public class GameViewController implements Initializable {
         switch (curPlayer) {
             case 1:
                 cPlayer = App.redPlayer;
-                break;
-            case 2:
-                cPlayer = App.yellowPlayer;
-                break;
-            case 3:
-                cPlayer = App.greenPlayer;
-                break;
-            case 4:
-                cPlayer = App.bluePlayer;
-                break;
-            default:
-                break;
-        }
-    }
-
-    public void checkCPlayerView() {
-
-        switch (curPlayer) {
-            case 1:
                 cPlayerView = ivRedPlayer;
                 break;
             case 2:
+                cPlayer = App.yellowPlayer;
                 cPlayerView = ivYellowPlayer;
                 break;
             case 3:
+                cPlayer = App.greenPlayer;
                 cPlayerView = ivGreenPlayer;
                 break;
             case 4:
+                cPlayer = App.bluePlayer;
                 cPlayerView = ivBluePlayer;
                 break;
             default:
                 break;
         }
+
     }
+
+    
     
     public void checkBounds() {
 
@@ -354,10 +332,12 @@ public class GameViewController implements Initializable {
         } else if (cr && rl == true) {
             boundsRight = true;
         }
-
     }
 
-    public void addToList() {
+    public void loadImages(){
+        tempList.clear();
+        imageviews.clear();
+        
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
         imageviews.add(iv0_5);
@@ -391,43 +371,85 @@ public class GameViewController implements Initializable {
         imageviews.add(iv6_1);
         imageviews.add(iv6_3);
         imageviews.add(iv6_5);
-        imageviews.add(ivNewField);
+        imageviews.add(ivNewField);   
+
+        FieldModel F0_1 = App.field[0][1];
+        FieldModel F0_3 = App.field[0][3];
+        FieldModel F0_5 = App.field[0][5];
+        FieldModel F1_0 = App.field[1][0];
+        FieldModel F1_1 = App.field[1][1];
+        FieldModel F1_2 = App.field[1][2];
+        FieldModel F1_3 = App.field[1][3];
+        FieldModel F1_4 = App.field[1][4];
+        FieldModel F1_5 = App.field[1][5];
+        FieldModel F1_6 = App.field[1][6];
+        FieldModel F2_1 = App.field[2][1];
+        FieldModel F2_3 = App.field[2][3];
+        FieldModel F2_5 = App.field[2][5];
+        FieldModel F3_0 = App.field[3][0];
+        FieldModel F3_1 = App.field[3][1];
+        FieldModel F3_2 = App.field[3][2];
+        FieldModel F3_3 = App.field[3][3];
+        FieldModel F3_4 = App.field[3][4];
+        FieldModel F3_5 = App.field[3][5];
+        FieldModel F3_6 = App.field[3][6];
+        FieldModel F4_1 = App.field[4][1];
+        FieldModel F4_3 = App.field[4][3];
+        FieldModel F4_5 = App.field[4][5];
+        FieldModel F5_0 = App.field[5][0];
+        FieldModel F5_1 = App.field[5][1];
+        FieldModel F5_2 = App.field[5][2];
+        FieldModel F5_3 = App.field[5][3];
+        FieldModel F5_4 = App.field[5][4];
+        FieldModel F5_5 = App.field[5][5];
+        FieldModel F5_6 = App.field[5][6];
+        FieldModel F6_1 = App.field[6][1];
+        FieldModel F6_3 = App.field[6][3];
+        FieldModel F6_5 = App.field[6][5];
+        FieldModel FNewField = App.getNewField();
         
-    }
-
-    public void checkTileOri() {
-        int X = 0;
-        int Y = 0;
-        boolean exit = false;
-
-        while (exit == false) {
-            FieldModel F = App.field[X][Y];
-            Image i = F.getImg();
-            int r = F.getRotation();
-            images.add(i);
-            rotations.add(r);
-
-            if (X == 6 && Y == 6) {
-                exit = true;
-            } else {
-                if (X == 6) {
-                    X = 0;
-                    Y = Y + 1;
-                } else {
-                    X = X + 1;
-                }
-            }
-        }
-    }
-    
-
-    public void loadImages(){
+        tempList.add(F0_1);
+        tempList.add(F0_3);
+        tempList.add(F0_5);
+        tempList.add(F1_0);
+        tempList.add(F1_1);
+        tempList.add(F1_2);
+        tempList.add(F1_3);
+        tempList.add(F1_4);
+        tempList.add(F1_5);
+        tempList.add(F1_6);
+        tempList.add(F2_1);
+        tempList.add(F2_3);
+        tempList.add(F2_5);
+        tempList.add(F3_0);
+        tempList.add(F3_1);
+        tempList.add(F3_2);
+        tempList.add(F3_3);
+        tempList.add(F3_4);
+        tempList.add(F3_5);
+        tempList.add(F3_6);
+        tempList.add(F4_1);
+        tempList.add(F4_3);
+        tempList.add(F4_5);
+        tempList.add(F5_0);
+        tempList.add(F5_1);
+        tempList.add(F5_2);
+        tempList.add(F5_3);
+        tempList.add(F5_4);
+        tempList.add(F5_5);
+        tempList.add(F5_6);
+        tempList.add(F6_1);
+        tempList.add(F6_3);
+        tempList.add(F6_5);
+        tempList.add(FNewField);
+        
+        
         for(ImageView I : imageviews) {
-            System.out.println();
-            I.setImage(images.get(0));
-            I.setRotate(rotations.get(0));
-            images.remove(0); 
-            rotations.remove(0);
+            I.setImage(tempList.get(0).getImg());
+            I.setRotate(tempList.get(0).getRotation());
+            
+            tempList.remove(0);
         }
     }
 }
+        
