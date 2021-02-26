@@ -747,17 +747,20 @@ public class GameViewController implements Initializable {
 
         for(ImageView I : cardImageviewsR){
             I.setImage(App.redPlayer.getHand().get(0).getImgC());
+            App.redPlayer.getHand().remove(0);
         }
         for(ImageView I : cardImageviewsY){
             I.setImage(App.yellowPlayer.getHand().get(0).getImgC());
+            App.yellowPlayer.getHand().remove(0);
         }
         for(ImageView I : cardImageviewsG){
             I.setImage(App.greenPlayer.getHand().get(0).getImgC());
+            App.yellowPlayer.getHand().remove(0);
         }
         for(ImageView I : cardImageviewsB){
             I.setImage(App.bluePlayer.getHand().get(0).getImgC());
+            App.bluePlayer.getHand().remove(0);
         }
-
         for (ImageView I : imageviews) {
             I.setImage(tempList.get(0).getImg());
             I.setRotate(tempList.get(0).getRotation());
