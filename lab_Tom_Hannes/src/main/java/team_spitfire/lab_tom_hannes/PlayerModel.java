@@ -49,7 +49,7 @@ public class PlayerModel {
     public void setPosY(int posY) {
         this.posY = posY;
     }
-
+ 
     public ArrayList<CardModel> getHand() {
         return hand;
     }
