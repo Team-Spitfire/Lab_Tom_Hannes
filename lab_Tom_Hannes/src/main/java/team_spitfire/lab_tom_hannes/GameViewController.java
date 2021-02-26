@@ -142,7 +142,7 @@ public class GameViewController implements Initializable {
     
     
     private static Image black;
-    private Button btn;
+    
     
     /**
      * Initializes the controller class.
