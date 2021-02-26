@@ -101,8 +101,7 @@ public class GameViewController implements Initializable {
     private ImageView ivBluePlayer;
     @FXML
     private ImageView ivGreenPlayer;
-    
-    
+
     @FXML
     private Button btn1;
     @FXML
@@ -131,13 +130,6 @@ public class GameViewController implements Initializable {
     private static ArrayList<ImageView> imageviews;
     private static ArrayList<FieldModel> tempList;
 
-   
-    private static PlayerModel cPlayer;
-    private static ImageView cPlayerView;
-
-    
-    
-    
     /**
      * Initializes the controller class.
      */
@@ -145,16 +137,14 @@ public class GameViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         imageviews = new ArrayList<ImageView>();
-        tempList = new ArrayList<FieldModel> ();
+        tempList = new ArrayList<FieldModel>();
         
-        checkCPlayer();
         checkBounds();
         loadImages();
-        
+
     }
 
-    
-    public void disableBtns(){
+    public void disableBtns() {
         App.btnStatus1 = false;
         App.btnStatus2 = false;
         App.btnStatus3 = false;
@@ -168,8 +158,8 @@ public class GameViewController implements Initializable {
         App.btnStatus11 = false;
         App.btnStatus12 = false;
     }
-    
-    public void enableBtns(){
+
+    public void enableBtns() {
         App.btnStatus1 = true;
         App.btnStatus2 = true;
         App.btnStatus3 = true;
@@ -183,10 +173,7 @@ public class GameViewController implements Initializable {
         App.btnStatus11 = true;
         App.btnStatus12 = true;
     }
-    
-    
-    
-    
+
     @FXML
     private void btnTurnRight(ActionEvent event) throws IOException {
         App.getNewField().turnRight();
@@ -202,20 +189,20 @@ public class GameViewController implements Initializable {
         ivNewField.setRotate(-45);
         App.setRoot("gameView");
     }
-    
+
     @FXML
     private void btn10insU(ActionEvent event) throws IOException {
-        if(App.btnStatus1 == true){
+        if (App.btnStatus1 == true) {
             App.PfeilY1Oben(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
         }
-        
+
     }
 
     @FXML
     private void btn30insU(ActionEvent event) throws IOException {
-        if(App.btnStatus2 == true){
+        if (App.btnStatus2 == true) {
             App.PfeilY3Oben(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -224,7 +211,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn50insU(ActionEvent event) throws IOException {
-        if(App.btnStatus3 == true){
+        if (App.btnStatus3 == true) {
             App.PfeilY5Oben(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -233,7 +220,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn61insR(ActionEvent event) throws IOException {
-        if(App.btnStatus4 == true){
+        if (App.btnStatus4 == true) {
             App.PfeilX1Rechts(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -242,7 +229,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn63insR(ActionEvent event) throws IOException {
-        if(App.btnStatus5 == true){
+        if (App.btnStatus5 == true) {
             App.PfeilX3Rechts(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -251,7 +238,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn65insR(ActionEvent event) throws IOException {
-        if(App.btnStatus6 == true){
+        if (App.btnStatus6 == true) {
             App.PfeilX5Rechts(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -260,7 +247,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn56insD(ActionEvent event) throws IOException {
-        if(App.btnStatus7 == true){
+        if (App.btnStatus7 == true) {
             App.PfeilY5Unten(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -269,7 +256,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn36insD(ActionEvent event) throws IOException {
-        if(App.btnStatus8 == true){
+        if (App.btnStatus8 == true) {
             App.PfeilY3Unten(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -278,7 +265,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn16insD(ActionEvent event) throws IOException {
-        if(App.btnStatus9 == true){
+        if (App.btnStatus9 == true) {
             App.PfeilY1Unten(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -287,7 +274,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn01insL(ActionEvent event) throws IOException {
-        if(App.btnStatus12 == true){
+        if (App.btnStatus12 == true) {
             App.PfeilX1Links(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -296,7 +283,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn03insL(ActionEvent event) throws IOException {
-        if(App.btnStatus11 == true){
+        if (App.btnStatus11 == true) {
             App.PfeilX3Links(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -305,7 +292,7 @@ public class GameViewController implements Initializable {
 
     @FXML
     private void btn05insL(ActionEvent event) throws IOException {
-        if(App.btnStatus10 == true){
+        if (App.btnStatus10 == true) {
             App.PfeilX5Links(App.getNewField());
             disableBtns();
             App.setRoot("gameView");
@@ -318,135 +305,169 @@ public class GameViewController implements Initializable {
         enableBtns();
         checkCurPlayer();
     }
-    
-    private void checkCurPlayer(){
-        if(App.curPlayer == 5){
+
+    private void checkCurPlayer() {
+        if (App.curPlayer == 5) {
             App.curPlayer = 1;
         }
-    
+
     }
-    
+
     void keyPressed(KeyEvent event) throws IOException {
+        System.out.println("----------------------------------------------------------------");
         switch (event.getCode()) {
             case W:
-                
 
-                // welcher Spieler ist dran, in alle richtugen offen ist 
-                // versetz das Bild und die position des Spieler auf dem Grid
-                cPlayerView.setY(cPlayerView.getY() - 16);
-                cPlayer.setPosY(cPlayer.getPosY() - 1);
-                
-                
-                App.setRoot("gameview");
-                
+                switch (App.curPlayer) {
+                    case 1:
+                        ivRedPlayer.setY(ivRedPlayer.getY() - 16);
+                        App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                        break;
+                    case 2:
+                        ivYellowPlayer.setY(ivYellowPlayer.getY() - 16);
+                        App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                        break;
+                    case 3:
+                        ivGreenPlayer.setY(ivGreenPlayer.getY() - 16);
+                        App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                        break;
+                    case 4:
+                        ivBluePlayer.setY(ivBluePlayer.getY() - 16);
+                        App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case S:
-                
 
-                cPlayerView.setY(cPlayerView.getY() + 16);
-                cPlayer.setPosY(cPlayer.getPosY() + 1);
-                
-                
-                App.setRoot("gameview");
+                switch (App.curPlayer) {
+                    case 1:
+                        ivRedPlayer.setY(ivRedPlayer.getY() + 16);
+                        App.redPlayer.setPosY(App.redPlayer.getPosY() + 1);
+                        break;
+                    case 2:
+                        ivYellowPlayer.setY(ivYellowPlayer.getY() + 16);
+                        App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() + 1);
+                        break;
+                    case 3:
+                        ivGreenPlayer.setY(ivGreenPlayer.getY() + 16);
+                        App.greenPlayer.setPosY(App.greenPlayer.getPosY() + 1);
+                        break;
+                    case 4:
+                        ivBluePlayer.setY(ivBluePlayer.getY() + 16);
+                        App.bluePlayer.setPosY(App.bluePlayer.getPosY() + 1);
+                        break;
+                    default:
+                        break;
+                }
 
                 break;
             case A:
-                
-                cPlayerView.setX(cPlayerView.getX() - 16);
-                cPlayer.setPosX(cPlayer.getPosX() - 1);
-                
-                
-                App.setRoot("gameview");
-                
+
+                switch (App.curPlayer) {
+                    case 1:
+                        ivRedPlayer.setX(ivRedPlayer.getX() - 16);
+                        App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                        break;
+                    case 2:
+                        ivYellowPlayer.setX(ivYellowPlayer.getX() - 16);
+                        App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                        break;
+                    case 3:
+                        ivGreenPlayer.setX(ivGreenPlayer.getX() - 16);
+                        App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                        break;
+                    case 4:
+                        ivBluePlayer.setX(ivBluePlayer.getX() - 16);
+                        App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case D:
-                
-
-                cPlayerView.setX(cPlayerView.getX() + 16);
-                cPlayer.setPosX(cPlayer.getPosX() + 1);
-                
-                
-                App.setRoot("gameview");
-                
-                break;
-            default:
+                switch (App.curPlayer) {
+                    case 1:
+                        ivRedPlayer.setX(ivRedPlayer.getX() - 16);
+                        App.redPlayer.setPosY(App.redPlayer.getPosY() - 1);
+                        break;
+                    case 2:
+                        ivYellowPlayer.setX(ivYellowPlayer.getX() - 16);
+                        App.yellowPlayer.setPosY(App.yellowPlayer.getPosY() - 1);
+                        break;
+                    case 3:
+                        ivGreenPlayer.setX(ivGreenPlayer.getX() - 16);
+                        App.greenPlayer.setPosY(App.greenPlayer.getPosY() - 1);
+                        break;
+                    case 4:
+                        ivBluePlayer.setX(ivBluePlayer.getX() - 16);
+                        App.bluePlayer.setPosY(App.bluePlayer.getPosY() - 1);
+                        break;
+                    default:
+                        break;
+                }
                 break;
         }
     }
 
-    public void checkCPlayer() {
-
+    public void checkBounds() {
+        int x = 0;
+        int y = 0;
         switch (App.curPlayer) {
             case 1:
-                cPlayer = App.redPlayer;
-                cPlayerView = ivRedPlayer;
+                x = App.redPlayer.getPosX();
+                y = App.redPlayer.getPosY();
                 break;
             case 2:
-                cPlayer = App.yellowPlayer;
-                cPlayerView = ivYellowPlayer;
+                x = App.yellowPlayer.getPosX();
+                y = App.yellowPlayer.getPosY();
                 break;
             case 3:
-                cPlayer = App.greenPlayer;
-                cPlayerView = ivGreenPlayer;
+                x = App.greenPlayer.getPosX();
+                y = App.greenPlayer.getPosY();
                 break;
             case 4:
-                cPlayer = App.bluePlayer;
-                cPlayerView = ivBluePlayer;
+                x = App.bluePlayer.getPosX();
+                y = App.bluePlayer.getPosY();
                 break;
             default:
                 break;
         }
 
-    }
-
-    
-    
-    public void checkBounds() {
-
-        int x = cPlayer.getPosX();
-        int y = cPlayer.getPosY();
-        
         System.out.println(x);
         System.out.println(y);
-        
-        
+
         FieldModel c = App.field[x][y];
-        
+
         App.boundsUp = false;
         App.boundsRight = false;
         App.boundsDown = false;
         App.boundsLeft = false;
-        
+
         boolean du = false;
         boolean ud = false;
         boolean lr = false;
         boolean rl = false;
-        
-        
-        if(y != 6){
+
+        if (y != 6) {
             FieldModel d = App.field[x][y + 1];
             du = d.isUp();
         }
-        if(y != 0){
+        if (y != 0) {
             FieldModel u = App.field[x][y - 1];
             ud = u.isDown();
         }
-        if(x != 0){
+        if (x != 0) {
             FieldModel l = App.field[x - 1][y];
             lr = l.isRight();
         }
-        if(x != 6){
+        if (x != 6) {
             FieldModel r = App.field[x + 1][y];
             rl = r.isLeft();
         }
-        
-        
-        
-        //Alle Fieldmodels die den Spieler Umgeben
-        
-        
-       
 
+        //Alle Fieldmodels die den Spieler Umgeben
         //Alle Booleans des Feldes wo der Spieler sich drauf befindet
         boolean cu = c.isUp();
         boolean cd = c.isDown();
@@ -454,37 +475,33 @@ public class GameViewController implements Initializable {
         boolean cr = c.isRight();
 
         //Alle Booleans der umgebenden Felder
-        
-        
         System.out.println(cu + " " + "CU");
         System.out.println(cr + " " + "Cr");
         System.out.println(lr + " " + "LR");
-        
-        
 
         //guckt ob die Übergänge offen sind
-        if (cu  == true && ud == true) {
+        if (cu == true && ud == true) {
             App.boundsUp = true;
         }
-        
-        if (cd  == true && du == true) {
+
+        if (cd == true && du == true) {
             App.boundsDown = true;
         }
-        
-        if (cl  == true && lr == true) {
+
+        if (cl == true && lr == true) {
             App.boundsLeft = true;
         }
-        
-        if (cr  == true && rl == true) {
+
+        if (cr == true && rl == true) {
             App.boundsRight = true;
         }
-        
+
     }
 
-    public void loadImages(){
+    public void loadImages() {
         tempList.clear();
         imageviews.clear();
-        
+
         imageviews.add(iv0_1);
         imageviews.add(iv0_3);
         imageviews.add(iv0_5);
@@ -518,7 +535,7 @@ public class GameViewController implements Initializable {
         imageviews.add(iv6_1);
         imageviews.add(iv6_3);
         imageviews.add(iv6_5);
-        imageviews.add(ivNewField);   
+        imageviews.add(ivNewField);
 
         FieldModel F0_1 = App.field[0][1];
         FieldModel F0_3 = App.field[0][3];
@@ -554,7 +571,7 @@ public class GameViewController implements Initializable {
         FieldModel F6_3 = App.field[6][3];
         FieldModel F6_5 = App.field[6][5];
         FieldModel FNewField = App.getNewField();
-        
+
         tempList.add(F0_1);
         tempList.add(F0_3);
         tempList.add(F0_5);
@@ -589,7 +606,7 @@ public class GameViewController implements Initializable {
         tempList.add(F6_3);
         tempList.add(F6_5);
         tempList.add(FNewField);
-        
+
         System.out.println();
         System.out.println(F0_1.isUp() + " " + "UP");
         System.out.println(F0_1.isRight() + " " + "RIGHT");
@@ -603,15 +620,12 @@ public class GameViewController implements Initializable {
         System.out.println(App.field[0][0].isDown() + " " + "DOWN");
         System.out.println(App.field[0][0].isLeft() + " " + "LEFT");
         System.out.println();
-        
-        
-        
-        for(ImageView I : imageviews) {
+
+        for (ImageView I : imageviews) {
             I.setImage(tempList.get(0).getImg());
             I.setRotate(tempList.get(0).getRotation());
-            
+
             tempList.remove(0);
         }
     }
 }
-        
