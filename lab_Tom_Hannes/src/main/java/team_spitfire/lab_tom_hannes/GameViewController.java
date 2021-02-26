@@ -159,18 +159,18 @@ public class GameViewController implements Initializable {
     }
 
     private void disableBtns(){
-        btn1.setDisable(App.insertedField);
-        btn2.setDisable(App.insertedField);
-        btn3.setDisable(App.insertedField);
-        btn4.setDisable(App.insertedField);
-        btn5.setDisable(App.insertedField);
-        btn6.setDisable(App.insertedField);
-        btn7.setDisable(App.insertedField);
-        btn8.setDisable(App.insertedField);
-        btn9.setDisable(App.insertedField);
-        btn10.setDisable(App.insertedField);
-        btn11.setDisable(App.insertedField);
-        btn12.setDisable(App.insertedField);
+        btn1.setDisable(true);
+        btn2.setDisable(true);
+        btn3.setDisable(true);
+        btn4.setDisable(true);
+        btn5.setDisable(true);
+        btn6.setDisable(true);
+        btn7.setDisable(true);
+        btn8.setDisable(true);
+        btn9.setDisable(true);
+        btn10.setDisable(true);
+        btn11.setDisable(true);
+        btn12.setDisable(true);
     }
     
     
@@ -195,9 +195,12 @@ public class GameViewController implements Initializable {
     @FXML
     private void btn10insU(ActionEvent event) throws IOException {
         App.PfeilY1Oben(App.getNewField());
-        App.insertedField = true;
-        disableBtns();
+
+        System.out.println(App.insertedField);
         App.setRoot("gameView");
+        
+        disableBtns();
+        
     }
 
     @FXML
