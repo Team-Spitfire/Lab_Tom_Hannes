@@ -15,7 +15,7 @@ public class CardModel {
     private int itemCardInt;
     private Image imgC;
 
-    public CardModel(int itemCardInt) {
+    public CardModel(int itemCardInt, Image imgC) {
         this.itemCardInt = itemCardInt;
         this.imgC = imgC;
     }

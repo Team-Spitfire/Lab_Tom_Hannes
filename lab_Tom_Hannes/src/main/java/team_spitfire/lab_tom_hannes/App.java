@@ -261,30 +261,30 @@ public class App extends Application {
 
 
         //name             ID
-        c1 = new CardModel(1);
-        c2 = new CardModel(2);
-        c3 = new CardModel(3);
-        c4 = new CardModel(4);
-        c5 = new CardModel(5);
-        c6 = new CardModel(6);
-        c7 = new CardModel(7);
-        c8 = new CardModel(8);
-        c9 = new CardModel(9);
-        c10 = new CardModel(10);
-        c11 = new CardModel(11);
-        c12 = new CardModel(12);
-        c13 = new CardModel(13);
-        c14 = new CardModel(14);
-        c15 = new CardModel(15);
-        c16 = new CardModel(16);
-        c17 = new CardModel(17);
-        c18 = new CardModel(18);
-        c19 = new CardModel(19);
-        c20 = new CardModel(20);
-        c21 = new CardModel(21);
-        c22 = new CardModel(22);
-        c23 = new CardModel(23);
-        c24 = new CardModel(24);
+        c1 = new CardModel(1, new Image(Cfile1.toURI().toString()));
+        c2 = new CardModel(2, new Image(Cfile2.toURI().toString()));
+        c3 = new CardModel(3, new Image(Cfile3.toURI().toString()));
+        c4 = new CardModel(4, new Image(Cfile4.toURI().toString()));
+        c5 = new CardModel(5, new Image(Cfile5.toURI().toString()));
+        c6 = new CardModel(6, new Image(Cfile6.toURI().toString()));
+        c7 = new CardModel(7, new Image(Cfile7.toURI().toString()));
+        c8 = new CardModel(8, new Image(Cfile8.toURI().toString()));
+        c9 = new CardModel(9, new Image(Cfile9.toURI().toString()));
+        c10 = new CardModel(10, new Image(Cfile10.toURI().toString()));
+        c11 = new CardModel(11, new Image(Cfile11.toURI().toString()));
+        c12 = new CardModel(12, new Image(Cfile12.toURI().toString()));
+        c13 = new CardModel(13, new Image(Cfile13.toURI().toString()));
+        c14 = new CardModel(14, new Image(Cfile14.toURI().toString()));
+        c15 = new CardModel(15, new Image(Cfile15.toURI().toString()));
+        c16 = new CardModel(16, new Image(Cfile16.toURI().toString()));
+        c17 = new CardModel(17, new Image(Cfile17.toURI().toString()));
+        c18 = new CardModel(18, new Image(Cfile18.toURI().toString()));
+        c19 = new CardModel(19, new Image(Cfile19.toURI().toString()));
+        c20 = new CardModel(20, new Image(Cfile20.toURI().toString()));
+        c21 = new CardModel(21, new Image(Cfile21.toURI().toString()));
+        c22 = new CardModel(22, new Image(Cfile22.toURI().toString()));
+        c23 = new CardModel(23, new Image(Cfile23.toURI().toString()));
+        c24 = new CardModel(24, new Image(Cfile24.toURI().toString()));
 
         //fügt zu liste hinzu
         cardList.add(c1);
