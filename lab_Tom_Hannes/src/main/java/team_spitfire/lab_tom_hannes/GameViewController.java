@@ -412,6 +412,10 @@ public class GameViewController implements Initializable {
 
     }
 
+
+
+    }
+
     public void checkBounds() {
         int x = 0;
         int y = 0;
@@ -435,6 +439,7 @@ public class GameViewController implements Initializable {
             default:
                 break;
         }
+
 
         System.out.println(x);
         System.out.println(y);
@@ -629,5 +634,4 @@ public class GameViewController implements Initializable {
             tempList.remove(0);
         }
     }
-
 }
