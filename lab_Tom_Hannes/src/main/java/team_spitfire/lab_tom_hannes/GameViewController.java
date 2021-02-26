@@ -17,11 +17,7 @@ import javafx.scene.control.Button;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> parent of 02fa115 (base)
 
 /**
  * FXML Controller class
@@ -141,16 +137,9 @@ public class GameViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-<<<<<<< HEAD
-        checkBounds();
-        loadImages();
-        
-        
-=======
         imageviews = new ArrayList<ImageView>();
         tempList = new ArrayList<FieldModel>();
->>>>>>> parent of 02fa115 (base)
-        
+
         checkBounds();
         loadImages();
 
@@ -420,196 +409,7 @@ public class GameViewController implements Initializable {
                         break;
                 }
                 break;
-        }
-<<<<<<< HEAD
-    }  
-    
-    
-    
-    public static void checkBounds() {
-            int x = 0;
-            int y = 0;
-            switch (App.curPlayer) {
-                case 1:
-                    x = App.redPlayer.getPosX();
-                    y = App.redPlayer.getPosY();
-                    break;
-                case 2:
-                    x = App.yellowPlayer.getPosX();
-                    y = App.yellowPlayer.getPosY();
-                    break;
-                case 3:
-                    x = App.greenPlayer.getPosX();
-                    y = App.greenPlayer.getPosY();
-                    break;
-                case 4:
-                    x = App.bluePlayer.getPosX();
-                    y = App.bluePlayer.getPosY();
-                    break;
-                default:
-                    break;
-            }
 
-            System.out.println(x);
-            System.out.println(y);
-
-            FieldModel c = App.field[x][y];
-
-            App.boundsUp = false;
-            App.boundsRight = false;
-            App.boundsDown = false;
-            App.boundsLeft = false;
-
-            boolean du = false;
-            boolean ud = false;
-            boolean lr = false;
-            boolean rl = false;
-
-            if (y != 6) {
-                FieldModel d = App.field[x][y + 1];
-                du = d.isUp();
-            }
-            if (y != 0) {
-                FieldModel u = App.field[x][y - 1];
-                ud = u.isDown();
-            }
-            if (x != 0) {
-                FieldModel l = App.field[x - 1][y];
-                lr = l.isRight();
-            }
-            if (x != 6) {
-                FieldModel r = App.field[x + 1][y];
-                rl = r.isLeft();
-            }
-
-            //Alle Fieldmodels die den Spieler Umgeben
-            //Alle Booleans des Feldes wo der Spieler sich drauf befindet
-            boolean cu = c.isUp();
-            boolean cd = c.isDown();
-            boolean cl = c.isLeft();
-            boolean cr = c.isRight();
-
-            //Alle Booleans der umgebenden Felder
-            System.out.println(cu + " " + "CU");
-            System.out.println(cr + " " + "Cr");
-            System.out.println(lr + " " + "LR");
-
-            //guckt ob die Übergänge offen sind
-            if (cu == true && ud == true) {
-                App.boundsUp = true;
-            }
-
-            if (cd == true && du == true) {
-                App.boundsDown = true;
-            }
-
-            if (cl == true && lr == true) {
-                App.boundsLeft = true;
-            }
-
-            if (cr == true && rl == true) {
-                App.boundsRight = true;
-            }
-
-        }
-
-        public static void loadImages() {
-            App.tempList.clear();
-            App.imageviews.clear();
-
-            
-
-            FieldModel F0_1 = App.field[0][1];
-            FieldModel F0_3 = App.field[0][3];
-            FieldModel F0_5 = App.field[0][5];
-            FieldModel F1_0 = App.field[1][0];
-            FieldModel F1_1 = App.field[1][1];
-            FieldModel F1_2 = App.field[1][2];
-            FieldModel F1_3 = App.field[1][3];
-            FieldModel F1_4 = App.field[1][4];
-            FieldModel F1_5 = App.field[1][5];
-            FieldModel F1_6 = App.field[1][6];
-            FieldModel F2_1 = App.field[2][1];
-            FieldModel F2_3 = App.field[2][3];
-            FieldModel F2_5 = App.field[2][5];
-            FieldModel F3_0 = App.field[3][0];
-            FieldModel F3_1 = App.field[3][1];
-            FieldModel F3_2 = App.field[3][2];
-            FieldModel F3_3 = App.field[3][3];
-            FieldModel F3_4 = App.field[3][4];
-            FieldModel F3_5 = App.field[3][5];
-            FieldModel F3_6 = App.field[3][6];
-            FieldModel F4_1 = App.field[4][1];
-            FieldModel F4_3 = App.field[4][3];
-            FieldModel F4_5 = App.field[4][5];
-            FieldModel F5_0 = App.field[5][0];
-            FieldModel F5_1 = App.field[5][1];
-            FieldModel F5_2 = App.field[5][2];
-            FieldModel F5_3 = App.field[5][3];
-            FieldModel F5_4 = App.field[5][4];
-            FieldModel F5_5 = App.field[5][5];
-            FieldModel F5_6 = App.field[5][6];
-            FieldModel F6_1 = App.field[6][1];
-            FieldModel F6_3 = App.field[6][3];
-            FieldModel F6_5 = App.field[6][5];
-            FieldModel FNewField = App.getNewField();
-
-            App.tempList.add(F0_1);
-            App.tempList.add(F0_3);
-            App.tempList.add(F0_5);
-            App.tempList.add(F1_0);
-            App.tempList.add(F1_1);
-            App.tempList.add(F1_2);
-            App.tempList.add(F1_3);
-            App.tempList.add(F1_4);
-            App.tempList.add(F1_5);
-            App.tempList.add(F1_6);
-            App.tempList.add(F2_1);
-            App.tempList.add(F2_3);
-            App.tempList.add(F2_5);
-            App.tempList.add(F3_0);
-            App.tempList.add(F3_1);
-            App.tempList.add(F3_2);
-            App.tempList.add(F3_3);
-            App.tempList.add(F3_4);
-            App.tempList.add(F3_5);
-            App.tempList.add(F3_6);
-            App.tempList.add(F4_1);
-            App.tempList.add(F4_3);
-            App.tempList.add(F4_5);
-            App.tempList.add(F5_0);
-            App.tempList.add(F5_1);
-            App.tempList.add(F5_2);
-            App.tempList.add(F5_3);
-            App.tempList.add(F5_4);
-            App.tempList.add(F5_5);
-            App.tempList.add(F5_6);
-            App.tempList.add(F6_1);
-            App.tempList.add(F6_3);
-            App.tempList.add(F6_5);
-            App.tempList.add(FNewField);
-
-            System.out.println();
-            System.out.println(F0_1.isUp() + " " + "UP");
-            System.out.println(F0_1.isRight() + " " + "RIGHT");
-            System.out.println(F0_1.isDown() + " " + "DOWN");
-            System.out.println(F0_1.isLeft() + " " + "LEFT");
-            System.out.println();
-            System.out.println(App.boundsRight + " " + "BOUNDS_RIGHT");
-            System.out.println();
-            System.out.println(App.field[0][0].isUp() + " " + "UP");
-            System.out.println(App.field[0][0].isRight() + " " + "RIGHT");
-            System.out.println(App.field[0][0].isDown() + " " + "DOWN");
-            System.out.println(App.field[0][0].isLeft() + " " + "LEFT");
-            System.out.println();
-
-            for (ImageView I : App.imageviews) {
-                I.setImage(App.tempList.get(0).getImg());
-                I.setRotate(App.tempList.get(0).getRotation());
-                App.tempList.remove(0);
-            }
-        }
-=======
     }
 
     public void checkBounds() {
@@ -829,5 +629,5 @@ public class GameViewController implements Initializable {
             tempList.remove(0);
         }
     }
->>>>>>> parent of 02fa115 (base)
+
 }
